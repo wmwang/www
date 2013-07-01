@@ -1,0 +1,36 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ 
+ <div class="clearfix">
+ <img src="../images/tit_best.gif" style="float:left">  <a class="more" href="../search.php?intro=best"><img src="../images/more.gif"></a>
+</div>
+
+<div class="pro_box">
+  
+   <!--{foreach from=$best_goods item=goods name=no}-->
+  <div class="goodsItem"    <!--{if $smarty.foreach.no.index mod 5 eq 0}-->style="background:none" <!--{else}-->  <!--{/if}-->>
+ 
+  
+  
+   <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}"  class="goodsimg" /></a> 
+         
+ 
+           <font class="f1">
+           <!-- {if $goods.promote_price neq ""} -->
+          {$goods.promote_price}
+          <!-- {else}-->
+          {$goods.shop_price}
+          <!--{/if}-->
+         </font>     <font class="market"> <del>{$goods.market_price}</del></font>  
+         
+            <p class="name f1"><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_style_name}</a></p>
+         
+         
+           <img src="../images/ico_zhekou.gif" class="wek">
+         
+  </div>       
+  <!--{/foreach}-->
+  
+
+
+</div>
+<div class="blank"></div>

@@ -1,0 +1,84 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="box">
+<h3 style=" background:url(../images/1px.gif) 0 28px repeat-x ; padding:0; height:29px; overflow:hidden" >
+<div class="ff_1">
+    <h2 id="ECS_tree1" class=" tabFront" style="float:left">商品分類</h2>
+    <h2 id="ECS_tree2" class=" tabBack" style="float:right">品牌分類</h2>
+    
+ </div>   
+</h3>
+
+<div style="clear:both"></div>
+
+ <div class="box_1 clearfix" style="height:339px; overflow: hidden; border-top:none">
+ <div id="ECS_tree1_BODY">
+  <div id="category_tree">
+    <!--{foreach name=goods_list from=$categories item=cat}-->
+     <dl  <!--{if $smarty.foreach.goods_list.index mod 2 eq 1}-->style="background:#f7f7f7"<!--{/if}-->
+      <!--{if !$smarty.foreach.goods_list.last}-->class="dot"<!--{/if}--> >
+     <dt><a href="{$cat.url}">{$cat.name|escape:html}</a></dt>
+     <dd><!--{foreach from=$cat.cat_id item=child name=no}-->
+     <a href="{$child.url}">{$child.name|escape:html}</a><!-- {if !$smarty.foreach.no.last} -->|<!-- {/if} --><!--{/foreach}--></dd>
+     </dl>
+    <!--{/foreach}--> 
+  </div>
+   </div>
+    <div id="ECS_tree2_BODY" style="display:none;">
+    <div class="brands_tree clearfix">
+    <!-- {if $brand_list} -->
+  <!-- {foreach from=$brand_list item=brand name="brand_foreach"} -->
+        <a href="{$brand.url}">{$brand.brand_name|escape:html}</a>
+  <!-- {/foreach} -->
+<!-- {/if} -->
+    
+    
+    </div>
+    
+    </div>
+ </div>
+</div>
+
+
+
+
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+{literal}
+  var cycleList = ['ECS_tree1','ECS_tree2'];
+  var tabFront = 'tabFront';
+  var tabBack = 'tabBack';
+  function cycleShow(obj)
+  {
+    var curObj;
+    var curBody;
+    for (i=0; i < cycleList.length; i++)
+    {
+      curObj = document.getElementById(cycleList[i]);
+      curBody = document.getElementById(cycleList[i] + '_BODY');
+      if (obj.id == curObj.id)
+      {
+        curObj.className = tabFront;
+        curBody.style.display = "";
+      }
+      else
+      {
+        curObj.className = tabBack;
+        curBody.style.display = "none";
+      }
+    }
+  }
+
+  // 添加事件
+  for (i=0; i< cycleList.length; i++)
+  {
+    document.getElementById(cycleList[i]).onmousemove = function()
+    {
+      cycleShow(this);
+    };
+  }
+{/literal}
+//]]>
+</script>

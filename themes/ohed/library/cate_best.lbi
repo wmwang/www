@@ -1,0 +1,54 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $best_goods} -->
+<div class="remai_box">
+<div class="f_l">
+ <div class="span3">
+          <div class="btn btn-large btn-block btn-danger">超級特價!!買到賺到
+          </div>
+        </div>       
+        <div class="blank"></div>
+
+<div class="clearfix">
+  <!--{foreach from=$best_goods item=goods name=no}-->
+  	<!-- {if $smarty.foreach.no.iteration<4}-->
+  <div class="goodsItem" >
+           <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" class="goodsimg" /></a> 
+           <ul>
+           <p><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_style_name}</a></p>
+           今日特價!!<br><font class="f1"><!-- {if $goods.promote_price neq ""} -->{$goods.promote_price}<!-- {else}-->{$goods.shop_price}
+          <!--{/if}-->
+          <br/>
+          <div style="padding-top:1px">
+            <div class="bottom blue">
+              <a href="javascript:addToCart({$goods.id})"><font color="red">立即搶購</font></a>
+            </div>
+          </div>
+           </font>
+            </ul>
+  </div>
+   <!--{/if}-->
+  <!--{/foreach}-->
+</div>
+</div>
+
+<div class="f_r">
+<div class="span3">
+          <div class="btn btn-large btn-block btn-info">促銷活動
+          </div>
+        </div>       
+        <div class="blank"></div>
+<div class="clearfix" style="margin-top:-2px; line-height:22px">
+
+<p><a href="#">休閒零食特價買贈大酬</a></p> 
+<p><a href="#">買麥片、蜂蜜滿28元</a></p>  
+<p><a href="#">買方便面送咖啡</a></p>  
+<p><a href="#">whisper活力薄 </a></p> 
+<p><a href="#">休閒零食特價買贈大酬</a></p> 
+<p><a href="#">買麥片、蜂蜜滿28元</a></p>  
+
+</div>
+</div>
+
+</div>
+<div class="blank"></div>
+<!-- {/if} -->

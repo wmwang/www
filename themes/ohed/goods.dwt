@@ -1,0 +1,703 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+{* 包含腳本文件 *}
+{insert_scripts files='common.js'}
+ 
+<script type="text/javascript" src="js/action.js"></script>
+<script type="text/javascript" src="js/goods.js"></script>
+<script type="text/javascript" src="js/mzp-packed-me.js"></script>
+<script type="text/javascript">
+function $id(element) {
+  return document.getElementById(element);
+}
+//切屏--是按鈕，_v是內容平台，_h是內容庫
+function reg(str){
+  var bt=$id(str+"_b").getElementsByTagName("h2");
+  for(var i=0;i<bt.length;i++){
+    bt[i].subj=str;
+    bt[i].pai=i;
+    bt[i].style.cursor="pointer";
+    bt[i].onmousemove=function(){
+      $id(this.subj+"_v").innerHTML=$id(this.subj+"_h").getElementsByTagName("blockquote")[this.pai].innerHTML;
+      for(var j=0;j<$id(this.subj+"_b").getElementsByTagName("h2").length;j++){
+        var _bt=$id(this.subj+"_b").getElementsByTagName("h2")[j];
+        var ison=j==this.pai;
+        _bt.className=(ison?"":"h2bg");
+      }
+    }
+  }
+  $id(str+"_h").className="none";
+  $id(str+"_v").innerHTML=$id(str+"_h").getElementsByTagName("blockquote")[0].innerHTML;
+}
+
+function changeAtt(t) {
+t.lastChild.checked='checked';
+for (var i = 0; i<t.parentNode.childNodes.length;i++) {
+        if (t.parentNode.childNodes[i].className == 'cattsel') {
+            t.parentNode.childNodes[i].className = '';
+        }
+    }
+t.className = "cattsel";
+changePrice();
+}
+</script>
+
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+ 
+  
+ 
+
+<div class="block clearfix"> 
+  <!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
+
+ 
+ 
+   <!--商品詳情start-->
+   <div id="goodsInfo" class="clearfix">
+     <!--商品圖片和相冊 start-->
+  <div class="imgInfo">
+     <a style="position:relative" href="{$pictures.0.img_url}" id="zoom1" class="MagicZoom MagicThumb" title="{$goods.goods_style_name}">
+      <img src="{$goods.goods_img}" alt="{$goods.goods_name|escape:html}" width="278px" height="278" style="border:1px solid #d2d0d0"/>
+    
+    </a>
+       <a href="javascript:;" onclick="window.open('gallery.php?id={$goods.goods_id}'); return false;"><img src="images/fangda.gif" style="position:absolute; left:241px; z-index:999999999; top:241px;" /></a>
+ 
+     
+ 
+      
+     <!--相冊 START-->
+     <!-- #BeginLibraryItem "/library/goods_gallery.lbi" --><!-- #EndLibraryItem -->
+     <!--相冊 END-->
+         <div class="blank5"></div>
+         <!-- TemplateBeginEditable name="商品相冊下廣告（寬230px）" -->
+<!-- TemplateEndEditable -->
+     </div>
+     <!--商品圖片和相冊 end-->
+     <div class="textInfo">
+     <form action="javascript:addToCart({$goods.goods_id})" method="post" name="ECS_FORMBUY" id="ECS_FORMBUY" >
+    <div class="clearfix" style="font-size:17px; font-family:'微軟雅黑';  padding-bottom:8px; padding-left:10px; color:#000">
+      {$goods.goods_style_name}
+       </div>
+      
+       <!-- {if $promotion} -->
+      <li class="padd">
+      <!-- {foreach from=$promotion item=item key=key} 優惠活動-->
+      {$lang.activity}
+      <!-- {if $item.type eq "snatch"} -->
+      <a href="snatch.php" title="{$lang.snatch}" style="font-weight:100;   text-decoration:none;">[{$lang.snatch}]</a>
+      <!-- {elseif $item.type eq "group_buy"} -->
+      <a href="group_buy.php" title="{$lang.group_buy}" style="font-weight:100;  text-decoration:none;">[{$lang.group_buy}]</a>
+      <!-- {elseif $item.type eq "auction"} -->
+      <a href="auction.php" title="{$lang.auction}" style="font-weight:100;   text-decoration:none;">[{$lang.auction}]</a>
+      <!-- {elseif $item.type eq "favourable"} -->
+      <a href="activity.php" title="{$lang.favourable}" style="font-weight:100;  text-decoration:none;">[{$lang.favourable}]</a>
+      <!-- {/if} -->
+      <a href="{$item.url}" title="{$lang.$item.type} {$item.act_name}{$item.time}" style="font-weight:100;  ">{$item.act_name}</a><br />
+      <!-- {/foreach} -->
+      </li>
+      <!-- {/if} --> 
+       
+   
+       
+       
+        <li class="clearfix">
+       
+       
+       
+     
+        <!-- {if $cfg.show_marketprice} 市場價格-->
+       <dd>
+   
+     
+   
+        
+       <strong>市場價：</strong>{$goods.market_price} 
+    </dd>
+           
+     <!-- {/if} -->
+      <dd>
+          <!-- {if $cfg.show_goodssn} 顯示商品貨號-->
+           <strong>{$lang.goods_sn}</strong>{$goods.goods_sn}
+       </dd>
+         <!-- {/if} -->
+       
+       </li>   
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <!-- {if $cfg.show_goodsweight} 商品重量-->
+       <li class="clearfix">
+       <dd>
+       
+       <strong>{$lang.goods_weight}</strong>{$goods.goods_weight}
+       
+       </dd>
+      </li>
+      <!-- {/if} -->  
+      
+      
+ 
+       
+      
+       
+    
+       
+         
+       
+  
+     
+       
+    
+      
+      
+           <li class="clearfix"><dd><div class=" ">
+<!--{if $goods.is_promote and $goods.gmt_end_time } 促銷-->
+{insert_scripts files='lefttime.js'}
+<strong>{$lang.promote_price}</strong><font class="shop">{$goods.promote_price}</font> <!--{else}-->
+<strong>偉民帥哥價：</strong><font class="shop" id="ECS_SHOPPRICE">{$goods.shop_price_formated}</font>  
+<!--{/if}-->
+      
+         <strong style=" padding-left:10px; color:#cc0000">節省{$goods.sheng_price}元</strong>
+      </div>
+      
+        
+      
+      
+       </dd>
+      </li>
+    
+        
+       <!--{if $goods.is_promote and $goods.gmt_end_time } 促銷
+       <dd>
+      <li  ><strong>{$lang.residual_time}</strong>
+      <font class="f4" id="leftTime">{$lang.please_waiting}</font> </li>
+    </dd>
+       {/if}-->
+      
+      
+      
+        <!-- {if $goods.goods_number neq "" and $cfg.show_goodsnumber} 商品庫存--> <li>
+    
+        <!-- {if $goods.goods_number eq 0} -->
+        <dd>
+          <strong>{$lang.goods_number}</strong>
+          <font color='red'>{$lang.stock_up}</font>
+        </dd>
+        <!-- {else} -->
+          <dd>
+          <strong>{$lang.goods_number}</strong>
+          {$goods.goods_number} {$goods.measure_unit}
+        
+        <!-- {/if} --> 
+               
+          <select name="11">
+          <option>上海發貨</option>
+          <option>北京發貨</option>
+          <option>廣東發貨</option>
+        </select>   
+    </dd>
+      </li>
+      
+      <!-- {/if} -->
+      
+    
+    
+     <li class="clearfix">
+      <dd  >
+       <strong>{$lang.goods_rank}</strong>
+      <img src="images/stars{$goods.comment_rank}.gif" alt="comment rank {$goods.comment_rank}" />  <a href="#">（已有<font id="print">123</font>條評論）</a>
+       </dd>
+    
+    
+    
+    
+    
+    
+     </li>
+    
+    
+    
+    
+      
+   
+       <!-- {foreach from=$rank_prices item=rank_price key=key} 會員等級對應的價格-->
+         <li class="clearfix">
+       <dd><strong>{$rank_price.rank_name}：</strong><font class="shop" id="ECS_RANKPRICE_{$key}">{$rank_price.price}</font>
+       </dd>
+       </li>
+       <!--{/foreach}-->
+      
+ 
+
+      <!--{if $volume_price_list } -->
+      
+      <!--{/if}-->
+
+     
+      <li class="clearfix" style="display:none">
+       <dd>
+       <strong>{$lang.amount}：</strong><font id="ECS_GOODS_AMOUNT" class="shop"></font>
+       </dd>
+       </li>
+       
+      <!-- {if $goods.bonus_money} 紅包-->
+      <li class="padd loop" style="margin-bottom:5px; border-bottom:1px dashed #ccc;">
+      <strong>{$lang.goods_bonus}</strong><font class="shop">{$goods.bonus_money}</font><br />
+      </li>
+      <!-- {/if} -->
+        
+      
+             
+       
+       
+       
+       
+              
+       
+       
+       <div class="blank"></div>
+       
+       
+      
+       <div class="bnt_box">
+       
+       
+      <!-- {if $goods.is_shipping} 為免運費商品則顯示-->
+      <li style="height:30px;padding-top:4px;">
+      {$lang.goods_free_shipping}<br />
+      </li>
+      <!-- {/if} -->
+      <!-- {* 開始循環所有可選屬性 *} -->
+          <!-- {foreach from=$specification item=spec key=spec_key} -->
+      <li >
+      <dd>
+      <strong style="float:left">{$spec.name}：</strong>
+      
+      <div style="float:left">
+      
+      
+         <!-- {* 判斷屬性是復選還是單選 *} -->
+                    <!-- {if $spec.attr_type eq 1} -->
+                      <!-- {if $cfg.goodsattr_style eq 1} -->
+<div class="catt">
+<!-- {foreach from=$spec.values item=value key=key} -->
+  <a style="color:#666; text-decoration:none" {if $key eq 0}class="cattsel"{/if} onclick="changeAtt(this)" href="javascript:;" name="{$value.id}" title="[{if $value.price gt 0}{$lang.plus}{elseif $value.price lt 0}{$lang.minus}{/if} {$value.format_price|abs}]">{$value.label}<input style="display:none" id="spec_value_{$value.id}" type="radio" name="spec_{$spec_key}" value="{$value.id}" {if $key eq 0}checked{/if} /></a>
+<!-- {/foreach} -->
+</div>
+                        <input type="hidden" name="spec_list" value="{$key}" />
+                        <!-- {else} -->
+                        <select name="spec_{$spec_key}" onchange="changePrice()">
+                          <!-- {foreach from=$spec.values item=value key=key} -->
+                          <option label="{$value.label}" value="{$value.id}">{$value.label} {if $value.price gt 0}{$lang.plus}{elseif $value.price lt 0}{$lang.minus}{/if}{if $value.price neq 0}{$value.format_price}{/if}</option>
+                          <!-- {/foreach} -->
+                        </select>
+                        <input type="hidden" name="spec_list" value="{$key}" />
+                      <!-- {/if} -->
+                    <!-- {else} -->
+                      <!-- {foreach from=$spec.values item=value key=key} -->
+                      <label for="spec_value_{$value.id}">
+                      <input type="checkbox" name="spec_{$spec_key}" value="{$value.id}" id="spec_value_{$value.id}" onclick="changePrice()" />
+                      {$value.label} [{if $value.price gt 0}{$lang.plus}{elseif $value.price lt 0}{$lang.minus}{/if} {$value.format_price|abs}] </label>
+                      <!-- {/foreach} -->
+                      <input type="hidden" name="spec_list" value="{$key}" />
+                    <!-- {/if} -->
+
+</div>
+</dd>
+      </li>
+      <!-- {/foreach} -->
+      <!-- {* 結束循環可選屬性 *} -->
+      
+      <li  >
+       <dd>
+       <strong>{$lang.number}：</strong>
+       
+       <a href="javascript:subnum('numberid')" title="減少"><img alt="減少圖標" src="images/jian.gif" style="vertical-align:middle" /></a>
+        <input name="number" type="text" id="numberid" value="1" size="4" onkeyup="this.value=this.value.replace(/\D/g,'');if(this.value==0) this.value=1;" onblur="changePrice()"style=" width:35px; height:16px; border:1px solid #b4b4b4; text-align:center; color:#000;vertical-align:middle" />  
+         <a href="javascript:addnum('numberid')" title="增加"><img alt="增加圖標" src="images/jia.gif" style="vertical-align:middle" /></a>
+         件
+         
+         
+        
+       </dd>
+       </li>
+       
+      
+      
+        <li style="padding:5px 0 10px 0">
+          <dd>
+      
+      已售出：<b class="price_all">{insert name='goods_sells' goods_id=$id}</b> 件 
+      
+      
+      </dd>
+       <dd>
+      
+      
+          <div class="blank"></div>   
+     
+      <a style=" margin:0 12px 0 0;" href="javascript:addToCart({$goods.goods_id})"><img src="images/bnt_cat.gif" /></a>
+      <a style=" margin:0 8px;"  href="javascript:collect({$goods.goods_id})"> <img src="images/bnt_cat2.gif" /></a>
+      
+      
+         
+       
+       </dd>
+       </li>
+      
+ 
+    
+    
+    
+        <li>
+       
+       </li>
+      
+      
+      
+      
+       </div>
+ 
+        
+      </form>
+     </div>
+     
+     
+     
+   </div>
+   <div class="blank"></div>
+   <!-- #BeginLibraryItem "/library/goods_fittings.lbi" --><!-- #EndLibraryItem --> 
+ 
+   <!--商品詳情end-->
+   <!--商品描述，商品屬性 START-->
+   
+ 
+      <div class="tit3  clearfix"  >
+        <div id="com_b" >
+        <h2 style="margin:0">商品描述</h2>
+        <h2 class="h2bg">如何購買</h2>
+        <h2 class="h2bg"  >配送方式</h2>
+   
+  <h2 class="h2bg"  >購買記錄</h2>
+
+     
+           </div>
+      </div>
+      
+      
+ 
+      
+      
+      <div id="com_v" class="boxCenterList box_1" style="padding: 0px; border-top:none"></div>
+      <div id="com_h">
+       <blockquote>
+      <div class="blank"></div>
+      <div class="shuxin">
+       <!-- {if $cfg.show_goodssn} 顯示商品貨號-->
+       <div>貨號：{$goods.goods_sn}</div>
+       <!-- {/if} -->
+       
+       
+       
+       
+       <div>品名：{$goods.goods_style_name}</div>
+       
+       
+       
+       
+       
+       <div>瀏覽量：{$goods.click_count}</div>
+       
+       
+       
+       
+       
+       
+            
+         <!-- {foreach from=$properties item=property_group key=key} -->
+        <!-- {foreach from=$property_group item=property} -->
+        <div>{$property.name|escape:html}：{$property.value}</div>
+        <!-- {/foreach}-->
+        <!-- {/foreach}-->
+         
+        </div>  
+    
+    <div class="blank" ></div>
+    
+    <div style="height:1px; line-height:1px; background:#b4b4b4"></div>
+    
+    
+    <div style=" padding:20px;">
+    
+        <div class="blank"></div>
+        <div class="blank"></div>
+       
+       
+       
+       
+        {$goods.goods_desc}
+        
+        
+          <div class="blank"></div>
+        <div class="blank"></div>
+       
+        
+        <div class="tishi" style=" line-height:25px;">
+       <img src="images/goods_3.gif" />
+         <div class="blank"></div>
+        
+       <p style="color:#c00"> 溫馨提示：進口化妝品通常在不同的國家設有工廠，樸芳頁面標注的產地僅代表原產國，你的貨品產地可能與原產地不同，若由此給您帶來不便請多多諒解，謝謝！ </p>
+
+ <p style="color:#c00">聲明:因廠家會在沒有任何提前通知的情況下更改產品包裝、產地或者一些附件，本司不能確保客戶收到的貨物與商城圖片、產地、附件說明完全一致。只能確保為原廠正貨！並且保證與當時市場上同樣主流新品一致。若本商城沒有及時更新，請大家諒解！
+</p>
+        
+         </div> 
+     
+     
+        </div>
+       </blockquote>
+
+     <blockquote>
+    <div style=" padding:20px;">
+    
+   
+       <!-- #BeginLibraryItem "/library/goods_gm.lbi" --><!-- #EndLibraryItem -->
+     
+     </div>
+     </blockquote>
+
+ 
+     <blockquote>
+    <div style=" padding:20px;">
+   
+     <!-- #BeginLibraryItem "/library/goods_ps.lbi" --><!-- #EndLibraryItem -->
+  </div>
+     </blockquote>
+
+
+  <blockquote>
+    <div style=" padding:20px;">
+  <!-- #BeginLibraryItem "/library/bought_note_guide.lbi" -->
+
+{insert_scripts files='transport.js,utils.js'}
+<div id="ECS_BOUGHT">{* ECSHOP 提醒您：動態載入bought_notes.lbi，顯示當前商品的購買記錄 *}{insert name='bought_notes' id=$id}</div>
+ <!-- #EndLibraryItem -->  
+  </div>
+     </blockquote>
+
+      </div>
+ 
+    <script type="text/javascript">
+    <!--
+    reg("com");
+    //-->
+    </script>
+  <div class="blank"></div>
+  
+ 
+  
+  
+  
+  
+  
+    <div class="blank"></div>
+  
+  
+  
+  
+  <!--商品描述，商品屬性 END-->
+  
+  
+     
+     
+ <div class="blank"></div>
+     
+     
+      <div id="pro_zixun" class="pro_t">
+     
+              
+        
+       
+      </div>
+  
+  
+  
+  
+  <!-- TemplateBeginEditable name="底部區域" -->
+  <!-- #BeginLibraryItem "/library/goods_related.lbi" --><!-- #EndLibraryItem -->
+  <!-- #BeginLibraryItem "/library/bought_goods.lbi" --><!-- #EndLibraryItem -->
+  <!-- TemplateEndEditable -->
+  
+  
+   
+  
+ 
+</div>
+ 
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+<script type="text/javascript">
+var goods_id = {$goods_id};
+var goodsattr_style = {$cfg.goodsattr_style|default:1};
+var gmt_end_time = {$promote_end_time|default:0};
+{foreach from=$lang.goods_js item=item key=key}
+var {$key} = "{$item}";
+{/foreach}
+var goodsId = {$goods_id};
+var now_time = {$now_time};
+
+<!-- {literal} -->
+onload = function(){
+  changePrice();
+ 
+  try { onload_leftTime(); }
+  catch (e) {}
+}
+
+/**
+ * 點選可選屬性或改變數量時修改商品價格的函數
+ */
+function changePrice()
+{
+  var attr = getSelectedAttributes(document.forms['ECS_FORMBUY']);
+  var qty = document.forms['ECS_FORMBUY'].elements['number'].value;
+
+  Ajax.call('goods.php', 'act=price&id=' + goodsId + '&attr=' + attr + '&number=' + qty, changePriceResponse, 'GET', 'JSON');
+}
+
+/**
+ * 接收返回的信息
+ */
+function changePriceResponse(res)
+{
+  if (res.err_msg.length > 0)
+  {
+    alert(res.err_msg);
+  }
+  else
+  {
+    document.forms['ECS_FORMBUY'].elements['number'].value = res.qty;
+
+    if (document.getElementById('ECS_GOODS_AMOUNT'))
+      document.getElementById('ECS_GOODS_AMOUNT').innerHTML = res.result;
+  }
+}
+<!-- {/literal} -->
+
+function showcommentform(e){
+  /*
+  isLogined = false;
+  if (isLogined) {
+    if (confirm('此操作需要登錄，您現在要登錄嗎？')) {
+      location.href = WWW_ROOW+'user.php@act=login';
+      return;
+    }
+    return;
+  }
+  else {
+    if (false){
+      alert('只有購買過此商品的顧客且沒有評論才可以打分和評論');
+      return;
+    }
+  }
+  */
+  e=e||window.event;
+  x=mousePos(e).x;
+  y=mousePos(e).y;
+
+  if($("commentform")){
+    var isie= navigator.appVersion.indexOf("MSIE")!=-1?true:false;
+    var newdiv=document.createElement("div");
+    newdiv.id="yinyingcom";
+    newdiv.style.position="absolute";
+    newdiv.style.width="100%";
+    newdiv.style.height=document.body.clientHeight+"px";
+    newdiv.style.background="black";
+    if(!isie) newdiv.style.opacity=0.5;
+    else newdiv.style.filter="alpha(opacity=50)";
+    newdiv.style.left=0+"px";
+    newdiv.style.top=0+"px";
+    newdiv.style.zIndex=999;
+    document.body.appendChild(newdiv);
+    $("commentform").style.display = "block";
+    $("commentform").style.top=y-120+"px";
+    $("commentform").style.left=x-$("commentform").offsetWidth+30+"px";
+  }
+}
+function hiddencommentform(){
+  if($("commentform")){
+    if($("yinyingcom")) document.body.removeChild($("yinyingcom"));
+    $("commentform").style.display = "none";
+  }
+}
+/*獲取鼠標坐標*/
+function mousePos(e){
+        var x,y;
+        e = e || window.event;
+        return {
+        x:e.pageX||(e.clientX?e.clientX+(document.documentElement.scrollLeft?document.documentElement.scrollLeft:document.body.scrollLeft):0),
+        y:e.pageY||(e.clientY?e.clientY+(document.documentElement.scrollTop?document.documentElement.scrollTop:document.body.scrollTop):0)
+        };
+}
+/*打分函數*/
+function showrank(obj,num,rankid,commentrank){
+  obj.parentNode.className = "cmtRank fen"+num;
+  $(rankid).innerHTML = num+".0分";
+  if(commentrank) $(commentrank).value = num;
+}
+function hiddenrank(obj,rankid,commentrank){
+  if($(commentrank).value) showrank(obj,$(commentrank).value,'Rank','commentrank');
+  else showrank(obj,1,'Rank','commentrank');
+}
+/**
+ * 點選可選屬性或改變數量時修改商品價格的函數
+ */
+function changePrice()
+{
+  var attr = getSelectedAttributes(document.forms['ECS_FORMBUY']);
+  var qty = document.forms['ECS_FORMBUY'].elements['number'].value;
+
+  Ajax.call('goods.php', 'act=price&id=' + goodsId + '&attr=' + attr + '&number=' + qty, changePriceResponse, 'GET', 'JSON');
+}
+
+/**
+ * 接收返回的信息
+ */
+function changePriceResponse(res)
+{
+  if (res.err_msg.length > 0)
+  {
+    alert(res.err_msg);
+  }
+  else
+  {
+    document.forms['ECS_FORMBUY'].elements['number'].value = res.qty;
+
+    if (document.getElementById('ECS_GOODS_AMOUNT'))
+      document.getElementById('ECS_GOODS_AMOUNT').innerHTML = res.result;
+  }
+}
+<!-- {/literal} -->
+</script>
+</html>

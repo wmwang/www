@@ -1,0 +1,54 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
+
+<div  style="background:#fff; height:28px; line-height:28px; text-align:right; border-bottom:3px solid #fff" >
+ 
+ <div class="btn btn-large btn-block btn-primaryForIndexTree">商品分類中心
+          </div>
+ 
+ 
+ <a class="more" href="catalog.php"><img   src="../images/more.gif"></a>
+</div>
+
+ 
+
+
+
+
+
+
+<div  id="category_tree_index" class="box  clearfix">
+<ul>
+ <!--{foreach from=$categories item=cat name=no}-->
+   <!-- {if $smarty.foreach.no.iteration<5}-->
+ 
+ 
+     <dl  onmouseover="this.className='  dl_on'" onmouseout="this.className=''">
+     <dt>
+    
+     <a href="{$cat.url}">{$cat.name|escape:html}</a>
+     </dt>
+     <dd class="clearfix">
+    
+     <!--{foreach from=$cat.cat_id item=child name=no2}--><a href="{$child.url}">{$child.name|escape:html}</a>
+     
+ 
+ 
+      <!-- {if !$smarty.foreach.no2.last} -->
+           |
+        <!-- {/if} -->
+      
+     
+ 
+     <!--{/foreach}-->
+     </dd>
+   
+     </dl>
+       
+     <!--{/if}-->    
+    <!--{/foreach}--> 
+</ul>    
+</div>
+
+

@@ -1,0 +1,73 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $group_buy_goods} -->
+<div class="box_1" style=" height:223px;">
+<h3 style="padding:0;"> <img src="../images/tit_group.gif" style="float:left"></h3>
+ 
+<div class="index_group">
+      <!--{foreach from=$group_buy_goods item=goods name="groupgoods"}-->
+      
+      <div class="jieshu">
+  距離結束：<input type="text" value="" id="_lefttime"  > 小時 <input type="text" value="" id="_lefttime1"  > 分 <input type="text" value="" id="_lefttime2"  > 秒
+      </div>
+      
+      
+      
+      
+      
+  {if $smarty.foreach.groupgoods.index <= 0}
+
+  <div class="goodsimg">
+  <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.goods_name|escape:html}" /></a>
+  </div>
+      <div class="des" style=" height:16px; line-height:16px; overflow:hidden"><a href="{$goods.url}">{$goods.act_desc}</a></div>
+      
+      <div style=" clear:both"></div>
+    
+    
+    
+    
+    <div class="clearfix">
+    
+    <div class="price_bg">
+    <div class="t">市場價：<del>{$goods.market_price}</del></div>
+    <div class="b">團購價：<b>{$goods.last_price}</b></div>
+    </div>
+ 
+ 
+ <div class="price_r">
+  <a href="{$goods.url}">
+<img class="bottom" src="images/qianggou.gif">
+ </a>
+     </div>
+     
+     
+       </div>
+     
+     
+     
+</div>
+  {/if}
+  <!--{/foreach}-->
+  <SCRIPT LANGUAGE="Javascript">
+function _fresh()
+{
+    var endtime=new Date("October 15, 2021 00:00:00");
+    var nowtime = new Date();
+    var leftsecond=parseInt((endtime.getTime()-nowtime.getTime())/1000);
+    if(leftsecond<0){leftsecond=0;}
+    __d=parseInt(leftsecond/3600/24);
+    __h=parseInt((leftsecond/3600)%24);
+    __m=parseInt((leftsecond/60)%24);
+    __s=parseInt(leftsecond%60);
+    __all =__h+"小時"+__m+"分"+__s+"秒";
+    __all = __all.replace(/([0-9]{1})/g,'$1')
+    document.getElementById("_lefttime").value=__h;
+	document.getElementById("_lefttime1").value=__m;
+	document.getElementById("_lefttime2").value=__s;
+}
+_fresh()
+setInterval(_fresh,1000);
+</SCRIPT>
+ </div>
+ 
+<!-- {/if} -->

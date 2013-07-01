@@ -1,0 +1,23 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ 
+ 
+ 
+ 
+ <div class="new_article">
+ <h3> <img   src="../images/tit_news.gif"></h3>
+ 
+ 
+ 
+ 
+ 
+ 
+        <ul>
+        <!--{foreach from=$new_articles item=article name=no}-->
+        <li>
+        <a  <!-- {if $smarty.foreach.no.iteration<2}--> class="a1" <!-- {/if} --> href="{$article.url}" title="{$article.title|escape:html}">{$article.short_title|truncate:13:"...":true}</a>
+        </li>
+        <!--{/foreach}-->
+        </ul>
+ </div>
+ 
+ <div class="blank"></div>

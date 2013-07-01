@@ -1,0 +1,203 @@
+/*文章頁面樣式*/
+#location a { color: #999; }
+#main { margin-bottom: 20px; text-align: left; }
+.newsbox h2 { font-size: 14px; font-weight: bold; border-bottom: 1px solid #e1e1e1; margin: 0 5px; padding: 10px 0 5px; }
+.newsbox ul { margin: 0 5px; }
+.newsbox li { background: url(images/new_xtb.gif) 2px 11px no-repeat; line-height: 25px; border-bottom: 1px dashed #e4e4e4; }
+.newsbox li a { margin-left: 10px; color: #999; }
+.newsbox li a:hover { color: #c00; }
+.news_more { text-align: right; line-height: 25px; padding-right: 15px; }
+.news_more a { color: #36f; }
+/*文章列表頁*/
+.newslist { width: 743px; float: left; border: 1px solid #ddd; }
+.newslist dl { margin: 30px; }
+.newslist dt { background: url(images/news_h1.gif) 0px 3px no-repeat; padding-left: 10px; }
+.newslist dt a { font-size: 14px; font-weight: bold; }
+.newslist dd { line-height: 25px; color: #999; }
+.news_data { text-indent: 24px; }
+/*分頁*/
+.goods_fenye { margin-right: 30px; }
+/*文章內容頁*/
+.newscontent { width: 725px; float: right; border: 1px solid #DDD; padding-bottom: 20px; overflow: hidden; }
+.newscontent h1 { text-align: center; font-size: 20px; font-weight: normal; color: #bf0772; padding: 30px 0 8px; font-family: "微軟雅黑"; }
+.newscontent h2 { margin: 10px 10px; text-align: left; font-size: 14px; font-weight: normal; color: #ff3875; padding: 10px 0 8px 10px; border: 1px dotted #9d9d9d; border-left: none; border-right: none; background: #f9f9f9; }
+.newscontent p { margin: 0 30px; line-height: 25px; color: #666; }
+.newscontent .news_date { text-align: center; color: #999; border-bottom: 1px solid #f2f2f2; border: none; margin-bottom: 15px; }
+/*側邊欄樣式*/
+.news_sidebar { width:210px; float: left; }
+.sidebarbox { border: 1px solid #DDD; margin-bottom: 20px; padding-bottom: 20px; }
+.sidebarbox h2 { height: 40px; line-height: 40px; padding: 0 0 0 20px; font-family: "微軟雅黑"; font-size: 14px; font-weight: bold; background: url(images/articlebg.gif) center bottom no-repeat; }
+.sidebarbox h2 span { padding: 0 0 0 15px; background: url(images/articleico.gif) 0 center no-repeat; }
+.sidebarbox ul { margin: 0 20px 0 25px; }
+.sidebarbox li { padding: 10px 0 10px 0px; border-bottom: 1px dashed #ccc; background: url(images/articleicotwo.jpg) 10px 15px no-repeat; }
+.sidebarbox li.curr { background: url(images/articleicothree.jpg) 10px 17px no-repeat; }
+.sidebarbox li a { margin: 0 0 0 25px; }
+.sidebarbox li ul { margin: 10px 0 0; line-height: 24px; padding: 5px 0 0 30px; border-top: 1px dashed #ccc; }
+.sidebarbox li ul li { padding: 0 0 0 10px; border: none; background: url(images/articleicofour.gif) 0 center no-repeat; }
+.sidebarbox li ul li a { margin: 0; }
+.sidebarbox li ul li.curr { background: url(images/articleicofive.gif) 0 center no-repeat; }
+.sidebarbox li ul li.curr a { color: #bf0772; }
+.sidebarbox p { margin: 0 0 0 25px; line-height: 24px; font-size: 14px; font-family: "微軟雅黑"; color: #666; }
+.sidebarbox p.hotline { margin: 15px 0 0 25px; color: #bf0772; }
+/*幫助中心側邊欄樣式*/
+.helpcenter ul { padding: 0; margin: 0 10px; }
+.helpcenter ul li { padding: 0 0 0 10px; background: url(images/articleicotwo.jpg) no-repeat 20px 10px; }
+.helpcenter ul li.curr { background: url(images/articleicothree.jpg) 20px 10px no-repeat; }
+.helpcenter ul li ul { margin: 5px 0 0; }
+.helpcenter p { text-align: left; padding: 0; margin: 0 0 0 10px; }
+.helpcenter p.hotline { margin: 15px 0 0 10px; }
+/*百科樣式*/
+.baikecontent { float: left; width: 705px; padding: 0 6px 0 0; border: none; background: #fafafa; background: url(images/baikecontent_right.jpg) right 0 repeat-y; }
+.baikecontent_main { border: 1px solid #ddd; border-bottom: none; }
+.baikecontent .news_date { margin: 0; padding: 0 0 15px; background: url(images/baike_h1bg.jpg) 0 bottom repeat-x; }
+.baikecontent .daodu { width: 673px; margin: 15px auto; padding: 0 0 16px; background: url(images/baike_daodubottom.jpg) left bottom no-repeat; }
+.baikecontent .daodu_right { padding: 0 7px 0 0; background: #fcf9f3 url(../images/baike_daoduright.jpg) right 0 repeat-y; }
+.baikecontent .daodu p { margin: 0 0 0; padding: 10px 20px; line-height: 24px; border: 1px solid #e6e0e0; border-bottom: none; border-right: none; font-size: 14px; }
+.baikecontent .daodu p span { color: #bf0772; font-weight: bold; }
+.baikecontent .contentbox { padding: 0 15px; line-height: 24px; color: #666; font-size: 14px; }
+.baikecontent .contentbox a { color: #bf0772; }
+.baikecontent .contentbox p { padding: 0; margin: 0; }
+.baikecontent .contentbox .preandnext { height: 40px; line-height: 40px; margin: 20px 0; padding: 0 20px; border: 1px solid #ddd; border-left: none; border-right: none; }
+.baikecontent .contentbox .preandnext .pre { float: left; }
+.baikecontent .contentbox .preandnext .next { float: right; }
+.baikecontent .realticle { zoom: 1; }
+.baikecontent .realticle h2 { height: 31px; line-height: 31px; margin: 0; padding: 0 0 0 20px; font-size: 14px; font-weight: bold; color: #666; background: url(images/realticlebg.jpg) repeat-x; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+.realticlebox { width: 234px; margin: 10px 0 0; float: left; text-align: center; }
+.baikecontent .realticlebox p { margin: 0; padding: 0; position: relative; }
+.baikecontent .realticlebox p img { width: 206px; height: 200px; }
+.baikecontent .realticlebox p a { width: 206px; position: absolute; height: 20px; line-height: 20px; left: 14px; top: 180px; display: block; opacity: 0.7; background: #000; color: #fff; text-align: center; filter: alpha(opacity=70);  }
+.baikecontent .realticlebox ul { padding-top: 10px; line-height: 24px; text-align: left; text-indent: 5px; }
+.baikecontent .realticlebox li { height: 25px; overflow: hidden; }
+.baikecontent .realticlebox li a { color: #666; font-size: 14px; }
+.baikecontent_bottom { float: left; width:711px; height: 11px; background: url(images/baikecontent_bottom.jpg) no-repeat; }
+.baike_banner_bottom { margin-top: 10px; }
+.baike_banner_bottom img { width: 704px; height: 85px; border: 1px solid #ddd; }
+
+.baikeside { float: right; width: 235px; }
+.baikeside .sidebarbox { width: auto; padding: 0; margin-bottom: 15px; border: none; zoom: 1; }
+.baikeside .ad { margin-bottom: 15px; border: none; }
+.baikebox { border: 1px solid #DDD; margin-bottom: 15px; padding-bottom: 10px; zoom: 1; }
+.baikebox .sidetitle { height: 35px; margin-bottom: 15px; background: url(images/bk_side_titlebg.jpg) repeat-x; border-bottom: 1px solid #ddd; }
+.baikebox .sidetitle ul { padding: 10px 0 0 10px; font-family: "微軟雅黑"; font-size: 14px; }
+.baikebox .sidetitle li { float: left; line-height: 24px; padding: 0 15px; }
+.baikebox .sidetitle li a { font-size: 14px; }
+.baikebox .sidetitle li a:hover { text-decoration: none; }
+.baikebox .sidetitle li.curr { position: relative; top: 1px; background: #fff; border: 1px solid #ddd; border-bottom: none; }
+.baikebox .sidecontent dl { padding: 0 5px 0 0; }
+.baikebox .sidecontent dt { float: right; width: 135px; }
+.baikebox .sidecontent dt a { color: #bf0772; font-weight: bold; }
+.baikebox .sidecontent dd.img { float: left; }
+.baikebox .sidecontent dd.img img { width: 88px; height: 102px; }
+.baikebox .sidecontent dd.dis { float: right; width: 135px; color: #666; text-indent: 24px; line-height: 20px; }
+.baikebox .sidecontent dd.dis a { color: #bf0772; }
+.baikebox .sidecontent ul { clear: both; line-height: 30px; margin: 15px 10px 10px; padding-top: 10px; }
+.baikebox .sidecontent li { height: 31px; overflow: hidden; border-bottom: 1px dashed #e4e4e4; background: url(images/baikelibg.jpg) 0px 8px no-repeat; }
+.baikebox .sidecontent li a { color: #666; }
+.baikebox .sidecontent li span { margin: 0 20px 0 5px; color: #fff; }
+.baikebox .sidecontent li.curr { background: url(images/baikelibg_curr.jpg) 0 8px no-repeat; }
+.baikebox .sidecontent li.curr a { color: #bf0772; }
+.baikebox .sidecontent p { padding-right: 15px; text-align: right; }
+.baikebox .sidecontent p a { color: #666; }
+#bk_xs { border: 1px solid #ddd; }
+#bk_xs h2 { padding: 0 0 0 10px; font-weight: normal; background: url(images/bk_side_titlebg.jpg) repeat-x; }
+#bk_xs h2 span { float: left; height: 24px; line-height: 24px; padding: 0 10px; position: relative; top: 9px; background: #fff; border: 1px solid #ddd; border-bottom: none; }
+#bk_xs dl{ padding-left: 0; }
+#bk_xs dd.dlimg { width: 120px; text-align: center; }
+#bk_xs dd.dlimg img { width: 88px; height: 102px; border: 1px solid #fff; }
+#bk_xs dd.dlprice { width: 105px; }
+#bk_xs dt { width: 100px; padding: 10px 10px 0 0; line-height: 18px; }
+/*關於我們*/
+#banner { width: 950px; margin-bottom: 10px; }
+/*側邊欄*/
+.aboutside { width: 212px; text-align: center; }
+.aboutside h2 { width: 212px; height: 42px; line-height: 36px; background: url(images/aboutsidebg.jpg) no-repeat; font-family: "微軟雅黑"; font-size: 18px; color: #bf0772; font-weight: bold; }
+.aboutside h2 span { display: none; }
+.aboutside ul { padding: 10px 0 15px; line-height: 36px; border: 1px solid #e7e7e7; border-top: none; }
+.aboutside ul li { background: url(images/aboutsidelibg.jpg) right bottom no-repeat; }
+.aboutside ul li a { font-size: 14px; color: #666; }
+.aboutside ul li a:hover { color: #bf0772; }
+.aboutside ul li.curr { background: url(images/aboutsidelibg_curr.jpg) right bottom no-repeat; }
+.aboutside ul li.curr a { color: #bf0772; }
+/*主體內容*/
+.aboutcontent { width: 726px; padding: 0 5px 0 0; background: url(images/aboutrightbg.jpg) right 0 repeat-y; border: none; }
+.aboutcontent h1 { height: 36px; line-height: 36px; text-indent: 40px; padding: 0; margin: 0; color: #666; font-size: 17px; font-family: "微軟雅黑"; text-align: left; background: url(images/about_titlebg.jpg) left bottom no-repeat; }
+.about_pufung h1 { height: 54px; padding-top: 20px; color: #bf0772; font-size: 24px; font-family: "微軟雅黑"; background: url(images/aboutcontentbg.jpg) center bottom no-repeat; }
+.about_pufung h1 span { display: none; }
+.aboutcontent_main { border: 1px solid #ddd; padding: 10px 0 30px; border-right: none; }
+.aboutcontent_bottom { float: right; width: 731px; height: 6px; margin: 0; padding: 0; font-size: 0; line-height: 6px; background: url(images/aboutbottombg.jpg) no-repeat; }
+.about_pufung .contentbox h2 { color: #333; font-size: 18px; font-family: "微軟雅黑"; border-top: none; background: none; }
+.contentbox { overflow: hidden; padding: 0 5px; }
+.contentbox .rightimg { float: right; padding: 7px 10px 0 0; }
+.about_pufung .contentbox p { padding-top: 7px; text-indent: 24px; }
+/*公告樣式*/
+.gonggao { float: none; width: 944px; padding: 0 6px 0 0; border: none; background: #fafafa; background: url(images/baikecontent_right.jpg) right 0 repeat-y; }
+.gonggao .contentbox { padding: 20px; }
+.gonggaobottom { height: 11px; background: url(images/gonggao_bottom.gif) repeat-x; }
+.gonggaobottom .left { float: left; width: 11px; height: 11px; background: url(images/baikecontent_bottom.jpg) 0 0 no-repeat; }
+.gonggaobottom .right { float: right; width: 11px; height: 11px; background: url(images/baikecontent_bottom.jpg) right 0 no-repeat; }
+
+/*幫助中心*/
+.help_all #main { width: auto; background: url(images/helpbg.jpg) repeat-x; }
+.help_ad { width: 950px; margin: 0 auto; }
+.help_ad img {  }
+.help_main { width: 950px; margin: 0 auto; padding: 12px 0 0; }
+.help_main .title { height: 43px; position: relative; top: 1px; }
+.help_main .title .l { float: left; width: 5px; height: 43px; background: url(images/help_l.jpg) no-repeat; }
+.help_main .title .r { float: left; width: 5px; height: 43px; background: url(images/help_r.jpg) no-repeat; }
+.help_main .title ul { float: left; }
+.help_main .title li { float: left; height: 43px; line-height: 43px; border-left: 1px solid #ccc; background: url(images/help_libg.jpg) repeat-x; }
+.help_main .title li#first { border: none; }
+.help_main .title li a { display: block; padding: 0 25px; font-size: 13px; color: #666; }
+.help_main .title li.curr { height: 42px; border-top: 1px solid #ccc; background: #fff; }
+.help_main .title li.curr a { font-weight: bold; }
+.help_main .content { background: #fff; border: 1px solid #ccc; }
+.help_main .content .left { float: left; width: 204px; padding: 18px 0 15px 12px; }
+.help_main .content .left .leftbox1 {  }
+.help_main .content .left .leftbox1 .t { height: 6px; background: url(images/help_t.jpg) no-repeat; }
+.help_main .content .left .leftbox1 .b { height: 6px; background: url(images/help_b.jpg) no-repeat; }
+.help_main .content .left .leftbox1 ul { padding: 0 0 55px; border-left: 1px solid #ddd; border-right: 1px solid #ddd; background: #ececec; }
+.help_main .content .left .leftbox1 li {  }
+.help_main .content .left .leftbox1 li#first a { border-top: none; }
+.help_main .content .left .leftbox1 li.curr a { background: url(images/helpleftli_bg.jpg) 0 center no-repeat; }
+.help_main .content .left .leftbox1 li a { display: block; margin: 0 13px; padding: 0 0 0 45px; line-height: 36px; border-top: 1px solid #fff; border-bottom: 1px solid #cbcbcb; background: url(images/helpli_ico.gif) 30px center no-repeat; color: #666; }
+.help_main .content .left .leftbox1 li a:hover { background: url(images/helpleftli_bg.jpg) 0 center no-repeat; }
+.help_main .content .left .leftbox2 { margin: 10px 0 0; border: 1px solid #dfdfdf; }
+.help_main .content .left .leftbox2 h2 { height: 26px; margin: 1px; background: url(images/help_question.jpg) no-repeat; }
+.help_main .content .left .leftbox2 h2 span { display: none; }
+.help_main .content .left .leftbox2 ul { padding: 10px 0 0; }
+.help_main .content .left .leftbox2 li { line-height: 20px; margin: 0 10px; padding: 5px 0 5px 25px; border-bottom: 1px solid #f4f4f4; background: url(images/help_left_ico2.gif) 10px 10px no-repeat; }
+.help_main .content .left .leftbox2 li a {  }
+.help_main .content .left .leftbox2 p { padding: 10px 20px 30px 0; text-align: right; }
+.help_main .content .left .leftbox2 p a { color: #1a66b3; }
+.help_main .content .left .leftbox3 { margin: 10px 0 0; border: 1px solid #dfdfdf; }
+.help_main .content .left .leftbox3 h2 { margin: 1px; height: 26px; background: url(images/help_lianxi.jpg) no-repeat; }
+.help_main .content .left .leftbox3 h2 span { display: none; }
+.help_main .content .left .leftbox3 p { padding: 15px 0 10px; text-align: center; }
+.help_main .content .left .leftbox3 p a { margin: 0 5px; }
+.help_main .content .left .leftbox3 ul { margin: 0 0 0 20px; padding: 0 0 10px; }
+.help_main .content .left .leftbox3 li { line-height: 30px; padding: 0 0 0 30px; color: #7f7f7f; }
+.help_main .content .left .leftbox3 li.li1 { background: url(images/help_telphpne.jpg) 0 center no-repeat; }
+.help_main .content .left .leftbox3 li.li2 { background: url(images/help_email.jpg) 0 center no-repeat; }
+.help_main .content .left .leftbox3 li.li3 { background: url(images/help_tax.jpg) 0 center no-repeat; }
+
+.help_main .content .right { float: right; width: 709px; padding: 0 10px 0 0; }
+.help_main .content .right .searchbox { height: 65px; margin: 19px 0 0; border: 1px solid #ccc; border-left: none; border-right: none; background: #efeeee; }
+.help_main .content .right .searchbox p { padding: 18px 0 0 68px; line-height: 28px; font-size: 14px; color: #333; font-weight: bold; }
+.help_main .content .right .searchbox .text { width: 333px; height: 24px; text-indent: 10px; background: #fff; border: 1px solid #ccc; color: #cbc9c9; }
+.help_main .content .right .searchbox .sub { width: 100px; height: 28px; margin: 0 0 0 10px; border: none; cursor: pointer; background: url(images/help_searchbtn.jpg) no-repeat; }
+.help_main #location { width: auto; padding: 18px 0 0 0px; margin-bottom:15px; background: url(images/help_location.jpg) 0 bottom no-repeat; }
+.help_main .content .right .list { padding: 0 0 30px; }
+.help_main .content .right .list dl { padding: 15px 0 0; }
+.help_main .content .right .list dt { padding: 5px 0 5px 40px; margin: 0 0 5px; color: #666; font-size: 13px; font-weight: bold; background: #f5f5f5 url(../images/help_dt.jpg) 20px center no-repeat; }
+.help_main .content .right .list dt a { color: #666; }
+.help_main .content .right .list dt .up { float: right; width: 9px; height: 13px; padding: 2px 10px 0 0; background: url(images/help_up.jpg) 0 2px no-repeat; cursor: pointer; }
+.help_main .content .right .list dt .down { float: right; width: 9px; height: 13px; padding: 2px 10px 0 0; background: url(images/help_down.jpg) 0 2px no-repeat; cursor: pointer; }
+.help_main .content .right .list dd {  }
+.help_main .content .right .list dd.dis { margin: 0 10px 0 25px; padding: 0 0 12px 17px; line-height: 24px; border-bottom: 1px solid #ccd5de; background: url(images/helpdd_ico.jpg) 0 7px no-repeat; }
+.help_main .content .right .list .reply { margin: 20px 10px 0 25px; padding: 10px 0 10px 15px; border: 1px solid #dae6f1; background: #f6fbfd; }
+.help_main .content .right .list .reply .p1 { padding: 0 0 10px; }
+.help_main .content .right .list .reply .p2 {  }
+.help_main .content .right .list .reply .p2 a { margin: 0 8px; }
+.help_main .content .right .list .reply .p3 {  }
+.help_main .content .right .list .reply .p3 a { color: #24aa00; }
+.help_main .content .right .list .reply .p3 a:hover { text-decoration: underline; }

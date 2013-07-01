@@ -1,0 +1,28 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ 
+<div class="box_1"  >
+<div class="tit"><span>熱銷排行榜</span></div>
+
+
+  <div class="boxCenterList clearfix" id='history_list'>
+  
+   <!--{foreach from=$hot_goods item=goods}-->
+  <ul class="clearfix">
+   <li class="goodsimg"><a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}"  class="B_blue" /></a></li>
+   <li>       
+    <p class="name"><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_style_name}</a></p>
+           <font class="f1">
+           <!-- {if $goods.promote_price neq ""} -->
+          {$goods.promote_price}
+          <!-- {else}-->
+          {$goods.shop_price}
+          <!--{/if}-->
+    </li>      
+   </ul>       
+  <!--{/foreach}-->
+  
+  
+   </div>
+
+</div>
+<div class="blank"></div>

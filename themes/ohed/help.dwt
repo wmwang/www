@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="themes/ohed/help.css" />
+
+
+</head>
+<body>
+<div id="all" class="help_all">
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<div id="main">
+<div class="help_ad"> <img alt="help帮助中心" src="images/help_ad.jpg" /> </div>
+<div class="help_main">
+<div class="title">
+  <div class="l"></div>
+  <ul>
+<?php
+		  $GLOBALS['smarty']->assign('helps',get_shop_help_ex());
+		  ?>
+  <!-- {foreach from=$helps item=help_cat name=helps} -->
+  <!-- {foreach from=$help_cat.article item=item name=help_cat_article} -->
+  <!-- {if $smarty.foreach.help_cat_article.index eq 0} -->
+    <li {if $help_cat.id eq $article.cat_id}class="curr"{/if}><a href="help.php?id={$item.article_id}">{$help_cat.cat_name}</a></li>
+  <!-- {/if} -->	
+  <!-- {/foreach} -->	
+  <!-- {/foreach} -->	
+
+  </ul>
+  <div class="r"></div>
+</div>
+<div class="content">
+<div class="left">
+  <div class="leftbox1">
+    <div class="t"></div>
+    <ul>
+	<!-- {foreach from=$helps item=help_cat} -->
+	{if $help_cat.id eq $article.cat_id}
+	<!-- {foreach from=$help_cat.article item=item} -->
+      <li  {if $item.article_id eq $id}class="curr"{/if}><a href="help.php?id={$item.article_id}" title="{$item.title|escape:html}">{$item.title}</a></li>
+	   <!-- {/foreach} -->
+	 {/if} 
+    <!-- {/foreach} -->
+    </ul>
+    <div class="b"></div>
+  </div>
+
+  <div class="leftbox3">
+    <h2><span>联系客服</span></h2>
+    
+    <div style="text-align:center; padding-top:15px;">  <a href="http://wpa.qq.com/msgrd?V=1&amp;Uin=123456&amp;Site={$shop_name}&amp;Menu=yes" target="_blank"><img src="images/help_kefu.jpg" /></a> <a  target="_blank" style="padding-left:10px;" href="user.php?act=message_list"><img src="images/help_left_liuyan.jpg" /></a>  </div>
+   
+    <ul style="margin-top:5px">
+      <li class="li1">热线：{$service_phone}</li>
+      <li class="li2">邮箱：{$service_email}</li>
+      <li class="li3">传真：{$service_phone}</li>
+    </ul>
+  </div>
+</div>
+<div class="right">
+
+<div id="location"  > <!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem --></div>
+
+
+
+<div  style="font-size:12px; font-weight:bold; height:26px; line-height:26px; padding:0 10px; margin-bottom:20px; background:#f5f5f5 " >{$article.title|escape:html}</div>
+
+
+<div class="list" id="list">
+ {$article.content}
+</div>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</div>
+</body>
+</html>

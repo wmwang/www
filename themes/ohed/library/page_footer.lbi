@@ -1,0 +1,138 @@
+﻿<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ 
+
+<div class="blank"></div> 
+<!--{if $helps}-->
+<div class="block">
+<div class="helpTitBg clearfix">
+ 
+    
+   <div class="clearfix">
+<!-- {foreach from=$helps item=help_cat name=no} -->
+<dl>
+  <dt class="dt{$smarty.foreach.no.iteration}">{$help_cat.cat_name}</dt>
+  <!-- {foreach from=$help_cat.article item=item} -->
+  <dd><a  href="help.php?id={$item.article_id}" title="{$item.title|escape:html}">{$item.short_title}</a></dd>
+  <!-- {/foreach} -->
+</dl>
+<!-- {/foreach} -->
+
+ 
+</div>
+</div>
+
+</div>
+<div class="blank"></div>
+ 
+<!--{/if}-->
+<div class="block">
+ 
+ 
+ 
+<!--底部導航 end-->
+
+<!--
+<!--友情鏈接 start-->
+<!--{if $img_links  or $txt_links }-->
+ 
+  <div class="links clearfix">
+  友情鏈接：
+    <!--{foreach from=$txt_links item=link}-->
+    <a href="{$link.url}" target="_blank" title="{$link.name}">{$link.name}</a>
+    <!--{/foreach}-->
+
+  </div>
+
+<!--{/if}-->
+<!--友情鏈接 end-->
+-->
+</div>
+
+<div class="blank"></div>
+
+<!--底部導航 start-->
+ 
+   
+
+<div class="blank"></div>
+<!--版權 start-->
+<div id="footer">
+
+<div class="block">
+<img src="../images/logo2.gif" style="float:left">
+
+
+ <div class="text">
+ <div class="bNavList clearfix">
+   <!-- {if $navigator_list.bottom} -->
+   <!-- {foreach name=nav_bottom_list from=$navigator_list.bottom item=nav} -->
+        <a href="{$nav.url}" <!-- {if $nav.opennew eq 1} --> target="_blank" <!-- {/if} -->>{$nav.name}</a>
+        <!-- {if !$smarty.foreach.nav_bottom_list.last} -->
+           |
+        <!-- {/if} -->
+      <!-- {/foreach} -->
+  <!-- {/if} -->
+
+   
+ 
+</div>
+ {$copyright}<br />
+ {$shop_address} {$shop_postcode}
+ <!-- 客服電話{if $service_phone} -->
+      Tel: {$service_phone}
+ <!-- 結束客服電話{/if} -->
+ <!-- 郵件{if $service_email} -->
+      E-mail: {$service_email}<br />
+ <!-- 結束郵件{/if} -->
+ <!-- QQ 號碼 {foreach from=$qq item=im} -->
+      <!-- {if $im} -->
+      <a href="http://wpa.qq.com/msgrd?V=1&amp;Uin={$im}&amp;Site={$shop_name}&amp;Menu=yes" target="_blank"><img src="http://wpa.qq.com/pa?p=1:{$im}:4" height="16" border="0" alt="QQ" /> {$im}</a>
+      <!-- {/if} -->
+      <!-- {/foreach} 結束QQ號碼 -->
+      <!-- 淘寶旺旺 {foreach from=$ww item=im} -->
+      <!-- {if $im} -->
+      <a href="http://amos1.taobao.com/msg.ww?v=2&uid={$im|escape:u8_url}&s=2" target="_blank"><img src="http://amos1.taobao.com/online.ww?v=2&uid={$im|escape:u8_url}&s=2" width="16" height="16" border="0" alt="淘寶旺旺" />{$im}</a>
+      <!-- {/if} -->
+      <!--{/foreach} 結束淘寶旺旺 -->
+      <!-- Yahoo Messenger {foreach from=$ym item=im} -->
+      <!-- {if $im} -->
+      <a href="http://edit.yahoo.com/config/send_webmesg?.target={$im}n&.src=pg" target="_blank"><img src="../images/yahoo.gif" width="18" height="17" border="0" alt="Yahoo Messenger" /> {$im}</a>
+      <!-- {/if} -->
+      <!-- {/foreach} 結束Yahoo Messenger -->
+      <!-- MSN Messenger {foreach from=$msn item=im} -->
+      <!-- {if $im} -->
+      <img src="../images/msn.gif" width="18" height="17" border="0" alt="MSN" /> <a href="msnim:chat?contact={$im}">{$im}</a>
+      <!-- {/if} -->
+      <!-- {/foreach} 結束MSN Messenger -->
+      <!-- Skype {foreach from=$skype item=im} -->
+      <!-- {if $im} -->
+      <img src="http://mystatus.skype.com/smallclassic/{$im|escape:url}" alt="Skype" /><a href="skype:{$im|escape:url}?call">{$im}</a>
+      <!-- {/if} -->
+  <!-- {/foreach} --><br />
+  <!-- ICP 證書{if $icp_number} -->
+  {$lang.icp_number}:<a href="http://www.miibeian.gov.cn/" target="_blank">{$icp_number}</a><br />
+  <!-- 結束ICP 證書{/if} -->
+  {insert name='query_info'}<br />
+   {$licensed}<br />
+    {if $stats_code}
+    <div align="left">{$stats_code}</div>
+    {/if}
+       <div align="center" style="padding-bottom:5px; width:1px; height:1px; overflow:hidden" >{foreach from=$lang.p_y item=pv}{$pv}{/foreach}</div>
+ </div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+</div>
+
+ </div>
+ <div class="blank"></div>
+ <div class="blank"></div>
+ <div class="blank"></div>

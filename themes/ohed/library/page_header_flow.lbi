@@ -1,0 +1,74 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ 
+<?php
+ include_once('themes/' . $GLOBALS['_CFG']['template'].'/init.php');
+?>
+
+ 
+<SCRIPT type=text/javascript src="themes/<?php echo $GLOBALS['_CFG']['template']; ?>/js/common1.js"></SCRIPT>
+ 
+
+
+
+
+
+
+
+
+
+ <!--[if IE 6]>
+    <script src="themes/<?php echo $GLOBALS['_CFG']['template']; ?>/js/DD_belatedPNG_0.0.8a-min.vb4e86b02.js"></script>
+    <script> DD_belatedPNG.fix('.pngfix'); </script>
+    <![endif]-->
+
+<div id="floatQQ" class="QQ_service" style="position:absolute; top:160px; right:5px; font-size:12px;  z-index:999999">
+ <img src="../images/float_kefu.gif" /></a> 
+</div>
+<script type="text/javascript">
+  window.setInterval("floatQQdone()",1);
+  lastScrollY=0;
+  function floatQQdone()
+  {
+	 var diffY;
+	if (document.documentElement && document.documentElement.scrollTop)
+		diffY = document.documentElement.scrollTop;
+	else if (document.body)
+		diffY = document.body.scrollTop
+	else
+		{/*Netscape stuff*/}	
+	//alert(diffY);
+	percent=.1*(diffY-lastScrollY); 
+	if(percent>0)percent=Math.ceil(percent); 
+	else percent=Math.floor(percent); 
+	document.getElementById("floatQQ").style.top=parseInt(document.getElementById("floatQQ").style.top)+percent+"px";
+	lastScrollY=lastScrollY+percent; 
+	//alert(lastScrollY);
+  }
+</script>
+<script type="text/javascript">
+var process_request = "{$lang.process_request}";
+</script>
+
+ 
+<div style="background: url(../images/header_flow.gif) repeat-x 0 bottom; padding-bottom:10px">
+<div class="block  " style=" height:84px;">
+ <div class="f_l" style=" padding-top:15px;"><a href="../index.php" name="top"><img src="../images/logo.gif" /></a> <img src="../images/logo_r.gif"></div>
+ <div class="f_r log">
+   <ul>
+   <li class="userInfo" >
+   {insert_scripts files='transport.js,utils.js'}
+   <font id="ECS_MEMBERZONE">{* ECSHOP 提醒您：根據用戶id來調用member_info.lbi顯示不同的界面  *}{insert name='member_info'} </font>
+   </li>
+ 
+ </ul>
+ </div>
+</div>
+
+</div>
+ 
+ 
+<!--search end-->
+<div class="blank"></div>
+ 
+
+

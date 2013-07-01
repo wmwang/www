@@ -1,0 +1,158 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $new_goods} -->
+<div class="pro_new">
+<img src="images/tit_new.gif" class="f_l" />
+<a class="more" href="../search.php?intro=hot"><img src="../images/more.gif"></a>
+ 
+
+<div class="pro_box"  >
+  <!--{foreach from=$new_goods item=goods name=no}-->
+  
+  
+  
+  <!-- {if $smarty.foreach.no.iteration<2}-->
+  
+      
+      <div class="goodsItem"  style="background:none; width:319px;" >
+   
+   
+ 
+  
+  <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" class="goodsimg" style="float:left" /></a>
+  
+  <div style="float:left; width:160px; padding-top:50px;   text-align:left">
+  
+ <font class="f1">
+           <!-- {if $goods.promote_price neq ""} -->
+          {$goods.promote_price}
+          <!-- {else}-->
+          {$goods.shop_price}
+          <!--{/if}-->
+           </font>
+    
+  <font class="market"> <del>{$goods.market_price}</del></font>  
+           
+     <p class="name f1" style="text-align:left; padding:0;"><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_style_name}</a> </p> 
+     
+     <div class="biref">
+   {$goods.brief}
+
+      </div>
+     
+          </div>
+            <img src="../images/ico_new.gif" class="wek">	
+     </div>
+      <!-- {else} -->	
+      
+     
+  
+  
+  
+  
+   <div class="goodsItem"    <!--{if $smarty.foreach.no.index mod 3 eq 0}-->style="background:none" <!--{else}-->  <!--{/if}-->>
+   
+   
+ 
+  
+  <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" class="goodsimg" /></a>
+  
+ <font class="f1">
+           <!-- {if $goods.promote_price neq ""} -->
+          {$goods.promote_price}
+          <!-- {else}-->
+          {$goods.shop_price}
+          <!--{/if}-->
+           </font>
+    
+  <font class="market"> <del>{$goods.market_price}</del></font>  
+           
+     <p class="name f1"><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_style_name}</a> </p> 
+     
+     
+     
+           <img src="../images/ico_new.gif" class="wek">	
+          </div>
+          
+          
+          <!-- {/if} -->
+          
+          
+          
+      
+  <!--{/foreach}-->
+ </div>   
+</div>  
+<!-- {/if} -->
+
+
+
+
+
+
+
+<!-- {if $promotion_goods} -->
+<div class="AreaL clearfix  f_r" id="sales">
+
+<div class="tit">
+<img src="../images/tit_sale.gif">
+</div>
+
+
+ 
+         <!--{foreach from=$promotion_goods item=goods name="promotion_foreach"}-->
+         {if $smarty.foreach.promotion_foreach.index ==1}
+		<div id="time{$goods.goods_id}" s="{$goods.s_time}" e="{$goods.e_time}" n="{$goods.t_now}" class="timeBox">正在載入...</div>
+        
+        
+        
+        
+        
+              <div class="goodsItem" style="background:none; width:237px;   padding:5px; padding-top:15px;" >
+        
+         
+         
+              <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" class="goodsimg" style="float:left; width:120px; margin:0; padding:0;  " /></a>
+		   
+        
+        <div style="float:left; width:110px; padding:0; padding-left:5px;   text-align:left">
+  
+ <font class="f1">
+          
+          {$goods.promote_price}
+    
+           </font>
+    
+  <font class="market"> <del>{$goods.market_price}</del></font>  
+           
+     <p class="name f1" style="text-align:left; padding:0;"><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_style_name}</a> </p> 
+     
+     <div class="biref">
+   {$goods.brief}
+
+      </div>
+      
+      <div class="blank"></div>
+       <a href="{$goods.url}"><img src="../images/qianggou.gif"></a>
+		   
+        
+      
+      
+      
+     
+          </div>
+        
+        
+          </div>
+            
+           
+            
+         {/if}
+         
+         
+         <!--{/foreach}-->
+         
+         
+           <a href="../search.php?intro=promotion" style=" position:absolute; left:0; bottom:0"><img src="../images/more_sale.gif"></a>
+		   
+    </div>     
+<!-- {/if} -->

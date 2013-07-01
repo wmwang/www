@@ -1,0 +1,8 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ 
+  <div class="boxCenterList art  " style="padding:0;">
+  <!--{foreach from=$articles item=article_item name=no}-->
+  <a   <!-- {if $smarty.foreach.no.iteration<2}--> style="border:none" <!-- {/if} -->		 href="{$article_item.url}" title="{$article_item.title|escape:html}">{$article_item.short_title}</a> 
+  <!--{/foreach}-->
+  </div>
+ 

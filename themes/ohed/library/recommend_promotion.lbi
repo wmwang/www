@@ -1,0 +1,33 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $promotion_goods} -->
+  <div class="pro_new pro_sale">
+<img src="images/tit_sale2.gif" class="f_l" />
+<a class="more" href="../search.php?intro=promotion"><img src="../images/more.gif"></a>
+ 
+
+<div class="pro_box"  >
+
+         <!--{foreach from=$promotion_goods item=goods name="promotion_foreach"}-->
+      <li class="goodsItem"    style="   <!--{if $smarty.foreach.promotion_foreach.index mod 3 eq 0}--> background:none  <!--{else}-->  <!--{/if}-->    "    >
+         
+           <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" class="goodsimg" /></a> <br/>
+           
+              <font class="f1">  
+          {$goods.promote_price}
+         </font>
+          
+          
+          <font class="market"> <del>{$goods.market_price}</del></font>  
+          
+          
+           <p class="f1"><a href="{$goods.url}">{$goods.short_style_name}</a> </p> 
+           
+           
+           
+           <img src="../images/ico_zhekou.gif" class="wek">
+           
+        </li>
+         <!--{/foreach}-->
+  </div>
+   </div>    
+<!-- {/if} -->

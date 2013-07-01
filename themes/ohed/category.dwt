@@ -1,0 +1,534 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<link href="themes/ohed/flat-ui.css" rel="stylesheet" type="text/css"/>
+<!-- {if $cat_style} -->
+<link href="{$cat_style}" rel="stylesheet" type="text/css" />
+<!-- {/if} -->
+{* 包含脚本文件 *}
+{insert_scripts files='common.js,global.js,compare.js'}
+<script src="themes/<?php echo $GLOBALS['_CFG']['template']; ?>/js/jquery_004.js" type="text/javascript"></script>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
+
+<div class="block clearfix">
+<script type="text/javascript" src="themes/ohed/js/left_goodslist.js"></script>
+<!-- #BeginLibraryItem "/library/cate_best.lbi" --><!-- #EndLibraryItem -->
+
+
+
+
+
+
+<div class="AreaR" style="float:left">
+ 
+ 
+ 
+
+	 <!--组合搜索 开始-->
+	  <!--{if $brands.1 || $price_grade.1 || $filter_attr_list}-->
+      
+      
+<div   style=" height:28px; line-height:28px; text-align:right; border-bottom:3px solid #fff">
+ 
+          <div class="btn btn-large btn-block btn-primaryForIndexTree">商品分類中心
+          </div>
+        </div>       
+<div class="clearfix" style="margin-top:-12px; line-height:22px">
+      
+       
+ <a class="more" href="catalog.php"><img   src="../images/more.gif"></a>
+</div>
+
+      
+    
+<div  id="category_tree_index" class="   box  clearfix">
+<ul>  
+      
+    <?php
+function get_cat_parent($id)
+{
+ $sql="SELECT parent_id FROM ".$GLOBALS['ecs']->table('category')." WHERE cat_id = '$id'";
+ $cat_id=$GLOBALS['db']->getOne($sql);
+ if($cat_id)
+ {
+ return get_cat_parent($cat_id);
+ }
+ else
+ {
+ return $id;
+ }
+}
+$cat_id   = $_REQUEST['id']?$_REQUEST['id']:$_REQUEST['category'];
+$p_id=get_cat_parent($cat_id);
+$this->assign('cat_id',$cat_id);
+$this->assign('p_id',$p_id);
+$this->assign('categories',get_categories_tree());
+?>
+
+
+    <!--{foreach from=$categories item=cat name=cat}-->
+    <dl {if $cat.id eq $p_id} {else}style="display:none;"{/if}  onmouseover="this.className='  dl_on'" onmouseout="this.className=''">
+    <dt><a style="cursor:pointer" href="{$cat.url}">{$cat.name|escape:html}</a></dt>
+     <dd class="clearfix xuanjiu_dd">
+				   <!--{foreach from=$cat.cat_id item=child}-->
+    <a   href="{$child.url}">{$child.name|escape:html}</a>
+     <!--{/foreach}-->
+    </dd>
+     </dl>
+        <!--{/foreach}--> 
+    
+      
+			<!--{if $brands.1}-->
+			
+     <dl  onmouseover="this.className='  dl_on'" onmouseout="this.className=''">
+     <dt><a href="#">{$lang.brand}</a></dt>
+     <dd class="clearfix xuanjiu_dd">
+				<!--{foreach from=$brands item=brand}-->
+					<!-- {if $brand.selected} -->
+					<span>{$brand.brand_name}</span>
+					<!-- {else} -->
+					<a href="{$brand.url}">{$brand.brand_name}</a> 
+					<!-- {/if} -->
+				<!--{/foreach}-->
+    </dd>
+     </dl>
+			<!--{/if}-->
+			<!--{if $price_grade.1}-->
+            
+  <dl  onmouseover="this.className='  dl_on'" onmouseout="this.className=''">
+     <dt><a href="#">{$lang.price}</a> </dt>
+     <dd class="clearfix xuanjiu_dd">  
+          
+			<!--{foreach from=$price_grade item=grade}-->
+				<!-- {if $grade.selected} -->
+				<span>{$grade.price_range}</span>
+				<!-- {else} -->
+				<a href="{$grade.url}">{$grade.price_range}</a> 
+				<!-- {/if} -->
+			<!--{/foreach}-->
+        </dd>
+     </dl>
+			<!--{/if}-->
+			<!--{foreach from=$filter_attr_list item=filter_attr}-->
+    
+             
+             
+           <dl  onmouseover="this.className='  dl_on'" onmouseout="this.className=''">
+     <dt><a href="#">{$filter_attr.filter_attr_name|escape:html}</a> </dt>
+     <dd class="clearfix xuanjiu_dd">  
+   
+			<!--{foreach from=$filter_attr.attr_list item=attr}-->
+				<!-- {if $attr.selected} -->
+				<span>{$attr.attr_value}</span>
+				<!-- {else} -->
+				<a href="{$attr.url}">{$attr.attr_value}</a> 
+				<!-- {/if} -->
+			<!--{/foreach}-->
+         </dd>
+     </dl>  
+      <!--{/foreach}-->
+ </ul> 
+ </div> 	 
+		<div class="blank"></div>	 
+	  <!-- {/if} -->
+	 <!--组合搜索 结束-->
+     
+     
+     
+     
+     
+ 
+
+     
+   <!-- TemplateBeginEditable name="右边区域" -->
+<!-- #BeginLibraryItem "/library/goods_list.lbi" -->
+
+<div>
+  <div class="h3_2">
+
+
+ <form style="float:left" method="GET" class="sort" name="listform">
+ 
+ 
+ 
+<dl>
+      <!-- {if $pager.sort == 'last_update' && $pager.order == 'DESC'} -->class="g_now"<!--{/if}-->       href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=last_update&order=DESC#goods_list" title="按最近更新">最近更新<a  
+			<!-- {if $pager.sort == 'last_update' && $pager.order == 'DESC'} -->class="g_now"<!--{/if}-->       href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=last_update&order=DESC#goods_list" title="按最近更新">最近更新</a> 
+   <!-- {if $pager.sort == 'goods_id' && $pager.order == 'DESC'} -->class="g_now"<!--{/if}--> href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=goods_id&order=DESC#goods_list">最新上市<a   
+			<!-- {if $pager.sort == 'goods_id' && $pager.order == 'DESC'} -->class="g_now"<!--{/if}--> href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=goods_id&order=DESC#goods_list">最新上市</a>  
+           <!-- {if $pager.sort == 'shop_price' && $pager.order == 'DESC'} -->class="g_now"<!--{/if}-->
+			 href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=shop_price&order=DESC#goods_list">价格由高到低<a    
+			<!-- {if $pager.sort == 'shop_price' && $pager.order == 'DESC'} -->class="g_now"<!--{/if}-->
+			 href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=shop_price&order=DESC#goods_list">价格由高到低</a>  
+         <!-- {if $pager.sort == 'shop_price' && $pager.order == 'ASC'} -->class="g_now"<!--{/if}-->
+			 href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=shop_price&order=ASC#goods_list">价格由低到高<a   
+			<!-- {if $pager.sort == 'shop_price' && $pager.order == 'ASC'} -->class="g_now"<!--{/if}-->
+			 href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=shop_price&order=ASC#goods_list">价格由低到高</a>  
+          </dl>
+          
+          
+  <input type="hidden" name="category" value="{$category}" />
+  <input type="hidden" name="display" value="{$pager.display}" id="display" />
+  <input type="hidden" name="brand" value="{$brand_id}" />
+  <input type="hidden" name="price_min" value="{$price_min}" />
+  <input type="hidden" name="price_max" value="{$price_max}" />
+  <input type="hidden" name="filter_attr" value="{$filter_attr}" />
+  <input type="hidden" name="page" value="{$pager.page}" />
+  <input type="hidden" name="sort" value="{$pager.sort}" />
+  <input type="hidden" name="order" value="{$pager.order}" />
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </form>
+
+
+
+
+
+
+
+<div id="pager" class="pagebar" style="float:right">
+
+
+
+
+ 
+  <!-- {if $pager.page_first} --><a href="{$pager.page_first}">{$lang.page_first} ...</a><!-- {/if} -->
+  <!-- {if $pager.page_prev} -->
+  <a class="prev" href="{$pager.page_prev}" style="padding-bottom:3px;">< 第一页</a>
+   <!-- {else} -->
+   
+   <a class="no"  style="padding-bottom:3px;">< 上一页</a>
+  
+  <!-- {/if} -->
+  
+
+  <!-- {if $pager.page_next} -->
+  
+  <a class="next" href="{$pager.page_next}" style="padding-bottom:3px;">下一页 ></a>
+  
+  <!-- {else} -->
+ <a class="no" style="padding-bottom:3px;">最后页 ></a>
+  <!-- {/if} -->
+  
+  
+  <!-- {if $pager.page_last} --><a class="last" href="{$pager.page_last}">...{$lang.page_last}</a><!-- {/if} -->
+ 
+</div>
+
+<div class="f_r" style="color:#666; padding:0px 10px 0 20px">共{$pager.record_count}个商品 
+{$pager.page}/{$pager.page_count}
+</div>
+  </div>
+
+    <!-- {if $category > 0} -->
+  <form name="compareForm" action="compare.php" method="post" onSubmit="return compareGoods(this);">
+    <!-- {/if} -->
+    <!-- {if $pager.display == 'list'} -->
+    <div class="goodsList">
+    <!--{foreach name=goods_list from=$goods_list item=goods}-->
+ 
+    <!--{if $smarty.foreach.goods_list.index mod 2 eq 0}-->id=""<!--{else}-->id="bgcolor"<!--{/if}-->>
+    <ul class="clearfix bgcolor"<!--{if $smarty.foreach.goods_list.index mod 2 eq 0}-->id=""<!--{else}-->id="bgcolor"<!--{/if}-->>
+    <li>
+    <br>
+    <a href="javascript:;" id="compareLink" onClick="Compare.add({$goods.goods_id},'{$goods.goods_name|escape:"quotes"}','{$goods.type}')" class="f6">比较</a>
+    </li>
+    <li class="thumb"><a href="{$goods.url}"><img src="{$goods.goods_thumb}" alt="{$goods.goods_name}" /></a></li>
+    <li class="goodsName">
+    <a href="{$goods.url}" class="f6">
+        <!-- {if $goods.goods_style_name} -->
+        {$goods.goods_style_name}<br />
+        <!-- {else} -->
+        {$goods.goods_name}<br />
+        <!-- {/if} -->
+      </a>
+     <!-- {if $goods.goods_brief} -->
+    {$lang.goods_brief}{$goods.goods_brief}<br />
+    <!-- {/if} -->
+    </li>
+    <li>
+    <!-- {if $show_marketprice} -->
+    {$lang.market_price}<font class="market">{$goods.market_price}</font><br />
+    <!-- {/if} -->
+    <!--{if $goods.promote_price neq "" } -->
+    {$lang.promote_price}<font class="shop">{$goods.promote_price}</font><br />
+    <!--{else}-->
+    {$lang.shop_price}<font class="shop">{$goods.shop_price}</font><br />
+    <!--{/if}-->
+    </li>
+    <li class="action">
+    <a href="javascript:collect({$goods.goods_id});" class="abg f6">{$lang.favourable_goods}</a>
+    <a href="javascript:addToCart({$goods.goods_id})"><img src="../images/bnt_buy_1.gif"></a>
+    </li>
+    </ul>
+    <!--{/foreach}-->
+    </div>
+    <!-- {elseif $pager.display == 'grid'} -->
+    <div class="clearfix goodsBox" style="border:none;">
+    <!--{foreach from=$goods_list item=goods}-->
+    <!-- {if $goods.goods_id} -->
+     <div class="goodsItem">
+           <a href="{$goods.url}"><img src="{$goods.goods_thumb}" alt="{$goods.goods_name}" class="goodsimg" /></a><br />
+           <p class="name"><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.goods_name}</a></p>
+           <!-- {if $show_marketprice} -->
+            
+           <p> <font class="market">市场价：<del>{$goods.market_price}</del></font></p>
+            
+            
+            <!-- {/if} -->
+            
+            
+            <!--{if $goods.promote_price neq "" } -->
+            <p>
+            <font class="shop_s">本店价：{$goods.promote_price}</font><!--{else}--><font class="shop_s">本店价：{$goods.shop_price}</font>
+            </p>
+            <!--{/if}--> 
+           <p class="bnt">
+           <a href="javascript:addToCart({$goods.goods_id})"><img src="../images/bnt_buy.jpg"></a> 
+           <a href="javascript:collect({$goods.goods_id});"><img src="../images/bnt_coll.jpg"></a> 
+         
+           </p>
+        </div>
+    <!--{/if}-->
+    <!--{/foreach}-->
+    </div>
+    <!-- {elseif $pager.display == 'text'} -->
+    <div class="goodsList">
+    <!--{foreach from=$goods_list item=goods}-->
+  
+    <!--{if $smarty.foreach.goods_list.index mod 2 eq 0}-->id=""<!--{else}-->id="bgcolor"<!--{/if}-->>
+    <ul class="clearfix bgcolor"<!--{if $smarty.foreach.goods_list.index mod 2 eq 0}-->id=""<!--{else}-->id="bgcolor"<!--{/if}-->>
+    <li style="margin-right:15px;">
+    <a href="javascript:;" id="compareLink" onClick="Compare.add({$goods.goods_id},'{$goods.goods_name|escape:"quotes"}','{$goods.type}')" class="f6">{$lang.compare}</a>
+    </li>
+    <li class="goodsName">
+    <a href="{$goods.url}" class="f6 f5">
+        <!-- {if $goods.goods_style_name} -->
+        {$goods.goods_style_name}<br />
+        <!-- {else} -->
+        {$goods.goods_name}<br />
+        <!-- {/if} -->
+      </a>
+     <!-- {if $goods.goods_brief} -->
+    {$lang.goods_brief}{$goods.goods_brief}<br />
+    <!-- {/if} -->
+    </li>
+    <li>
+    <!-- {if $show_marketprice} -->
+    {$lang.market_price}<font class="market">{$goods.market_price}</font><br />
+    <!-- {/if} -->
+    <!--{if $goods.promote_price neq "" } -->
+    {$lang.promote_price}<font class="shop">{$goods.promote_price}</font><br />
+    <!--{else}-->
+    {$lang.shop_price}<font class="shop">{$goods.shop_price}</font><br />
+    <!--{/if}-->
+    </li>
+    <li class="action">
+    <a href="javascript:collect({$goods.goods_id});" class="abg f6">{$lang.favourable_goods}</a>
+    <a href="javascript:addToCart({$goods.goods_id})"><img src="../images/bnt_buy_1.gif"></a>
+    </li>
+    </ul>
+    <!--{/foreach}-->
+    </div>
+    <!-- {/if} -->
+  <!-- {if $category > 0} -->
+  </form>
+  <!-- {/if} -->
+
+ </div>
+
+<div class="blank5"></div>
+<script type="Text/Javascript" language="JavaScript">
+<!--
+{literal}
+function selectPage(sel)
+{
+  sel.form.submit();
+}
+{/literal}
+//-->
+</script>
+<script type="text/javascript">
+window.onload = function()
+{
+  Compare.init();
+
+
+}
+{foreach from=$lang.compare_js item=item key=key}
+{if $key neq 'button_compare'}
+var {$key} = "{$item}";
+{else}
+var button_compare = '';
+{/if}
+{/foreach}
+var compare_no_goods = "{$lang.compare_no_goods}";
+var btn_buy = "{$lang.btn_buy}";
+var is_cancel = "{$lang.is_cancel}";
+var select_spe = "{$lang.select_spe}";
+</script>
+ <!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/pages.lbi" -->
+
+
+
+<!--翻页 start-->
+<form name="selectPageForm" action="{$smarty.server.PHP_SELF}" method="get">
+ 
+
+
+<!-- {if $pager.styleid eq 0 } -->
+<div id="pager">
+ <a href="{$pager.page_first}">{$lang.page_first}</a> <a href="{$pager.page_prev}">{$lang.page_prev}</a> <a href="{$pager.page_next}">{$lang.page_next}</a> <a href="{$pager.page_last}">{$lang.page_last}</a> </span>
+    <!--{foreach from=$pager.search key=key item=item}-->
+      {if $key eq 'keywords'}
+          <input type="hidden" name="{$key}" value="{$item|escape:decode_url}" />
+        {else}
+          <input type="hidden" name="{$key}" value="{$item}" />
+      {/if}
+    <!--{/foreach}-->
+    <select name="page" id="page" onchange="selectPage(this)">
+    {html_options options=$pager.array selected=$pager.page}
+    </select>
+</div>
+<!--{else}-->
+
+<!--翻页 start-->
+ <div id="pager" class="pagebar" style="float:right">
+ 
+  <!-- {if $pager.page_first} --><a href="{$pager.page_first}">{$lang.page_first} ...</a><!-- {/if} -->
+  <!-- {if $pager.page_prev} -->
+  <a class="prev" href="{$pager.page_prev}" style="padding-bottom:3px;">< 第一页</a>
+   <!-- {else} -->
+   
+   <a class="no"  style="padding-bottom:3px;">< 上一页</a>
+  
+  <!-- {/if} -->
+  <!-- {if $pager.page_count neq 1} -->
+    <!--{foreach from=$pager.page_number key=key item=item}-->
+      <!-- {if $pager.page eq $key} -->
+      <span class="page_now">{$key}</span>
+      <!-- {else} -->
+      <a href="{$item}">{$key}</a>
+      <!-- {/if} -->
+    <!--{/foreach}-->
+  <!-- {/if} -->
+
+  <!-- {if $pager.page_next} -->
+  
+  <a class="next" href="{$pager.page_next}" style="padding-bottom:3px;">下一页 ></a>
+  
+  <!-- {else} -->
+ <a class="no" style="padding-bottom:3px;">最后页 ></a>
+  <!-- {/if} -->
+  
+  
+  <!-- {if $pager.page_last} --><a class="last" href="{$pager.page_last}">...{$lang.page_last}</a><!-- {/if} -->
+  <!-- {if $pager.page_kbd} -->
+    <!--{foreach from=$pager.search key=key item=item}-->
+      {if $key eq 'keywords'}
+          <input type="hidden" name="{$key}" value="{$item|escape:decode_url}" />
+        {else}
+          <input type="hidden" name="{$key}" value="{$item}" />
+      {/if}
+    <!--{/foreach}-->
+      <kbd style="float:left; margin-left:8px; position:relative; bottom:3px;"><input type="text" name="page" onkeydown="if(event.keyCode==13)selectPage(this)" size="3" class="B_blue" /></kbd>
+    <!-- {/if} -->
+</div>
+<!--翻页 END-->
+
+
+
+
+
+<!-- {/if} -->
+</form>
+<script type="Text/Javascript" language="JavaScript">
+<!--
+{literal}
+function selectPage(sel)
+{
+  sel.form.submit();
+}
+{/literal}
+//-->
+</script>
+<div  class="blank" style="height:40px;"></div>
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+ 
+
+  </div>
+
+
+  <!--left start-->
+  <div class="AreaL" style="float:right"  >
+  
+<!-- #BeginLibraryItem "/library/cate_hot.lbi" -->
+
+ 
+  <!-- #EndLibraryItem -->
+  
+  
+<!-- TemplateBeginEditable name="左边广告区域（宽200px）" -->
+<!-- TemplateEndEditable -->
+
+<!-- #BeginLibraryItem "/library/history.lbi" -->
+ 
+ 
+<div class="box_1" id='history_div'>
+<div class="tit"><span>浏览历史记录</span></div>
+  <div class="boxCenterList clearfix" id='history_list'>
+    {insert name='history'}
+  </div>
+
+</div>
+<div class="blank"></div>
+<script type="text/javascript">
+if (document.getElementById('history_list').innerHTML.replace(/\s/g,'').length<1)
+{
+    document.getElementById('history_div').style.display='none';
+}
+else
+{
+    document.getElementById('history_div').style.display='block';
+}
+function clear_history()
+{
+Ajax.call('user.php', 'act=clear_history',clear_history_Response, 'GET', 'TEXT',1,1);
+}
+function clear_history_Response(res)
+{
+document.getElementById('history_list').innerHTML = '{$lang.no_history}';
+}
+</script>
+ <!-- #EndLibraryItem -->
+    <!--AD end-->
+  </div>
+  <!--left end-->
+ 
+</div>
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

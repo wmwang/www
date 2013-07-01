@@ -1,0 +1,74 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<DIV class="cat_goods probox ">
+ 
+<div class="tit">
+ <a href="{$goods_cat.url}" ><img style="float:left" src="../images/cat/{$goods_cat.id}.gif">  </a>
+ <a class="more" href="{$goods_cat.url}" > </a>
+ <DIV class="ss_class"> 
+ 
+  <!--{foreach name=childlist from=$goods_cat.children item=children name=child}-->
+  <a href="category.php?id={$children.cat_id}" target="_blank">
+  {$children.cat_name}
+  </a> 
+  
+   <!-- {if !$smarty.foreach.child.last} -->
+           |
+        <!-- {/if} -->
+  <!--{/foreach}-->
+ 
+</div>   
+</div>
+
+  <div class="blank"></div>
+<DIV class=probox_img_box onmouseout=hiddenallimgbox(this,event)>
+<DIV class=leftbox>
+<DIV class=imgbox onmouseover=showimgbox(this,event); onmouseout=hiddenimgbox(this,event)>
+<?php echo get_adv('cat_l',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+<DIV style="DISPLAY: none" class=imgbox_gray></DIV>
+</DIV>
+<DIV class=imgbox onmouseover=showimgbox(this,event); onmouseout=hiddenimgbox(this,event)>
+<?php echo get_adv('cat_m',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+<DIV style="DISPLAY: none" class=imgbox_gray></DIV>
+</DIV>
+</DIV>
+<DIV class=rightbox>
+<DIV class=imgbox onmouseover=showimgbox(this,event); onmouseout=hiddenimgbox(this,event)>
+<?php echo get_adv('cat_r1',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+<DIV style="DISPLAY: none" class=imgbox_gray>
+</DIV>
+</DIV>
+<DIV class=imgbox onmouseover=showimgbox(this,event); onmouseout=hiddenimgbox(this,event)>
+<?php echo get_adv('cat_r2',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+<DIV style="DISPLAY: none" id=two class=imgbox_gray></DIV>
+</DIV>
+</DIV>
+</DIV>
+<DIV class="cat_goods_in">
+ 
+
+<UL id=hot_xiangshui class=porboxul>
+      <!--{foreach from=$cat_goods item=goods}-->
+      <LI>
+    <DL>
+    <DT><a href="{$goods.url}"><IMG style="WIDTH: 172px; HEIGHT: 200px"  alt="{$goods.name|escape:html}"  src="{$goods.thumb}"></A> </DT>
+    <DD class=title><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_name|escape:html}</a></DD>
+    <DD class=market_price><SPAN>{$goods.market_price}</SPAN> 
+    <DD class=pf_price>本店價：<SPAN><!-- {if $goods.promote_price neq ""} -->{$goods.promote_price}<!-- {else}-->{$goods.shop_price}<!--{/if}--></SPAN> 
+    </DD>
+    </DL> 
+</LI>
+      <!--{/foreach}-->
+    </div>
+    
+  
+  
+ <div class="blank"></div> 
+    
+    
+    
+</div>  
+
+ 
+ 
+<div class="blank"></div>
+ 

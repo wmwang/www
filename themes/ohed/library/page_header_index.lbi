@@ -1,0 +1,199 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ 
+ 
+ 
+ 
+<?php
+ include_once('themes/' . $GLOBALS['_CFG']['template'].'/init.php');
+?>
+
+<script src="themes/<?php echo $GLOBALS['_CFG']['template']; ?>/js/MSClass.js"></script> 
+ 
+ 
+
+
+
+
+
+
+
+ <!--[if IE 6]>
+    <script src="themes/<?php echo $GLOBALS['_CFG']['template']; ?>/js/DD_belatedPNG_0.0.8a-min.vb4e86b02.js"></script>
+    <script> DD_belatedPNG.fix('.pngfix'); </script>
+    <![endif]-->
+
+ 
+ 
+<script type="text/javascript">
+var process_request = "{$lang.process_request}";
+</script>
+
+ 
+ 
+
+<div class="top_nav">
+<div class="block">
+
+
+
+<div class="f_r">
+<a style="cursor: pointer"  
+onClick="window.external.AddFavorite(location.href,document.title);"> <img src="../images/top1.gif"> 收藏歐傑商城</a>  
+
+ {insert_scripts files='utils.js'}
+   <font id="ECS_MEMBERZONE"><img src="../images/top2.gif"> {* ECSHOP 提醒您：根據用戶id來調用member_info.lbi顯示不同的界面  *}{insert name='member_info'} </font>
+
+
+<a href="#"><img src="../images/top3.gif"> 幫助中心</a>  
+
+
+
+ 
+<span  id="ECS_CARTINFO">
+<a href="flow.php"><img src="../images/top4.gif"> {insert name='cart_info'}</a>
+</span>
+
+<a href="flow.php"><img src="../images/top4.gif">歐傑紅酒官方微博</a>
+
+
+
+</div>
+
+
+
+<div class="link">
+<a href="#"><img src="../images/link1.gif"></a>
+<a href="#"><img src="../images/link2.gif"></a>
+</div>
+
+</div>
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+<div class="block  " style=" height:84px;">
+ <div class="f_l" style=" padding-top:27px;">
+ <a href="../index.php" name="top"><img style="float:left" src="../images/logo.gif" /></a> 
+
+<div style="float:left; padding:24px 0 0 30px">
+
+
+<img src="../images/tel.gif" />
+
+ <a href="#" name="top"><img style="padding:0 5px" src="../images/ico_qianggou.gif" /></a> 
+
+ <a href="#" name="top"><img src="../images/ico_kefu.gif" /></a> 
+ 
+ </div>
+ 
+
+</div>
+ 
+ 
+ 
+ 
+  <script type="text/javascript">
+    {literal}
+    <!--
+    function checkSearchForm()
+    {
+        if(document.getElementById('keyword').value)
+        {
+            return true;
+        }
+        else
+        {
+              alert("{$lang.no_keywords}");
+            return false;
+        }
+    }
+    -->
+    {/literal}
+    </script>
+
+ 
+ <form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" class="f_r" >
+ 
+   <input name="keywords" type="text" id="keyword" value="請輸入關鍵字..." onclick="javascript:this.value=''"class="B_input f_l"/>
+ 
+    
+   <input name="imageField" type="submit" value="" class="go f_l" style="cursor:pointer;" />
+  
+            
+             
+   </form>
+ 
+ 
+ 
+ 
+ 
+ 
+</div>
+ 
+<div class="meun_bg">
+<div class="block">
+
+<div id="mainNav" class="clearfix">
+   <ul class="u1" { if $navigator_list.config.index eq 1} id="cur"{/if}  onmouseover="this.className='u1 u1_over '" onmouseout="this.className='u1'"   >
+  <a class="a1"     href="../index.php">{$lang.home}</a>
+  </ul>
+  
+  
+  
+
+
+
+ 
+ 
+   
+  <!-- {foreach name=nav_middle_list from=$navigator_list.middle item=nav} -->   
+   
+ 
+  <ul class="u1" onmouseover="this.className='u1 u1_over'" onmouseout="this.className='u1'" {if $nav.active eq 1} id="cur"{/if} >
+  <a  class="a1"  href="{$nav.url}"   {if $nav.opennew eq 1}target="_blank" {/if} >{$nav.name}</a>
+  
+    
+  
+  </ul>
+ <!-- {/foreach} -->
+ 
+ 
+ 
+  
+ 
+ 
+   
+ 
+ 
+ 
+ 
+</div>
+
+
+<div id="search"  class="clearfix">
+  
+ 
+    
+   
+   
+   
+   
+   
+   
+   
+   
+ 
+ 
+</div>
+</div>
+</div>
+<!--search end-->
+<div class="blank"></div>
+ 
+
+

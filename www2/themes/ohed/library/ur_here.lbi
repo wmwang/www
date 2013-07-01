@@ -1,0 +1,37 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+ @font-face {
+  font-family: DFTsaiStd-W3;
+  src:url("themes/ohed/images/DFTsaiStd-W3.otf") format("opentype");
+}
+#TextDiv2 a,pre{color:#808080;}
+#TextDiv2 a:link,a:visited {color:#555;}
+#TextDiv2 a:hover,a:active { color:#ff4e00;}
+#TextDiv2 li{height:30px;font-size:20px;}
+</style>
+<div class="block">
+ <div id="ur_here">
+ <div id="TextDiv2" style="width:460px;position:relative; top:0px; left:-10px;font-size:20px;font-family: isosoman ;border:1px solid #fff;text-align:left;height:30px;overflow:hidden;">
+<ul id="TextContent2">
+<li>演示地址:<a href="http://www.popub.net/script/MSClass.html">http://www.popub.net/script/MSClass.html</a></li>
+<li>下載地址:<a href="http://www.popub.net/script/MSClass.js"><font color="red">http://www.popub.net/script/MSClass.js</font></a></li>
+<li>PCAS (省、市、地區聯動選擇JS封裝類) Ver 2.01 數據壓縮完整版</b> <a href="pcas.html"><font color="red">演示及下載</font></a></li>
+<li>\***程序製作/版權所有:崔永祥(333) E-Mail:zhadan007@21cn.com 網址:http://www.popub.net***/</li>
+<li>文字滾動測試1</li>
+<li>文字滾動測試2</li>
+<li>文字滾動測試3</li>
+<li>如有其它意見及建議請Email</li>
+</ul>
+</div>
+{$ur_here} 
+<script type="text/javascript">
+new Marquee(["TextDiv2","TextContent2"],0,1,980,60,20,400,3000,60)	;
+
+/*********文字翻屏滾動***************/
+//new Marquee(["TextDiv1","TextContent1"],0,1,700,42,20,4000,2000)			//文字翻屏滾動實例
+
+
+</script>
+</div>
+</div>
+<div class="blank"></div>
