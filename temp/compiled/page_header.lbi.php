@@ -1,4 +1,4 @@
- 
+   
  
  
  
@@ -87,7 +87,7 @@ echo $this->_echash . $k['name'] . '|' . serialize($k) . $this->_echash;
 ?></a>
 </span>
 
-<a href="flow.php"><img src="themes/ohed/images/top4.gif">歐傑紅酒官方微博</a>
+
 
 
 

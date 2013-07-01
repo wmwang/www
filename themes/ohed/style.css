@@ -14,7 +14,7 @@ Logo filename: logo.gif
 ==================== */
 @font-face {
   font-family:isosoman;
-  src:url("DFZongYiStd-W5.otf") format("opentype"); 
+  src:url("DFZongYiStd-W5001.otf") format("opentype"); 
 }
 body{ font-size:12px; font-family:isosoman,  Verdana, Tahoma, Helvetica, sans-serif, SimSun, Arial ; 
   line-height:300%; margin:0; padding:0; color:#000; background: #fff;}
@@ -31,7 +31,7 @@ a:hover{ color:#af0102; text-decoration:none}
 }
 .f_l{float:left;}
 .f_r{float:right;}
-.tl{ text-align:left;}
+.tl{ tex t-align:left;}
 .tc{ text-align:center;}
 .tr{ text-align:right;}
 .dis{display:block;}
@@ -285,7 +285,7 @@ width:244px;
   .top_nav{ height:31px; line-height:31px; background:url(images/top_line.gif) 0 0 repeat-x}
   .top_nav .f_r{ float:right; padding:0 20px; padding-right:120px; height:28px; line-height:28px; _padding-top:5px; _height:23px; 
     background: #2C3E50; border-bottom:3px solid #d6dcda}
-  .top_nav a{ color:#FFFFFF;font-size: 20px}
+  .top_nav a{ color:#16a085;font-size: 20px}
   .top_nav img{ vertical-align:middle; padding:0 6px;}
    .top_nav .block{ position: relative} 
     .top_nav .link{ position: absolute; right:0; top:0;}

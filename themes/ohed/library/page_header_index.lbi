@@ -53,7 +53,7 @@ onClick="window.external.AddFavorite(location.href,document.title);"> <img src="
 <a href="flow.php"><img src="../images/top4.gif"> {insert name='cart_info'}</a>
 </span>
 
-<a href="flow.php"><img src="../images/top4.gif">歐傑紅酒官方微博</a>
+
 
 
 

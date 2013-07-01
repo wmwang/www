@@ -1,4 +1,4 @@
-<?php exit;?>a:3:{s:8:"template";a:10:{i:0;s:33:"C:/wamp/www/themes/ohed/index.dwt";i:1;s:47:"C:/wamp/www/themes/ohed/library/page_header.lbi";i:2;s:44:"C:/wamp/www/themes/ohed/library/index_ad.lbi";i:3;s:46:"C:/wamp/www/themes/ohed/library/index_tree.lbi";i:4;s:50:"C:/wamp/www/themes/ohed/library/promotion_info.lbi";i:5;s:40:"C:/wamp/www/themes/ohed/library/cart.lbi";i:6;s:43:"C:/wamp/www/themes/ohed/library/gundong.lbi";i:7;s:47:"C:/wamp/www/themes/ohed/library/ad_position.lbi";i:8;s:46:"C:/wamp/www/themes/ohed/library/index_comm.lbi";i:9;s:47:"C:/wamp/www/themes/ohed/library/page_footer.lbi";}s:7:"expires";i:1372647472;s:8:"maketime";i:1372643872;}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php exit;?>a:3:{s:8:"template";a:10:{i:0;s:33:"C:/wamp/www/themes/ohed/index.dwt";i:1;s:47:"C:/wamp/www/themes/ohed/library/page_header.lbi";i:2;s:44:"C:/wamp/www/themes/ohed/library/index_ad.lbi";i:3;s:46:"C:/wamp/www/themes/ohed/library/index_tree.lbi";i:4;s:50:"C:/wamp/www/themes/ohed/library/promotion_info.lbi";i:5;s:40:"C:/wamp/www/themes/ohed/library/cart.lbi";i:6;s:43:"C:/wamp/www/themes/ohed/library/gundong.lbi";i:7;s:47:"C:/wamp/www/themes/ohed/library/ad_position.lbi";i:8;s:46:"C:/wamp/www/themes/ohed/library/index_comm.lbi";i:9;s:47:"C:/wamp/www/themes/ohed/library/page_footer.lbi";}s:7:"expires";i:1372665480;s:8:"maketime";i:1372661880;}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta name="Generator" content="ECSHOP v2.7.3" />
@@ -39,11 +39,6 @@ function reg(str){
 </script>
 </head>
 <body>
- 
- 
- 
- 
- 
  
  <script src="themes/ohed/js/MSClass.js"></script> 
 <SCRIPT type=text/javascript src="themes/ohed/js/transport.js"></SCRIPT>
@@ -94,7 +89,6 @@ onClick="window.external.AddFavorite(location.href,document.title);"> <img src="
 <span  id="ECS_CARTINFO">
 <a href="flow.php"><img src="themes/ohed/images/top4.gif"> 554fcae493e564ee0dc75bdf2ebf94cacart_info|a:1:{s:4:"name";s:9:"cart_info";}554fcae493e564ee0dc75bdf2ebf94ca</a>
 </span>
-<a href="flow.php"><img src="themes/ohed/images/top4.gif">歐傑紅酒官方微博</a>
 </div>
 <div class="link">
 <a href="#"><img src="themes/ohed/images/link1.gif"></a>
@@ -281,7 +275,6 @@ new Marquee(["TextDiv2","TextContent2"],0,1,980,60,20,1000,1000,60) ;
 </div>
 </div>
 <div class="blank"></div>
- 
 <div class="block">
  
 <div class="f_l" style="width:728px;">

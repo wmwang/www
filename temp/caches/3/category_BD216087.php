@@ -1,14 +1,16 @@
-<?php exit;?>a:3:{s:8:"template";a:10:{i:0;s:36:"C:/wamp/www/themes/ohed/category.dwt";i:1;s:47:"C:/wamp/www/themes/ohed/library/page_header.lbi";i:2;s:43:"C:/wamp/www/themes/ohed/library/ur_here.lbi";i:3;s:45:"C:/wamp/www/themes/ohed/library/cate_best.lbi";i:4;s:46:"C:/wamp/www/themes/ohed/library/goods_list.lbi";i:5;s:41:"C:/wamp/www/themes/ohed/library/pages.lbi";i:6;s:44:"C:/wamp/www/themes/ohed/library/cate_hot.lbi";i:7;s:47:"C:/wamp/www/themes/ohed/library/ad_position.lbi";i:8;s:43:"C:/wamp/www/themes/ohed/library/history.lbi";i:9;s:47:"C:/wamp/www/themes/ohed/library/page_footer.lbi";}s:7:"expires";i:1372207277;s:8:"maketime";i:1372203677;}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php exit;?>a:3:{s:8:"template";a:9:{i:0;s:36:"C:/wamp/www/themes/ohed/category.dwt";i:1;s:47:"C:/wamp/www/themes/ohed/library/page_header.lbi";i:2;s:43:"C:/wamp/www/themes/ohed/library/ur_here.lbi";i:3;s:45:"C:/wamp/www/themes/ohed/library/cate_best.lbi";i:4;s:46:"C:/wamp/www/themes/ohed/library/goods_list.lbi";i:5;s:41:"C:/wamp/www/themes/ohed/library/pages.lbi";i:6;s:44:"C:/wamp/www/themes/ohed/library/cate_hot.lbi";i:7;s:43:"C:/wamp/www/themes/ohed/library/history.lbi";i:8;s:47:"C:/wamp/www/themes/ohed/library/page_footer.lbi";}s:7:"expires";i:1372664416;s:8:"maketime";i:1372660816;}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta name="Generator" content="ECSHOP v2.7.3" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="Keywords" content="" />
 <meta name="Description" content="" />
 <title>3G手機_手機類型_ECSHOP演示站</title>
 <link rel="shortcut icon" href="favicon.ico" />
 <link rel="icon" href="animated_favicon.gif" type="image/gif" />
 <link href="themes/ohed/style.css" rel="stylesheet" type="text/css" />
+<link href="themes/ohed/flat-ui.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="js/common.js"></script><script type="text/javascript" src="js/global.js"></script><script type="text/javascript" src="js/compare.js"></script><script src="themes/ohed/js/jquery_004.js" type="text/javascript"></script>
 </head>
 <body>
@@ -25,9 +27,11 @@
     <script src="themes/ohed/js/DD_belatedPNG_0.0.8a-min.vb4e86b02.js"></script>
     <script> DD_belatedPNG.fix('.pngfix'); </script>
     <![endif]-->
+<!--
 <div id="floatQQ" class="QQ_service" style="position:absolute; top:160px; right:5px; font-size:12px;  z-index:999999">
  <img src="themes/ohed/images/float_kefu.gif" /></a> 
 </div>
+-->
 <script type="text/javascript">
   window.setInterval("floatQQdone()",1);
   lastScrollY=0;
@@ -220,6 +224,38 @@ onClick="window.external.AddFavorite(location.href,document.title);"> <img src="
 </div>
 </div>
 <div class="blank"></div>
+<style>
+ @font-face {
+  font-family: DFTsaiStd-W3;
+  src:url("themes/ohed/images/DFTsaiStd-W3.otf") format("opentype");
+}
+#TextDiv2 a,pre{color:#000;}
+#TextDiv2 a:link,a:visited {color:#fff;}
+#TextDiv2 a:hover,a:active {color:#fff;}
+#TextDiv2 li{height:30px;font-size:20px;}
+</style>
+<div class="block">
+ <div id="ur_here">
+ <div id="TextDiv2" style="width:460px;position:relative; top:0px; left:-10px;font-size:20px;font-family: isosoman ;border:1px solid #ff0084;text-align:left;height:30px;overflow:hidden;">
+<ul id="TextContent2">
+<li>演示地址:<a href="http://www.popub.net/script/MSClass.html">http://www.popub.net/script/MSClass.html</a></li>
+<li>下載地址:<a href="http://www.popub.net/script/MSClass.js"><font color="white">http://www.popub.net/script/MSClass.js</font></a></li>
+<li>PCAS (省、市、地區聯動選擇JS封裝類) Ver 2.01 數據壓縮完整版</b> <a href="pcas.html"><font color="red">演示及下載</font></a></li>
+<li>\***程序製作/版權所有:崔永祥(333) E-Mail:zhadan007@21cn.com 網址:http://www.popub.net***/</li>
+<li>文字滾動測試1</li>
+<li>文字滾動測試2</li>
+<li>文字滾動測試3</li>
+<li>如有其它意見及建議請Email</li>
+</ul>
+</div>
+<script type="text/javascript">
+new Marquee(["TextDiv2","TextContent2"],0,1,980,60,20,1000,1000,60) ;
+/*********文字翻屏滾動***************/
+//new Marquee(["TextDiv1","TextContent1"],0,1,700,42,20,4000,2000)      //文字翻屏滾動實例
+</script>
+</div>
+</div>
+<div class="blank"></div>
  
 <style>
  @font-face {
@@ -231,34 +267,16 @@ onClick="window.external.AddFavorite(location.href,document.title);"> <img src="
 #TextDiv2 a:hover,a:active {color:#ff4e00;}
 #TextDiv2 li{height:30px;font-size:20px;}
 </style>
-<div class="block">
- <div id="ur_here">
- <div id="TextDiv2" style="width:460px;position:relative; top:0px; left:-10px;font-size:20px;font-family: isosoman ;border:1px solid #fff;text-align:left;height:30px;overflow:hidden;">
-<ul id="TextContent2">
-<li>演示地址:<a href="http://www.popub.net/script/MSClass.html">http://www.popub.net/script/MSClass.html</a></li>
-<li>下載地址:<a href="http://www.popub.net/script/MSClass.js"><font color="red">http://www.popub.net/script/MSClass.js</font></a></li>
-<li>PCAS (省、市、地區聯動選擇JS封裝類) Ver 2.01 數據壓縮完整版</b> <a href="pcas.html"><font color="red">演示及下載</font></a></li>
-<li>\***程序製作/版權所有:崔永祥(333) E-Mail:zhadan007@21cn.com 網址:http://www.popub.net***/</li>
-<li>文字滾動測試1</li>
-<li>文字滾動測試2</li>
-<li>文字滾動測試3</li>
-<li>如有其它意見及建議請Email</li>
-</ul>
-</div>
-<a href=".">首頁</a> <code>&gt;</code> <a href="category.php?id=1">手機類型</a> <code>&gt;</code> <a href="category.php?id=4">3G手機</a> 
-<script type="text/javascript">
-new Marquee(["TextDiv2","TextContent2"],0,1,980,60,20,4000,3000,60)	;
-/*********文字翻屏滾動***************/
-//new Marquee(["TextDiv1","TextContent1"],0,1,700,42,20,4000,2000)			//文字翻屏滾動實例
-</script>
-</div>
-</div>
 <div class="blank"></div>
 <div class="block clearfix">
 <script type="text/javascript" src="themes/ohed/js/left_goodslist.js"></script>
 <div class="remai_box">
 <div class="f_l">
-<div class="tit" style="padding-left:25px"><img src="themes/ohed/images/tit_remai.gif"></div>
+ <div class="span3">
+          <div class="btn btn-large btn-block btn-danger">超級特價!!買到賺到
+          </div>
+        </div>       
+        <div class="blank"></div>
 <div class="clearfix">
     	  <div class="goodsItem" >
            <a href="goods.php?id=1"><img src="images/200905/thumb_img/1_thumb_G_1240902890710.jpg" alt="KD876" class="goodsimg" /></a> 
@@ -276,8 +294,12 @@ new Marquee(["TextDiv2","TextContent2"],0,1,980,60,20,4000,3000,60)	;
      </div>
 </div>
 <div class="f_r">
-<div class="tit"><img src="themes/ohed/images/tit_cuxiao.gif"></div>
-<div class="clearfix" style="padding-top:5px; line-height:22px">
+<div class="span3">
+          <div class="btn btn-large btn-block btn-info">促銷活動
+          </div>
+        </div>       
+        <div class="blank"></div>
+<div class="clearfix" style="margin-top:-2px; line-height:22px">
 <p><a href="#">休閒零食特價買贈大酬</a></p> 
 <p><a href="#">買麥片、蜂蜜滿28元</a></p>  
 <p><a href="#">買方便面送咖啡</a></p>  
@@ -295,9 +317,12 @@ new Marquee(["TextDiv2","TextContent2"],0,1,980,60,20,4000,3000,60)	;
 	 
 	        
       
-<div   style=" height:28px; line-height:28px; text-align:right; border-bottom:3px solid #611986">
+<div   style=" height:28px; line-height:28px; text-align:right; border-bottom:3px solid #fff">
  
-<img style=" float:left;  " src="themes/ohed/images/category_tit.gif">
+          <div class="btn btn-large btn-block btn-primaryForIndexTree">商品分類中心
+          </div>
+        </div>       
+<div class="clearfix" style="margin-top:-12px; line-height:22px">
       
        
  <a class="more" href="catalog.php"><img   src="themes/ohed/images/more.gif"></a>
@@ -582,7 +607,6 @@ function selectPage(sel)
 <div class="blank"></div>
   
   
-554fcae493e564ee0dc75bdf2ebf94caads|a:3:{s:4:"name";s:3:"ads";s:2:"id";s:2:"13";s:3:"num";s:1:"1";}554fcae493e564ee0dc75bdf2ebf94ca
  
  
 <div class="box_1" id='history_div'>
@@ -613,10 +637,11 @@ document.getElementById('history_list').innerHTML = '您已清空最近流覽過
   
  
 </div>
+ 
 <div class="blank"></div> 
 <div class="block">
 <div class="helpTitBg clearfix">
- <img src="themes/ohed/images/help_left.gif" style="float:left">
+ 
     
    <div class="clearfix">
 <dl>

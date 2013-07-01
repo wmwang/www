@@ -1,4 +1,4 @@
-<?php exit;?>a:3:{s:8:"template";a:9:{i:0;s:36:"C:/wamp/www/themes/ohed/category.dwt";i:1;s:47:"C:/wamp/www/themes/ohed/library/page_header.lbi";i:2;s:43:"C:/wamp/www/themes/ohed/library/ur_here.lbi";i:3;s:45:"C:/wamp/www/themes/ohed/library/cate_best.lbi";i:4;s:46:"C:/wamp/www/themes/ohed/library/goods_list.lbi";i:5;s:41:"C:/wamp/www/themes/ohed/library/pages.lbi";i:6;s:44:"C:/wamp/www/themes/ohed/library/cate_hot.lbi";i:7;s:43:"C:/wamp/www/themes/ohed/library/history.lbi";i:8;s:47:"C:/wamp/www/themes/ohed/library/page_footer.lbi";}s:7:"expires";i:1372518788;s:8:"maketime";i:1372515188;}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php exit;?>a:3:{s:8:"template";a:9:{i:0;s:36:"C:/wamp/www/themes/ohed/category.dwt";i:1;s:47:"C:/wamp/www/themes/ohed/library/page_header.lbi";i:2;s:43:"C:/wamp/www/themes/ohed/library/ur_here.lbi";i:3;s:45:"C:/wamp/www/themes/ohed/library/cate_best.lbi";i:4;s:46:"C:/wamp/www/themes/ohed/library/goods_list.lbi";i:5;s:41:"C:/wamp/www/themes/ohed/library/pages.lbi";i:6;s:44:"C:/wamp/www/themes/ohed/library/cate_hot.lbi";i:7;s:43:"C:/wamp/www/themes/ohed/library/history.lbi";i:8;s:47:"C:/wamp/www/themes/ohed/library/page_footer.lbi";}s:7:"expires";i:1372664140;s:8:"maketime";i:1372660540;}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta name="Generator" content="ECSHOP v2.7.3" />
@@ -27,6 +27,32 @@
     <script src="themes/ohed/js/DD_belatedPNG_0.0.8a-min.vb4e86b02.js"></script>
     <script> DD_belatedPNG.fix('.pngfix'); </script>
     <![endif]-->
+<!--
+<div id="floatQQ" class="QQ_service" style="position:absolute; top:160px; right:5px; font-size:12px;  z-index:999999">
+ <img src="themes/ohed/images/float_kefu.gif" /></a> 
+</div>
+-->
+<script type="text/javascript">
+  window.setInterval("floatQQdone()",1);
+  lastScrollY=0;
+  function floatQQdone()
+  {
+	 var diffY;
+	if (document.documentElement && document.documentElement.scrollTop)
+		diffY = document.documentElement.scrollTop;
+	else if (document.body)
+		diffY = document.body.scrollTop
+	else
+		{/*Netscape stuff*/}	
+	//alert(diffY);
+	percent=.1*(diffY-lastScrollY); 
+	if(percent>0)percent=Math.ceil(percent); 
+	else percent=Math.floor(percent); 
+	document.getElementById("floatQQ").style.top=parseInt(document.getElementById("floatQQ").style.top)+percent+"px";
+	lastScrollY=lastScrollY+percent; 
+	//alert(lastScrollY);
+  }
+</script>
 <script type="text/javascript">
 var process_request = "正在處理您的請求...";
 </script>
@@ -203,17 +229,17 @@ onClick="window.external.AddFavorite(location.href,document.title);"> <img src="
   font-family: DFTsaiStd-W3;
   src:url("themes/ohed/images/DFTsaiStd-W3.otf") format("opentype");
 }
-#TextDiv2 a,pre{color:#808080;}
-#TextDiv2 a:link,a:visited {color:#555;}
-#TextDiv2 a:hover,a:active {color:#ff4e00;}
+#TextDiv2 a,pre{color:#000;}
+#TextDiv2 a:link,a:visited {color:#fff;}
+#TextDiv2 a:hover,a:active {color:#fff;}
 #TextDiv2 li{height:30px;font-size:20px;}
 </style>
 <div class="block">
  <div id="ur_here">
- <div id="TextDiv2" style="width:460px;position:relative; top:0px; left:-10px;font-size:20px;font-family: isosoman ;border:1px solid #14A2D4;text-align:left;height:30px;overflow:hidden;">
+ <div id="TextDiv2" style="width:460px;position:relative; top:0px; left:-10px;font-size:20px;font-family: isosoman ;border:1px solid #ff0084;text-align:left;height:30px;overflow:hidden;">
 <ul id="TextContent2">
 <li>演示地址:<a href="http://www.popub.net/script/MSClass.html">http://www.popub.net/script/MSClass.html</a></li>
-<li>下載地址:<a href="http://www.popub.net/script/MSClass.js"><font color="red">http://www.popub.net/script/MSClass.js</font></a></li>
+<li>下載地址:<a href="http://www.popub.net/script/MSClass.js"><font color="white">http://www.popub.net/script/MSClass.js</font></a></li>
 <li>PCAS (省、市、地區聯動選擇JS封裝類) Ver 2.01 數據壓縮完整版</b> <a href="pcas.html"><font color="red">演示及下載</font></a></li>
 <li>\***程序製作/版權所有:崔永祥(333) E-Mail:zhadan007@21cn.com 網址:http://www.popub.net***/</li>
 <li>文字滾動測試1</li>
@@ -573,7 +599,7 @@ document.getElementById('history_list').innerHTML = '您已清空最近流覽過
 <div class="blank"></div> 
 <div class="block">
 <div class="helpTitBg clearfix">
- <img src="themes/ohed/images/help_left.gif" style="float:left">
+ 
     
    <div class="clearfix">
 <dl>
