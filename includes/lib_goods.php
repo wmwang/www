@@ -3,14 +3,14 @@
 /**
  * ECSHOP 商品相关函数库
  * ============================================================================
- * * 版权所有 2005-2012 上海商派网络科技有限公司，并保留所有权利。
+ * 版权所有 2005-2010 上海商派网络科技有限公司，并保留所有权利。
  * 网站地址: http://www.ecshop.com；
  * ----------------------------------------------------------------------------
  * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和
  * 使用；不允许对程序代码以任何形式任何目的的再发布。
  * ============================================================================
- * $Author: liubo $
- * $Id: lib_goods.php 17217 2011-01-19 06:29:08Z liubo $
+ * $Author: liuhui $
+ * $Id: lib_goods.php 17113 2010-04-16 03:44:19Z liuhui $
 */
 
 if (!defined('IN_ECS'))
@@ -159,7 +159,7 @@ function get_top10($cats = '')
            "AND (o.pay_status = '" . PS_PAYED . "' OR o.pay_status = '" . PS_PAYING . "') " .
            "AND (o.shipping_status = '" . SS_SHIPPED . "' OR o.shipping_status = '" . SS_RECEIVED . "') " .
            'GROUP BY g.goods_id ORDER BY goods_number DESC, g.goods_id DESC LIMIT ' . $GLOBALS['_CFG']['top_number'];
-           
+
     $arr = $GLOBALS['db']->getAll($sql);
 
     for ($i = 0, $count = count($arr); $i < $count; $i++)
@@ -383,6 +383,9 @@ function get_promote_goods($cats = '')
         }
 
         $goods[$idx]['id']           = $row['goods_id'];
+				$goods[$idx]['s_time']       = $row['promote_start_date'];
+				$goods[$idx]['e_time']       = $row['promote_end_date'];
+				$goods[$idx]['t_now']        = $time;
         $goods[$idx]['name']         = $row['goods_name'];
         $goods[$idx]['brief']        = $row['goods_brief'];
         $goods[$idx]['brand_name']   = $row['brand_name'];
@@ -521,6 +524,10 @@ function get_goods_info($goods_id)
         $row['comment_rank']  = ceil($row['comment_rank']) == 0 ? 5 : ceil($row['comment_rank']);
 
         /* 获得商品的销售价格 */
+		
+		 $row['sheng_price'] = $row['market_price']-$row['shop_price'];
+
+		
         $row['market_price']        = price_format($row['market_price']);
         $row['shop_price_formated'] = price_format($row['shop_price']);
 
@@ -748,7 +755,7 @@ function get_goods_gallery($goods_id)
  * @param   string      $order_rule 指定商品排序规则
  * @return  array
  */
-function assign_cat_goods($cat_id, $num = 0, $from = 'web', $order_rule = '')
+function assign_cat_goods($cat_id, $num = 0, $from = 'web',$return='cat')    //这里增加了一个参数  $return， 下面有用到这个参数， zhangyh_100322
 {
     $children = get_children($cat_id);
 
@@ -809,7 +816,65 @@ function assign_cat_goods($cat_id, $num = 0, $from = 'web', $order_rule = '')
     $cat['url']  = build_uri('category', array('cid' => $cat_id), $cat['name']);
     $cat['id']   = $cat_id;
 
+
+
+
+    /**
+	*  zhangyh_100322 start
+	* 下面代码针对函数返回值做了修改，如果$return传入值是cat则返回$cat，如果是goods则返回 $goods
+	*/
+	$sql = 'SELECT cat_id,cat_name FROM ' . $GLOBALS['ecs']->table('category') . " WHERE parent_id = '$cat_id' order by sort_order  limit 0,6";
+	$cat['children']=$GLOBALS['db']->getAll($sql);  //获得该大类下的小类
+
+	/* 得到第一个小类下的商品列表 */
+	$children_2 = get_children($cat['children'][0]['cat_id']);
+    $sql = 'SELECT g.goods_id, g.goods_name, g.market_price, g.shop_price AS org_price, ' .
+                "IFNULL(mp.user_price, g.shop_price * '$_SESSION[discount]') AS shop_price, ".
+               'g.promote_price, promote_start_date, promote_end_date, g.goods_brief, g.goods_thumb, g.goods_img ' .
+            "FROM " . $GLOBALS['ecs']->table('goods') . ' AS g '.
+            "LEFT JOIN " . $GLOBALS['ecs']->table('member_price') . " AS mp ".
+                    "ON mp.goods_id = g.goods_id AND mp.user_rank = '$_SESSION[user_rank]' ".
+            'WHERE g.is_on_sale = 1 AND g.is_alone_sale = 1 AND '.
+                'g.is_delete = 0 AND (' . $children_2  . 'OR ' . get_extension_goods($children_2) . ') ';
+    $sql .= $order_rule;
+    if ($num > 0)
+    {
+        $sql .= ' LIMIT ' . $num;
+    }
+	$res_2 = $GLOBALS['db']->getAll($sql);
+	$goods_2 = array();
+    foreach ($res_2 AS $idx => $row)
+    {
+        if ($row['promote_price'] > 0)
+        {
+            $promote_price = bargain_price($row['promote_price'], $row['promote_start_date'], $row['promote_end_date']);
+            $goods_2[$idx]['promote_price'] = $promote_price > 0 ? price_format($promote_price) : '';
+        }
+        else
+        {
+            $goods_2[$idx]['promote_price'] = '';
+        }
+
+        $goods_2[$idx]['id']           = $row['goods_id'];
+        $goods_2[$idx]['name']         = $row['goods_name'];
+        $goods_2[$idx]['short_name']   = $GLOBALS['_CFG']['goods_name_length'] > 0 ?
+                                        sub_str($row['goods_name'], $GLOBALS['_CFG']['goods_name_length']) : $row['goods_name'];
+        $goods_2[$idx]['shop_price']   = price_format($row['shop_price']);
+        $goods_2[$idx]['thumb']        = get_image_path($row['goods_id'], $row['goods_thumb'], true);
+        $goods_2[$idx]['url']          = build_uri('goods', array('gid' => $row['goods_id']), $row['goods_name']);
+    }
+	$cat['children_goods']=$goods_2;
+
+
+   if ($return=='cat')
+    {
     return $cat;
+    }
+   elseif ($return=='goods')
+    {
+    return $goods;
+    }
+	/* zhangyh_100322 end */
 }
 
 /**
@@ -943,18 +1008,6 @@ function spec_price($spec)
 {
     if (!empty($spec))
     {
-        if(is_array($spec))
-        {
-            foreach($spec as $key=>$val)
-            {
-                $spec[$key]=addslashes($val);
-            }
-        }
-        else
-        {
-            $spec=addslashes($spec);
-        }
-
         $where = db_create_in($spec, 'goods_attr_id');
 
         $sql = 'SELECT SUM(attr_price) AS attr_price FROM ' . $GLOBALS['ecs']->table('goods_attr') . " WHERE $where";
@@ -1465,6 +1518,9 @@ function get_goods_fittings($goods_list = array())
         $arr[$temp_index]['short_name']        = $GLOBALS['_CFG']['goods_name_length'] > 0 ?
             sub_str($row['goods_name'], $GLOBALS['_CFG']['goods_name_length']) : $row['goods_name'];//配件显示的名称
         $arr[$temp_index]['fittings_price']    = price_format($row['goods_price']);//配件价格
+		
+		 $arr[$temp_index]['fittings_price_nformat']   = $row['goods_price'];	//zhong改
+		
         $arr[$temp_index]['shop_price']        = price_format($row['shop_price']);//配件原价格
         $arr[$temp_index]['goods_thumb']       = get_image_path($row['goods_id'], $row['goods_thumb'], true);
         $arr[$temp_index]['goods_img']         = get_image_path($row['goods_id'], $row['goods_img']);

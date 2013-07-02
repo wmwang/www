@@ -1,13 +1,13 @@
 <?php
 $data = array (
-  'shop_name' => '寶新塑膠',
-  'shop_title' => '寶新塑膠',
-  'shop_desc' => '寶新塑膠',
-  'shop_keywords' => '寶新塑膠',
+  'shop_name' => 'ECSHOP',
+  'shop_title' => 'ECSHOP演示站',
+  'shop_desc' => 'ECSHOP演示站',
+  'shop_keywords' => 'ECSHOP演示站',
   'shop_country' => '1',
   'shop_province' => '2',
   'shop_city' => '52',
-  'shop_address' => '台中市神岡區中山路843號',
+  'shop_address' => '',
   'qq' => '',
   'ww' => '',
   'skype' => '',

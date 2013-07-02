@@ -96,6 +96,22 @@ $data = array (
     'id' => '12',
     'name' => '充值卡',
   ),
+  14 => 
+  array (
+    'cat_id' => '14',
+    'cat_name' => '移動手機充值卡',
+    'measure_unit' => '',
+    'parent_id' => '12',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => '2',
+    'level' => 1,
+    'id' => '14',
+    'name' => '移動手機充值卡',
+  ),
   15 => 
   array (
     'cat_id' => '15',
@@ -127,22 +143,6 @@ $data = array (
     'level' => 1,
     'id' => '13',
     'name' => '小靈通/固話充值卡',
-  ),
-  14 => 
-  array (
-    'cat_id' => '14',
-    'cat_name' => '移動手機充值卡',
-    'measure_unit' => '',
-    'parent_id' => '12',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => '2',
-    'level' => 1,
-    'id' => '14',
-    'name' => '移動手機充值卡',
   ),
   16 => 
   array (
@@ -239,22 +239,6 @@ $data = array (
     'level' => 1,
     'id' => '9',
     'name' => '電池',
-  ),
-  17 => 
-  array (
-    'cat_id' => '17',
-    'cat_name' => '塑膠袋',
-    'measure_unit' => '',
-    'parent_id' => '0',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => '1',
-    'level' => 0,
-    'id' => '17',
-    'name' => '塑膠袋',
   ),
 );
 ?>

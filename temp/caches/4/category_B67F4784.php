@@ -1,4 +1,4 @@
-<?php exit;?>a:3:{s:8:"template";a:9:{i:0;s:36:"C:/wamp/www/themes/ohed/category.dwt";i:1;s:47:"C:/wamp/www/themes/ohed/library/page_header.lbi";i:2;s:43:"C:/wamp/www/themes/ohed/library/ur_here.lbi";i:3;s:45:"C:/wamp/www/themes/ohed/library/cate_best.lbi";i:4;s:46:"C:/wamp/www/themes/ohed/library/goods_list.lbi";i:5;s:41:"C:/wamp/www/themes/ohed/library/pages.lbi";i:6;s:44:"C:/wamp/www/themes/ohed/library/cate_hot.lbi";i:7;s:43:"C:/wamp/www/themes/ohed/library/history.lbi";i:8;s:47:"C:/wamp/www/themes/ohed/library/page_footer.lbi";}s:7:"expires";i:1372739725;s:8:"maketime";i:1372736125;}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php exit;?>a:3:{s:8:"template";a:9:{i:0;s:36:"C:/wamp/www/themes/ohed/category.dwt";i:1;s:47:"C:/wamp/www/themes/ohed/library/page_header.lbi";i:2;s:43:"C:/wamp/www/themes/ohed/library/ur_here.lbi";i:3;s:45:"C:/wamp/www/themes/ohed/library/cate_best.lbi";i:4;s:46:"C:/wamp/www/themes/ohed/library/goods_list.lbi";i:5;s:41:"C:/wamp/www/themes/ohed/library/pages.lbi";i:6;s:44:"C:/wamp/www/themes/ohed/library/cate_hot.lbi";i:7;s:43:"C:/wamp/www/themes/ohed/library/history.lbi";i:8;s:47:"C:/wamp/www/themes/ohed/library/page_footer.lbi";}s:7:"expires";i:1372742037;s:8:"maketime";i:1372738437;}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta name="Generator" content="ECSHOP v2.7.3" />
@@ -6,28 +6,20 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="Keywords" content="" />
 <meta name="Description" content="" />
-<title>手機配件_寶新塑膠</title>
+<title>手機配件_ECSHOP演示站</title>
 <link rel="shortcut icon" href="favicon.ico" />
 <link rel="icon" href="animated_favicon.gif" type="image/gif" />
 <link href="themes/ohed/style.css" rel="stylesheet" type="text/css" />
 <link href="themes/ohed/flat-ui.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="js/common.js"></script><script type="text/javascript" src="js/global.js"></script><script type="text/javascript" src="js/compare.js"></script><script src="themes/<?php echo $GLOBALS['_CFG']['template']; ?>/js/jquery_004.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/common.js"></script><script type="text/javascript" src="js/global.js"></script><script type="text/javascript" src="js/compare.js"></script><script src="themes/ohed/js/jquery_004.js" type="text/javascript"></script>
 </head>
 <body>
-   
  
- 
- 
- 
-<?php
- include_once('themes/' . $GLOBALS['_CFG']['template'].'/init.php');
-?>
- 
- <script src="themes/<?php echo $GLOBALS['_CFG']['template']; ?>/js/MSClass.js"></script> 
-<SCRIPT type=text/javascript src="themes/<?php echo $GLOBALS['_CFG']['template']; ?>/js/transport.js"></SCRIPT>
+ <script src="themes/ohed/js/MSClass.js"></script> 
+<SCRIPT type=text/javascript src="themes/ohed/js/transport.js"></SCRIPT>
  
  <!--[if IE 6]>
-    <script src="themes/<?php echo $GLOBALS['_CFG']['template']; ?>/js/DD_belatedPNG_0.0.8a-min.vb4e86b02.js"></script>
+    <script src="themes/ohed/js/DD_belatedPNG_0.0.8a-min.vb4e86b02.js"></script>
     <script> DD_belatedPNG.fix('.pngfix'); </script>
     <![endif]-->
 <!--
@@ -257,9 +249,7 @@ new Marquee(["TextDiv2","TextContent2"],0,1,980,60,20,1000,1000,60) ;
 </script>
 </div>
 </div>
-<div class="blank"></div>
- 
-<style>
+<div class="blank"></div><style>
  @font-face {
   font-family: DFTsaiStd-W3;
   src:url("themes/ohed/images/DFTsaiStd-W3.otf") format("opentype");
@@ -334,26 +324,7 @@ new Marquee(["TextDiv2","TextContent2"],0,1,980,60,20,1000,1000,60) ;
 <div  id="category_tree_index" class="   box  clearfix">
 <ul>  
       
-    <?php
-function get_cat_parent($id)
-{
- $sql="SELECT parent_id FROM ".$GLOBALS['ecs']->table('category')." WHERE cat_id = '$id'";
- $cat_id=$GLOBALS['db']->getOne($sql);
- if($cat_id)
- {
- return get_cat_parent($cat_id);
- }
- else
- {
- return $id;
- }
-}
-$cat_id   = $_REQUEST['id']?$_REQUEST['id']:$_REQUEST['category'];
-$p_id=get_cat_parent($cat_id);
-$this->assign('cat_id',$cat_id);
-$this->assign('p_id',$p_id);
-$this->assign('categories',get_categories_tree());
-?>
+    
         <dl style="display:none;"  onmouseover="this.className='  dl_on'" onmouseout="this.className=''">
     <dt><a style="cursor:pointer" href="category.php?id=1">手機類型</a></dt>
      <dd class="clearfix xuanjiu_dd">
@@ -363,7 +334,7 @@ $this->assign('categories',get_categories_tree());
          <a   href="category.php?id=5">雙模手機</a>
          </dd>
      </dl>
-            <dl style="display:none;"  onmouseover="this.className='  dl_on'" onmouseout="this.className=''">
+            <dl    onmouseover="this.className='  dl_on'" onmouseout="this.className=''">
     <dt><a style="cursor:pointer" href="category.php?id=6">手機配件</a></dt>
      <dd class="clearfix xuanjiu_dd">
 				       <a   href="category.php?id=7">充電器</a>
@@ -580,8 +551,7 @@ var compare_no_goods = "您沒有選定任何需要比較的商品或者比較�
 var btn_buy = "購買";
 var is_cancel = "取消";
 var select_spe = "請選擇商品屬性";
-</script>
-<form name="selectPageForm" class="clearfix" action="/category.php" method="get" style="background:#FFF; border:1px solid #b4b4b4; border-top:none; padding-top:3px;">
+</script><form name="selectPageForm" class="clearfix" action="/category.php" method="get" style="background:#FFF; border:1px solid #b4b4b4; border-top:none; padding-top:3px;">
  
  <div id="pager" class="pagebar" style="float:right">
  
@@ -619,11 +589,8 @@ function selectPage(sel)
       type=text/javascript> window.onload = show_goodspic(1,'hot');</SCRIPT>
    </div>
 </div>
-<div class="blank"></div>
+<div class="blank"></div>  
   
-  
- 
- 
 <div class="box_1" id='history_div'>
 <div class="tit"><span> <img src="themes/ohed/images/tit_history.gif"></span></div>
   <div class="boxCenterList clearfix" id='history_list'>
@@ -652,7 +619,6 @@ document.getElementById('history_list').innerHTML = '您已清空最近流覽過
   
  
 </div>
- 
 <div class="blank"></div> 
 <div class="block">
 <div class="helpTitBg clearfix">
@@ -734,8 +700,8 @@ document.getElementById('history_list').innerHTML = '您已清空最近流覽過
    
  
 </div>
- &copy; 2005-2013 寶新塑膠 版權所有，並保留所有權利。<br />
- 台中市神岡區中山路843號                                                                                    <br />
+ &copy; 2005-2013 ECSHOP 版權所有，並保留所有權利。<br />
+                                                                                     <br />
     554fcae493e564ee0dc75bdf2ebf94caquery_info|a:1:{s:4:"name";s:10:"query_info";}554fcae493e564ee0dc75bdf2ebf94ca<br />
    <a href="http://service.shopex.cn/auth.php?product=ecshop&url=http%3A%2F%2Fisosoman.zapto.org%2F">Licensed</a><br />
            <div align="center" style="padding-bottom:5px; width:1px; height:1px; overflow:hidden" ><a href="http://www.ecshop.com" target="_blank" style=" font-family:Verdana; font-size:11px;">Powered&nbsp;by&nbsp;<strong><span style="color: #3366FF">ECShop</span><span style="color: #FF9966">v2.7.3</span></strong></a></div>

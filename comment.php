@@ -1,25 +1,26 @@
 <?php
 
 /**
- * ECSHOP 提交用户评论
+ * ECSHOP 提交用戶評論
  * ============================================================================
- * * 版权所有 2005-2012 上海商派网络科技有限公司，并保留所有权利。
- * 网站地址: http://www.ecshop.com；
+ * 版權所有 2005-2010 上海商派網絡科技有限公司，並保留所有權利。
+ * 網站地址: http://www.ecshop.com；
  * ----------------------------------------------------------------------------
- * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和
- * 使用；不允许对程序代码以任何形式任何目的的再发布。
+ * 這不是一個自由軟件！您只能在不用於商業目的的前提下對程序代碼進行修改和
+ * 使用；不允許對程序代碼以任何形式任何目的的再發佈。
  * ============================================================================
- * $Author: liubo $
- * $Id: comment.php 17217 2011-01-19 06:29:08Z liubo $
+ * $Author: liuhui $
+ * $Id: comment.php 17063 2010-03-25 06:35:46Z liuhui $
 */
 
 define('IN_ECS', true);
 
 require(dirname(__FILE__) . '/includes/init.php');
 require(ROOT_PATH . 'includes/cls_json.php');
+
 if (!isset($_REQUEST['cmt']) && !isset($_REQUEST['act']))
 {
-    /* 只有在没有提交评论内容以及没有act的情况下才跳转 */
+    /* 只有在沒有提交評論內容以及沒有act的情況下才跳轉 */
     ecs_header("Location: ./\n");
     exit;
 }
@@ -31,8 +32,8 @@ $result = array('error' => 0, 'message' => '', 'content' => '');
 if (empty($_REQUEST['act']))
 {
     /*
-     * act 参数为空
-     * 默认为添加评论内容
+     * act 參數為空
+     * 默認為添加評論內容
      */
     $cmt  = $json->decode($_REQUEST['cmt']);
     $cmt->page = 1;
@@ -53,7 +54,7 @@ if (empty($_REQUEST['act']))
     {
         if ((intval($_CFG['captcha']) & CAPTCHA_COMMENT) && gd_version() > 0)
         {
-            /* 检查验证码 */
+            /* 檢查驗證碼 */
             include_once('includes/cls_captcha.php');
 
             $validator = new captcha();
@@ -67,7 +68,7 @@ if (empty($_REQUEST['act']))
                 $factor = intval($_CFG['comment_factor']);
                 if ($cmt->type == 0 && $factor > 0)
                 {
-                    /* 只有商品才检查评论条件 */
+                    /* 只有商品才檢查評論條件 */
                     switch ($factor)
                     {
                         case COMMENT_LOGIN :
@@ -81,9 +82,10 @@ if (empty($_REQUEST['act']))
                         case COMMENT_CUSTOM :
                             if ($_SESSION['user_id'] > 0)
                             {
+                                //zhong改
                                 $sql = "SELECT o.order_id FROM " . $ecs->table('order_info') . " AS o ".
                                        " WHERE user_id = '" . $_SESSION['user_id'] . "'".
-                                       " AND (o.order_status = '" . OS_CONFIRMED . "' or o.order_status = '" . OS_SPLITED . "') ".
+                                       " AND o.order_status = '" . OS_SPLITED . "' ".
                                        " AND (o.pay_status = '" . PS_PAYED . "' OR o.pay_status = '" . PS_PAYING . "') ".
                                        " AND (o.shipping_status = '" . SS_SHIPPED . "' OR o.shipping_status = '" . SS_RECEIVED . "') ".
                                        " LIMIT 1";
@@ -102,16 +104,18 @@ if (empty($_REQUEST['act']))
                                 $result['message'] = $_LANG['comment_custom'];
                             }
                             break;
+
                         case COMMENT_BOUGHT :
                             if ($_SESSION['user_id'] > 0)
                             {
+                                //zhong改
                                 $sql = "SELECT o.order_id".
                                        " FROM " . $ecs->table('order_info'). " AS o, ".
                                        $ecs->table('order_goods') . " AS og ".
                                        " WHERE o.order_id = og.order_id".
                                        " AND o.user_id = '" . $_SESSION['user_id'] . "'".
                                        " AND og.goods_id = '" . $cmt->id . "'".
-                                       " AND (o.order_status = '" . OS_CONFIRMED . "' or o.order_status = '" . OS_SPLITED . "') ".
+                                       //zhong改" AND o.order_status = '" . OS_SPLITED . "' ".
                                        " AND (o.pay_status = '" . PS_PAYED . "' OR o.pay_status = '" . PS_PAYING . "') ".
                                        " AND (o.shipping_status = '" . SS_SHIPPED . "' OR o.shipping_status = '" . SS_RECEIVED . "') ".
                                        " LIMIT 1";
@@ -130,7 +134,7 @@ if (empty($_REQUEST['act']))
                     }
                 }
 
-                /* 无错误就保存留言 */
+                /* 無錯誤就保存留言 */
                 if (empty($result['error']))
                 {
                     add_comment($cmt);
@@ -139,14 +143,14 @@ if (empty($_REQUEST['act']))
         }
         else
         {
-            /* 没有验证码时，用时间来限制机器人发帖或恶意发评论 */
+            /* 沒有驗證碼時，用時間來限制機器人發帖或惡意發評論 */
             if (!isset($_SESSION['send_time']))
             {
                 $_SESSION['send_time'] = 0;
             }
 
             $cur_time = gmtime();
-            if (($cur_time - $_SESSION['send_time']) < 30) // 小于30秒禁止发评论
+            if (($cur_time - $_SESSION['send_time']) < 30) // 小於30秒禁止發評論
             {
                 $result['error']   = 1;
                 $result['message'] = $_LANG['cmt_spam_warning'];
@@ -156,7 +160,7 @@ if (empty($_REQUEST['act']))
                 $factor = intval($_CFG['comment_factor']);
                 if ($cmt->type == 0 && $factor > 0)
                 {
-                    /* 只有商品才检查评论条件 */
+                    /* 只有商品才檢查評論條件 */
                     switch ($factor)
                     {
                         case COMMENT_LOGIN :
@@ -172,7 +176,7 @@ if (empty($_REQUEST['act']))
                             {
                                 $sql = "SELECT o.order_id FROM " . $ecs->table('order_info') . " AS o ".
                                        " WHERE user_id = '" . $_SESSION['user_id'] . "'".
-                                       " AND (o.order_status = '" . OS_CONFIRMED . "' or o.order_status = '" . OS_SPLITED . "') ".
+                                       " AND o.order_status = '" . OS_CONFIRMED . "' ".
                                        " AND (o.pay_status = '" . PS_PAYED . "' OR o.pay_status = '" . PS_PAYING . "') ".
                                        " AND (o.shipping_status = '" . SS_SHIPPED . "' OR o.shipping_status = '" . SS_RECEIVED . "') ".
                                        " LIMIT 1";
@@ -201,7 +205,7 @@ if (empty($_REQUEST['act']))
                                        " WHERE o.order_id = og.order_id".
                                        " AND o.user_id = '" . $_SESSION['user_id'] . "'".
                                        " AND og.goods_id = '" . $cmt->id . "'".
-                                       " AND (o.order_status = '" . OS_CONFIRMED . "' or o.order_status = '" . OS_SPLITED . "') ".
+                                       " AND o.order_status = '" . OS_CONFIRMED . "' ".
                                        " AND (o.pay_status = '" . PS_PAYED . "' OR o.pay_status = '" . PS_PAYING . "') ".
                                        " AND (o.shipping_status = '" . SS_SHIPPED . "' OR o.shipping_status = '" . SS_RECEIVED . "') ".
                                        " LIMIT 1";
@@ -219,7 +223,7 @@ if (empty($_REQUEST['act']))
                             }
                     }
                 }
-                /* 无错误就保存留言 */
+                /* 無錯誤就保存留言 */
                 if (empty($result['error']))
                 {
                     add_comment($cmt);
@@ -232,9 +236,9 @@ if (empty($_REQUEST['act']))
 else
 {
     /*
-     * act 参数不为空
-     * 默认为评论内容列表
-     * 根据 _GET 创建一个静态对象
+     * act 參數不為空
+     * 默認為評論內容列表
+     * 根據 _GET 創建一個靜態對像
      */
     $cmt = new stdClass();
     $cmt->id   = !empty($_GET['id'])   ? intval($_GET['id'])   : 0;
@@ -253,7 +257,7 @@ if ($result['error'] == 0)
     $smarty->assign('comments',     $comments['comments']);
     $smarty->assign('pager',        $comments['pager']);
 
-    /* 验证码相关设置 */
+    /* 驗證碼相關設置 */
     if ((intval($_CFG['captcha']) & CAPTCHA_COMMENT) && gd_version() > 0)
     {
         $smarty->assign('enabled_captcha', 1);
@@ -271,7 +275,7 @@ echo $json->encode($result);
 /*------------------------------------------------------ */
 
 /**
- * 添加评论内容
+ * 添加評論內容
  *
  * @access  public
  * @param   object  $cmt
@@ -279,19 +283,20 @@ echo $json->encode($result);
  */
 function add_comment($cmt)
 {
-    /* 评论是否需要审核 */
+    /* 評論是否需要審核 */
     $status = 1 - $GLOBALS['_CFG']['comment_check'];
 
     $user_id = empty($_SESSION['user_id']) ? 0 : $_SESSION['user_id'];
     $email = empty($cmt->email) ? $_SESSION['email'] : trim($cmt->email);
-    $user_name = empty($cmt->username) ? $_SESSION['user_name'] : '';
+    $user_name = empty($cmt->username) ? $_SESSION['user_name'] : trim($cmt->username);
     $email = htmlspecialchars($email);
     $user_name = htmlspecialchars($user_name);
 
-    /* 保存评论内容 */
+    /* 保存評論內容 */
+    //zhong改
     $sql = "INSERT INTO " .$GLOBALS['ecs']->table('comment') .
            "(comment_type, id_value, email, user_name, content, comment_rank, add_time, ip_address, status, parent_id, user_id) VALUES " .
-           "('" .$cmt->type. "', '" .$cmt->id. "', '$email', '$user_name', '" .$cmt->content."', '".$cmt->rank."', ".gmtime().", '".real_ip()."', '$status', '0', '$user_id')";
+           "('" .$cmt->type. "', '" .$cmt->id. "', '$email', '$user_name', '" .$cmt->content."', '".$cmt->rank."', ".gmtime().", '".$cmt->ip."', '$status', '0', '$user_id')";
 
     $result = $GLOBALS['db']->query($sql);
     clear_cache_files('comments_list.lbi');

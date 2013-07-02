@@ -3,19 +3,13 @@
  
  
  
-<?php echo '<?php'; ?>
-
+<?php
  include_once('themes/' . $GLOBALS['_CFG']['template'].'/init.php');
-<?php echo '?>'; ?>
-
+?>
 
  
- <script src="themes/<?php echo '<?php'; ?>
- echo $GLOBALS['_CFG']['template']; <?php echo '?>'; ?>
-/js/MSClass.js"></script> 
-<SCRIPT type=text/javascript src="themes/<?php echo '<?php'; ?>
- echo $GLOBALS['_CFG']['template']; <?php echo '?>'; ?>
-/js/transport.js"></SCRIPT>
+ <script src="themes/<?php echo $GLOBALS['_CFG']['template']; ?>/js/MSClass.js"></script> 
+<SCRIPT type=text/javascript src="themes/<?php echo $GLOBALS['_CFG']['template']; ?>/js/transport.js"></SCRIPT>
  
 
 
@@ -25,9 +19,7 @@
 
 
  <!--[if IE 6]>
-    <script src="themes/<?php echo '<?php'; ?>
- echo $GLOBALS['_CFG']['template']; <?php echo '?>'; ?>
-/js/DD_belatedPNG_0.0.8a-min.vb4e86b02.js"></script>
+    <script src="themes/<?php echo $GLOBALS['_CFG']['template']; ?>/js/DD_belatedPNG_0.0.8a-min.vb4e86b02.js"></script>
     <script> DD_belatedPNG.fix('.pngfix'); </script>
     <![endif]-->
 <!--
