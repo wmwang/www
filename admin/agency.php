@@ -1,13 +1,13 @@
 <?php
 
 /**
- * ECSHOP 管理中心办事处管理
+ * ECSHOP 管理中心辦事處管理
  * ============================================================================
- * * 版权所有 2005-2012 上海商派网络科技有限公司，并保留所有权利。
- * 网站地址: http://www.ecshop.com；
+ * * 版權所有 2005-2012 上海商派網絡科技有限公司，並保留所有權利。
+ * 網站地址: http://www.ecshop.com；
  * ----------------------------------------------------------------------------
- * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和
- * 使用；不允许对程序代码以任何形式任何目的的再发布。
+ * 這不是一個自由軟件！您只能在不用於商業目的的前提下對程序代碼進行修改和
+ * 使用；不允許對程序代碼以任何形式任何目的的再發佈。
  * ============================================================================
  * $Author: liubo $
  * $Id: agency.php 17217 2011-01-19 06:29:08Z liubo $
@@ -20,7 +20,7 @@ require(dirname(__FILE__) . '/includes/init.php');
 $exc = new exchange($ecs->table('agency'), $db, 'agency_id', 'agency_name');
 
 /*------------------------------------------------------ */
-//-- 办事处列表
+//-- 辦事處列表
 /*------------------------------------------------------ */
 if ($_REQUEST['act'] == 'list')
 {
@@ -34,7 +34,7 @@ if ($_REQUEST['act'] == 'list')
     $smarty->assign('record_count', $agency_list['record_count']);
     $smarty->assign('page_count',   $agency_list['page_count']);
 
-    /* 排序标记 */
+    /* 排序標記 */
     $sort_flag  = sort_flag($agency_list['filter']);
     $smarty->assign($sort_flag['tag'], $sort_flag['img']);
 
@@ -43,7 +43,7 @@ if ($_REQUEST['act'] == 'list')
 }
 
 /*------------------------------------------------------ */
-//-- 排序、分页、查询
+//-- 排序、分頁、查詢
 /*------------------------------------------------------ */
 elseif ($_REQUEST['act'] == 'query')
 {
@@ -53,7 +53,7 @@ elseif ($_REQUEST['act'] == 'query')
     $smarty->assign('record_count', $agency_list['record_count']);
     $smarty->assign('page_count',   $agency_list['page_count']);
 
-    /* 排序标记 */
+    /* 排序標記 */
     $sort_flag  = sort_flag($agency_list['filter']);
     $smarty->assign($sort_flag['tag'], $sort_flag['img']);
 
@@ -62,7 +62,7 @@ elseif ($_REQUEST['act'] == 'query')
 }
 
 /*------------------------------------------------------ */
-//-- 列表页编辑名称
+//-- 列表頁編輯名稱
 /*------------------------------------------------------ */
 elseif ($_REQUEST['act'] == 'edit_agency_name')
 {
@@ -71,7 +71,7 @@ elseif ($_REQUEST['act'] == 'edit_agency_name')
     $id     = intval($_POST['id']);
     $name   = json_str_iconv(trim($_POST['val']));
 
-    /* 检查名称是否重复 */
+    /* 檢查名稱是否重複 */
     if ($exc->num("agency_name", $name, $id) != 0)
     {
         make_json_error(sprintf($_LANG['agency_name_exist'], $name));
@@ -92,7 +92,7 @@ elseif ($_REQUEST['act'] == 'edit_agency_name')
 }
 
 /*------------------------------------------------------ */
-//-- 删除办事处
+//-- 刪除辦事處
 /*------------------------------------------------------ */
 elseif ($_REQUEST['act'] == 'remove')
 {
@@ -102,7 +102,7 @@ elseif ($_REQUEST['act'] == 'remove')
     $name = $exc->get_name($id);
     $exc->drop($id);
 
-    /* 更新管理员、配送地区、发货单、退货单和订单关联的办事处 */
+    /* 更新管理員、配送地區、發貨單、退貨單和訂單關聯的辦事處 */
     $table_array = array('admin_user', 'region', 'order_info', 'delivery_order', 'back_order');
     foreach ($table_array as $value)
     {
@@ -110,10 +110,10 @@ elseif ($_REQUEST['act'] == 'remove')
         $db->query($sql);
     }
 
-    /* 记日志 */
+    /* 記日誌 */
     admin_log($name, 'remove', 'agency');
 
-    /* 清除缓存 */
+    /* 清除緩存 */
     clear_cache_files();
 
     $url = 'agency.php?act=query&' . str_replace('act=remove', '', $_SERVER['QUERY_STRING']);
@@ -127,26 +127,26 @@ elseif ($_REQUEST['act'] == 'remove')
 /*------------------------------------------------------ */
 elseif ($_REQUEST['act'] == 'batch')
 {
-    /* 取得要操作的记录编号 */
+    /* 取得要操作的記錄編號 */
     if (empty($_POST['checkboxes']))
     {
         sys_msg($_LANG['no_record_selected']);
     }
     else
     {
-        /* 检查权限 */
+        /* 檢查權限 */
         admin_priv('agency_manage');
 
         $ids = $_POST['checkboxes'];
 
         if (isset($_POST['remove']))
         {
-            /* 删除记录 */
+            /* 刪除記錄 */
             $sql = "DELETE FROM " . $ecs->table('agency') .
                     " WHERE agency_id " . db_create_in($ids);
             $db->query($sql);
 
-            /* 更新管理员、配送地区、发货单、退货单和订单关联的办事处 */
+            /* 更新管理員、配送地區、發貨單、退貨單和訂單關聯的辦事處 */
             $table_array = array('admin_user', 'region', 'order_info', 'delivery_order', 'back_order');
             foreach ($table_array as $value)
             {
@@ -154,10 +154,10 @@ elseif ($_REQUEST['act'] == 'batch')
                 $db->query($sql);
             }
 
-            /* 记日志 */
+            /* 記日誌 */
             admin_log('', 'batch_remove', 'agency');
 
-            /* 清除缓存 */
+            /* 清除緩存 */
             clear_cache_files();
 
             sys_msg($_LANG['batch_drop_ok']);
@@ -166,18 +166,18 @@ elseif ($_REQUEST['act'] == 'batch')
 }
 
 /*------------------------------------------------------ */
-//-- 添加、编辑办事处
+//-- 添加、編輯辦事處
 /*------------------------------------------------------ */
 elseif ($_REQUEST['act'] == 'add' || $_REQUEST['act'] == 'edit')
 {
-    /* 检查权限 */
+    /* 檢查權限 */
     admin_priv('agency_manage');
 
     /* 是否添加 */
     $is_add = $_REQUEST['act'] == 'add';
     $smarty->assign('form_action', $is_add ? 'insert' : 'update');
 
-    /* 初始化、取得办事处信息 */
+    /* 初始化、取得辦事處信息 */
     if ($is_add)
     {
         $agency = array(
@@ -202,13 +202,13 @@ elseif ($_REQUEST['act'] == 'add' || $_REQUEST['act'] == 'edit')
             sys_msg('agency does not exist');
         }
 
-        /* 关联的地区 */
+        /* 關聯的地區 */
         $sql = "SELECT region_id, region_name FROM " . $ecs->table('region') .
                 " WHERE agency_id = '$id'";
         $agency['region_list'] = $db->getAll($sql);
     }
 
-    /* 取得所有管理员，标注哪些是该办事处的('this')，哪些是空闲的('free')，哪些是别的办事处的('other') */
+    /* 取得所有管理員，標注哪些是該辦事處的('this')，哪些是空閒的('free')，哪些是別的辦事處的('other') */
     $sql = "SELECT user_id, user_name, CASE " .
             "WHEN agency_id = 0 THEN 'free' " .
             "WHEN agency_id = '$agency[agency_id]' THEN 'this' " .
@@ -219,11 +219,11 @@ elseif ($_REQUEST['act'] == 'add' || $_REQUEST['act'] == 'edit')
 
     $smarty->assign('agency', $agency);
 
-    /* 取得地区 */
+    /* 取得地區 */
     $country_list = get_regions();
     $smarty->assign('countries', $country_list);
 
-    /* 显示模板 */
+    /* 顯示模板 */
     if ($is_add)
     {
         $smarty->assign('ur_here', $_LANG['add_agency']);
@@ -246,11 +246,11 @@ elseif ($_REQUEST['act'] == 'add' || $_REQUEST['act'] == 'edit')
 }
 
 /*------------------------------------------------------ */
-//-- 提交添加、编辑办事处
+//-- 提交添加、編輯辦事處
 /*------------------------------------------------------ */
 elseif ($_REQUEST['act'] == 'insert' || $_REQUEST['act'] == 'update')
 {
-    /* 检查权限 */
+    /* 檢查權限 */
     admin_priv('agency_manage');
 
     /* 是否添加 */
@@ -263,19 +263,19 @@ elseif ($_REQUEST['act'] == 'insert' || $_REQUEST['act'] == 'update')
         'agency_desc'   => $_POST['agency_desc']
     );
 
-    /* 判断名称是否重复 */
+    /* 判斷名稱是否重複 */
     if (!$exc->is_only('agency_name', $agency['agency_name'], $agency['agency_id']))
     {
         sys_msg($_LANG['agency_name_exist']);
     }
 
-    /* 检查是否选择了地区 */
+    /* 檢查是否選擇了地區 */
     if (empty($_POST['regions']))
     {
         sys_msg($_LANG['no_regions']);
     }
 
-    /* 保存办事处信息 */
+    /* 保存辦事處信息 */
     if ($is_add)
     {
         $db->autoExecute($ecs->table('agency'), $agency, 'INSERT');
@@ -286,7 +286,7 @@ elseif ($_REQUEST['act'] == 'insert' || $_REQUEST['act'] == 'update')
         $db->autoExecute($ecs->table('agency'), $agency, 'UPDATE', "agency_id = '$agency[agency_id]'");
     }
 
-    /* 更新管理员表和地区表 */
+    /* 更新管理員表和地區表 */
     if (!$is_add)
     {
         $sql = "UPDATE " . $ecs->table('admin_user') . " SET agency_id = 0 WHERE agency_id = '$agency[agency_id]'";
@@ -308,7 +308,7 @@ elseif ($_REQUEST['act'] == 'insert' || $_REQUEST['act'] == 'update')
         $db->query($sql);
     }
 
-    /* 记日志 */
+    /* 記日誌 */
     if ($is_add)
     {
         admin_log($agency['agency_name'], 'add', 'agency');
@@ -318,7 +318,7 @@ elseif ($_REQUEST['act'] == 'insert' || $_REQUEST['act'] == 'update')
         admin_log($agency['agency_name'], 'edit', 'agency');
     }
 
-    /* 清除缓存 */
+    /* 清除緩存 */
     clear_cache_files();
 
     /* 提示信息 */
@@ -340,7 +340,7 @@ elseif ($_REQUEST['act'] == 'insert' || $_REQUEST['act'] == 'update')
 }
 
 /**
- * 取得办事处列表
+ * 取得辦事處列表
  * @return  array
  */
 function get_agencylist()
@@ -348,17 +348,17 @@ function get_agencylist()
     $result = get_filter();
     if ($result === false)
     {
-        /* 初始化分页参数 */
+        /* 初始化分頁參數 */
         $filter = array();
         $filter['sort_by']    = empty($_REQUEST['sort_by']) ? 'agency_id' : trim($_REQUEST['sort_by']);
         $filter['sort_order'] = empty($_REQUEST['sort_order']) ? 'DESC' : trim($_REQUEST['sort_order']);
 
-        /* 查询记录总数，计算分页数 */
+        /* 查詢記錄總數，計算分頁數 */
         $sql = "SELECT COUNT(*) FROM " . $GLOBALS['ecs']->table('agency');
         $filter['record_count'] = $GLOBALS['db']->getOne($sql);
         $filter = page_and_size($filter);
 
-        /* 查询记录 */
+        /* 查詢記錄 */
         $sql = "SELECT * FROM " . $GLOBALS['ecs']->table('agency') . " ORDER BY $filter[sort_by] $filter[sort_order]";
 
         set_filter($filter, $sql);

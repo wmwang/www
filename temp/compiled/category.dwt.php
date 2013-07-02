@@ -18,7 +18,9 @@
 <?php endif; ?>
 
 <?php echo $this->smarty_insert_scripts(array('files'=>'common.js,global.js,compare.js')); ?>
-<script src="themes/<?php echo $GLOBALS['_CFG']['template']; ?>/js/jquery_004.js" type="text/javascript"></script>
+<script src="themes/<?php echo '<?php'; ?>
+ echo $GLOBALS['_CFG']['template']; <?php echo '?>'; ?>
+/js/jquery_004.js" type="text/javascript"></script>
 </head>
 <body>
 <?php echo $this->fetch('library/page_header.lbi'); ?>
@@ -58,7 +60,8 @@
 <div  id="category_tree_index" class="   box  clearfix">
 <ul>  
       
-    <?php
+    <?php echo '<?php'; ?>
+
 function get_cat_parent($id)
 {
  $sql="SELECT parent_id FROM ".$GLOBALS['ecs']->table('category')." WHERE cat_id = '$id'";
@@ -77,7 +80,8 @@ $p_id=get_cat_parent($cat_id);
 $this->assign('cat_id',$cat_id);
 $this->assign('p_id',$p_id);
 $this->assign('categories',get_categories_tree());
-?>
+<?php echo '?>'; ?>
+
 
 
     <?php $_from = $this->_var['categories']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'cat');$this->_foreach['cat'] = array('total' => count($_from), 'iteration' => 0);
@@ -133,17 +137,17 @@ if ($this->_foreach['cat']['total'] > 0):
         </dd>
      </dl>
 			<?php endif; ?>
-			<?php $_from = $this->_var['filter_attr_list']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'filter_attr_0_96962000_1372596230');if (count($_from)):
-    foreach ($_from AS $this->_var['filter_attr_0_96962000_1372596230']):
+			<?php $_from = $this->_var['filter_attr_list']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'filter_attr_0_44580200_1372736109');if (count($_from)):
+    foreach ($_from AS $this->_var['filter_attr_0_44580200_1372736109']):
 ?>
     
              
              
            <dl  onmouseover="this.className='  dl_on'" onmouseout="this.className=''">
-     <dt><a href="#"><?php echo htmlspecialchars($this->_var['filter_attr_0_96962000_1372596230']['filter_attr_name']); ?></a> </dt>
+     <dt><a href="#"><?php echo htmlspecialchars($this->_var['filter_attr_0_44580200_1372736109']['filter_attr_name']); ?></a> </dt>
      <dd class="clearfix xuanjiu_dd">  
    
-			<?php $_from = $this->_var['filter_attr_0_96962000_1372596230']['attr_list']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'attr');if (count($_from)):
+			<?php $_from = $this->_var['filter_attr_0_44580200_1372736109']['attr_list']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'attr');if (count($_from)):
     foreach ($_from AS $this->_var['attr']):
 ?>
 				<?php if ($this->_var['attr']['selected']): ?>

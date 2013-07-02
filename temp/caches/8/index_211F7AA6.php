@@ -1,17 +1,17 @@
-<?php exit;?>a:3:{s:8:"template";a:10:{i:0;s:33:"C:/wamp/www/themes/ohed/index.dwt";i:1;s:47:"C:/wamp/www/themes/ohed/library/page_header.lbi";i:2;s:44:"C:/wamp/www/themes/ohed/library/index_ad.lbi";i:3;s:46:"C:/wamp/www/themes/ohed/library/index_tree.lbi";i:4;s:50:"C:/wamp/www/themes/ohed/library/promotion_info.lbi";i:5;s:40:"C:/wamp/www/themes/ohed/library/cart.lbi";i:6;s:43:"C:/wamp/www/themes/ohed/library/gundong.lbi";i:7;s:47:"C:/wamp/www/themes/ohed/library/ad_position.lbi";i:8;s:46:"C:/wamp/www/themes/ohed/library/index_comm.lbi";i:9;s:47:"C:/wamp/www/themes/ohed/library/page_footer.lbi";}s:7:"expires";i:1372665480;s:8:"maketime";i:1372661880;}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php exit;?>a:3:{s:8:"template";a:10:{i:0;s:33:"C:/wamp/www/themes/ohed/index.dwt";i:1;s:47:"C:/wamp/www/themes/ohed/library/page_header.lbi";i:2;s:44:"C:/wamp/www/themes/ohed/library/index_ad.lbi";i:3;s:46:"C:/wamp/www/themes/ohed/library/index_tree.lbi";i:4;s:50:"C:/wamp/www/themes/ohed/library/promotion_info.lbi";i:5;s:40:"C:/wamp/www/themes/ohed/library/cart.lbi";i:6;s:43:"C:/wamp/www/themes/ohed/library/gundong.lbi";i:7;s:47:"C:/wamp/www/themes/ohed/library/ad_position.lbi";i:8;s:46:"C:/wamp/www/themes/ohed/library/index_comm.lbi";i:9;s:47:"C:/wamp/www/themes/ohed/library/page_footer.lbi";}s:7:"expires";i:1372739697;s:8:"maketime";i:1372736097;}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta name="Generator" content="ECSHOP v2.7.3" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<meta name="Keywords" content="ECSHOP演示站" />
-<meta name="Description" content="ECSHOP演示站" />
-<title>ECSHOP演示站</title>
+<meta name="Keywords" content="寶新塑膠" />
+<meta name="Description" content="寶新塑膠" />
+<title>寶新塑膠</title>
 <link rel="shortcut icon" href="favicon.ico" />
 <link rel="icon" href="animated_favicon.gif" type="image/gif" />
 <link href="themes/ohed/style.css" rel="stylesheet" type="text/css" />
 <link href="themes/ohed/flat-ui.css" rel="stylesheet" type="text/css"/>
-<link hrel="alternate" type="application/rss+xml" title="RSS|ECSHOP演示站" href="feed.php" />
+<link hrel="alternate" type="application/rss+xml" title="RSS|寶新塑膠" href="feed.php" />
 <script type="text/javascript" src="js/common.js"></script><script type="text/javascript" src="js/index.js"></script><script type="text/javascript" src="themes/ohed/js/left_goodslist.js"></script>
 <script type="text/javascript">
 function $id(element) {
@@ -39,12 +39,15 @@ function reg(str){
 </script>
 </head>
 <body>
+<?php
+ include_once('themes/' . $GLOBALS['_CFG']['template'].'/init.php');
+?>
  
- <script src="themes/ohed/js/MSClass.js"></script> 
-<SCRIPT type=text/javascript src="themes/ohed/js/transport.js"></SCRIPT>
+ <script src="themes/<?php echo $GLOBALS['_CFG']['template']; ?>/js/MSClass.js"></script> 
+<SCRIPT type=text/javascript src="themes/<?php echo $GLOBALS['_CFG']['template']; ?>/js/transport.js"></SCRIPT>
  
  <!--[if IE 6]>
-    <script src="themes/ohed/js/DD_belatedPNG_0.0.8a-min.vb4e86b02.js"></script>
+    <script src="themes/<?php echo $GLOBALS['_CFG']['template']; ?>/js/DD_belatedPNG_0.0.8a-min.vb4e86b02.js"></script>
     <script> DD_belatedPNG.fix('.pngfix'); </script>
     <![endif]-->
 <!--
@@ -336,11 +339,9 @@ new Marquee(
  
  
  
-<div class="blank"></div>
-  
+<div class="blank"></div> 
  
-   
-<div  style="background:#fff; height:28px; line-height:28px; text-align:right; border-bottom:3px solid #fff" >
+   <div  style="background:#fff; height:28px; line-height:28px; text-align:right; border-bottom:3px solid #fff" >
  
  <div class="btn btn-large btn-block btn-primaryForIndexTree">商品分類中心
           </div>
@@ -492,10 +493,10 @@ new Marquee(
      </dl>
        
          
+           
      
 </ul>    
-</div>
- 
+</div> 
   
 </div> 
 <div class="f_r" style="width:250px; _overflow:hidden">
@@ -552,7 +553,7 @@ new Marquee(
   }
 //]]>
 </script>
- 
+ <!--
 <script language="javascript" type="text/javascript">
     function ScrollText(content,btnPrevious,btnNext,autoStart,timeout,isSmoothScroll)
     {
@@ -744,7 +745,7 @@ new Marquee(
     
  </div>
 <div class="blank"></div>
- 
+-->
 554fcae493e564ee0dc75bdf2ebf94caads|a:3:{s:4:"name";s:3:"ads";s:2:"id";s:2:"13";s:3:"num";s:1:"1";}554fcae493e564ee0dc75bdf2ebf94ca
  
 </div> 
@@ -755,97 +756,12 @@ new Marquee(
  
 <div class="blank"></div>
 <div style="float:right; width:251px;">
-<!--
-  
- 
-<script type="text/javascript">
-function $(id){return document.getElementById(id)};
-</script>
-<div class="sub-promotion">
-	<div class="sp-hd">
-    
-    
-    <img src="themes/ohed/images/tit_pinlun.gif" style="float:left; padding:7px;">
-		 
-		<a href="javascript:void(0);" class="sp-prev" id="TaoBaoUpButton"></a>
-		<a href="javascript:void(0);" class="sp-next" id="TaoBaoDownButton"></a>
-	</div>
-	<div class="sub-promotion-content">
-		<div id="Taobao_Box">
-        <ul class="con-of-3" id="Taobao_Box_Content">
-        
-        
-        
-<li>
- <a href="goods.php?id=12" title="摩托羅拉A810" target="_blank">
-<img alt="摩托羅拉A810" src="images/200905/thumb_img/12_thumb_G_1241965978410.jpg" style="width:80px;  float:left;   " >
-</a>
-<div>
-<a class="name" href="goods.php?id=12" title="摩托羅拉A810" target="_blank">
-摩托羅拉A810</a>
-<a href="goods.php?id=12" title="摩托羅拉A810" target="_blank">
-很好，我很喜歡</a>
- 
-</div>
- </li>
- 
- 
- 
-        
-        
-        
-        
-        
-        
-       
-			</ul></div>
-	</div>
-</div>
- <script type="text/javascript">
-var TaoBaoControl = new Marquee(
-{
-	MSClass	  : ["Taobao_Box","Taobao_Box_Content"],
-	Direction : -1,
-	Step	  : 0.1,
-	Width	  : 296,
-	Height	  : 198,
-	Timer	  : 20,
-	DelayTime : 3000,
-	WaitTime  : 100000,
-	ScrollStep: 0,
-	SwitchType: 0,
-	AutoStart : true
-});
-$("TaoBaoUpButton").onclick = function(){TaoBaoControl.Run(1)};		//跳過等待時間向上滾動
-$("TaoBaoDownButton").onclick = function(){TaoBaoControl.Run(0)};	//跳過等待時間向下滾動
-$("TaoBaoUpButton").className = "sp-prev disable";			//將按鈕置為不可點擊(樣式)
-TaoBaoControl.OnScroll = function();
-TaoBaoControl.OnBound = function()
-	{
-		if(TaoBaoControl.Bound == 1)
-		{
-			$("TaoBaoUpButton").className = "sp-prev disable";
-		}
-		else
-		{
-			$("TaoBaoDownButton").className = "sp-next disable";
-		}
-	};	//滾動至邊界做相應處理，切換按鈕狀態(樣式)
-TaoBaoControl.UnBound = function()
-	{
-		$("TaoBaoDownButton").className = "sp-next";
-		$("TaoBaoUpButton").className="sp-prev";
-	};	//非邊界狀態處理
-</script>
-<script src="themes/ohed/js/pinlun.js"></script> 
-<div class="blank"></div>
--->
+<?php ?>
 </div> 
  
     
 </div> 
    
- 
  
 <div class="blank"></div> 
 <div class="block">
@@ -935,8 +851,8 @@ TaoBaoControl.UnBound = function()
    
  
 </div>
- &copy; 2005-2013 ECSHOP 版權所有，並保留所有權利。<br />
-                                                                                     <br />
+ &copy; 2005-2013 寶新塑膠 版權所有，並保留所有權利。<br />
+ 台中市神岡區中山路843號                                                                                    <br />
     554fcae493e564ee0dc75bdf2ebf94caquery_info|a:1:{s:4:"name";s:10:"query_info";}554fcae493e564ee0dc75bdf2ebf94ca<br />
    <a href="http://service.shopex.cn/auth.php?product=ecshop&url=http%3A%2F%2Fisosoman.zapto.org%2F">Licensed</a><br />
            <div align="center" style="padding-bottom:5px; width:1px; height:1px; overflow:hidden" ><a href="http://www.ecshop.com" target="_blank" style=" font-family:Verdana; font-size:11px;">Powered&nbsp;by&nbsp;<strong><span style="color: #3366FF">ECShop</span><span style="color: #FF9966">v2.7.3</span></strong></a></div>

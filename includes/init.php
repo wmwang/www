@@ -3,14 +3,14 @@
 /**
  * ECSHOP 前台公用文件
  * ============================================================================
- * 版权所有 2005-2010 上海商派网络科技有限公司，并保留所有权利。
+ * * 版权所有 2005-2012 上海商派网络科技有限公司，并保留所有权利。
  * 网站地址: http://www.ecshop.com；
  * ----------------------------------------------------------------------------
  * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和
  * 使用；不允许对程序代码以任何形式任何目的的再发布。
  * ============================================================================
- * $Author: liuhui $
- * $Id: init.php 17153 2010-05-05 09:39:12Z liuhui $
+ * $Author: liubo $
+ * $Id: init.php 17217 2011-01-19 06:29:08Z liubo $
 */
 
 if (!defined('IN_ECS'))
@@ -82,7 +82,6 @@ require(ROOT_PATH . 'includes/lib_main.php');
 require(ROOT_PATH . 'includes/lib_insert.php');
 require(ROOT_PATH . 'includes/lib_goods.php');
 require(ROOT_PATH . 'includes/lib_article.php');
-require(ROOT_PATH . 'themes/ohed/php/init.php');  /* zhong改 */
 
 /* 对用户传入的变量进行转义操作。*/
 if (!get_magic_quotes_gpc())
@@ -156,19 +155,11 @@ if (!defined('INIT_NO_USERS'))
     $sess = new cls_session($db, $ecs->table('sessions'), $ecs->table('sessions_data'));
 
     define('SESS_ID', $sess->get_session_id());
-	
-	
-	
-	if(isset($_SERVER['PHP_SELF']))
+}
+if(isset($_SERVER['PHP_SELF']))
 {
     $_SERVER['PHP_SELF']=htmlspecialchars($_SERVER['PHP_SELF']);
 }
-
-
-
-	
-}
-
 if (!defined('INIT_NO_SMARTY'))
 {
     header('Cache-control: private');
@@ -215,7 +206,7 @@ if (!defined('INIT_NO_USERS'))
     if (!isset($_SESSION['user_id']))
     {
         /* 获取投放站点的名称 */
-        $site_name = isset($_GET['from'])   ? $_GET['from'] : addslashes($_LANG['self_site']);
+        $site_name = isset($_GET['from'])   ? htmlspecialchars($_GET['from']) : addslashes($_LANG['self_site']);
         $from_ad   = !empty($_GET['ad_id']) ? intval($_GET['ad_id']) : 0;
 
         $_SESSION['from_ad'] = $from_ad; // 用户点击的广告ID
@@ -296,7 +287,7 @@ if ((DEBUG_MODE & 1) == 1)
 }
 else
 {
-    error_reporting(E_ALL ^ E_NOTICE);
+    error_reporting(E_ALL ^ (E_NOTICE | E_WARNING)); 
 }
 if ((DEBUG_MODE & 4) == 4)
 {

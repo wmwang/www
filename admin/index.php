@@ -545,7 +545,7 @@ elseif ($_REQUEST['act'] == 'main_api')
 
 elseif ($_REQUEST['act'] == 'first')
 {
-    $smarty->assign('countries',    get_regions());
+    $smarty->assign('countries',   台灣);
     $smarty->assign('provinces',    get_regions(1, 1));
     $smarty->assign('cities',    get_regions(2, 2));
 

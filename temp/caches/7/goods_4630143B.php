@@ -1,4 +1,4 @@
-<?php exit;?>a:3:{s:8:"template";a:11:{i:0;s:33:"C:/wamp/www/themes/ohed/goods.dwt";i:1;s:47:"C:/wamp/www/themes/ohed/library/page_header.lbi";i:2;s:43:"C:/wamp/www/themes/ohed/library/ur_here.lbi";i:3;s:49:"C:/wamp/www/themes/ohed/library/goods_gallery.lbi";i:4;s:50:"C:/wamp/www/themes/ohed/library/goods_fittings.lbi";i:5;s:44:"C:/wamp/www/themes/ohed/library/goods_gm.lbi";i:6;s:44:"C:/wamp/www/themes/ohed/library/goods_ps.lbi";i:7;s:53:"C:/wamp/www/themes/ohed/library/bought_note_guide.lbi";i:8;s:49:"C:/wamp/www/themes/ohed/library/goods_related.lbi";i:9;s:48:"C:/wamp/www/themes/ohed/library/bought_goods.lbi";i:10;s:47:"C:/wamp/www/themes/ohed/library/page_footer.lbi";}s:7:"expires";i:1372517778;s:8:"maketime";i:1372514178;}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php exit;?>a:3:{s:8:"template";a:11:{i:0;s:33:"C:/wamp/www/themes/ohed/goods.dwt";i:1;s:47:"C:/wamp/www/themes/ohed/library/page_header.lbi";i:2;s:43:"C:/wamp/www/themes/ohed/library/ur_here.lbi";i:3;s:49:"C:/wamp/www/themes/ohed/library/goods_gallery.lbi";i:4;s:50:"C:/wamp/www/themes/ohed/library/goods_fittings.lbi";i:5;s:44:"C:/wamp/www/themes/ohed/library/goods_gm.lbi";i:6;s:44:"C:/wamp/www/themes/ohed/library/goods_ps.lbi";i:7;s:53:"C:/wamp/www/themes/ohed/library/bought_note_guide.lbi";i:8;s:49:"C:/wamp/www/themes/ohed/library/goods_related.lbi";i:9;s:48:"C:/wamp/www/themes/ohed/library/bought_goods.lbi";i:10;s:47:"C:/wamp/www/themes/ohed/library/page_footer.lbi";}s:7:"expires";i:1372739719;s:8:"maketime";i:1372736119;}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta name="Generator" content="ECSHOP v2.7.3" />
@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
 <meta name="Keywords" content="500萬攝像頭 microSD 工程塑料 藍牙 數碼相機 內置遊戲 滑蓋 高檔 2008年09月 320×240 像素 黑色" />
 <meta name="Description" content="" />
-<title>諾基亞N96_雙模手機_手機類型_ECSHOP演示站</title>
+<title>諾基亞N96_雙模手機_手機類型_寶新塑膠</title>
 <link rel="shortcut icon" href="favicon.ico" />
 <link rel="icon" href="animated_favicon.gif" type="image/gif" />
 <link href="themes/ohed/style.css" rel="stylesheet" type="text/css" />
@@ -50,19 +50,48 @@ changePrice();
 </script>
 </head>
 <body>
+   
  
  
  
  
+<?php
+ include_once('themes/' . $GLOBALS['_CFG']['template'].'/init.php');
+?>
  
- 
- <script src="themes/ohed/js/MSClass.js"></script> 
-<SCRIPT type=text/javascript src="themes/ohed/js/transport.js"></SCRIPT>
+ <script src="themes/<?php echo $GLOBALS['_CFG']['template']; ?>/js/MSClass.js"></script> 
+<SCRIPT type=text/javascript src="themes/<?php echo $GLOBALS['_CFG']['template']; ?>/js/transport.js"></SCRIPT>
  
  <!--[if IE 6]>
-    <script src="themes/ohed/js/DD_belatedPNG_0.0.8a-min.vb4e86b02.js"></script>
+    <script src="themes/<?php echo $GLOBALS['_CFG']['template']; ?>/js/DD_belatedPNG_0.0.8a-min.vb4e86b02.js"></script>
     <script> DD_belatedPNG.fix('.pngfix'); </script>
     <![endif]-->
+<!--
+<div id="floatQQ" class="QQ_service" style="position:absolute; top:160px; right:5px; font-size:12px;  z-index:999999">
+ <img src="themes/ohed/images/float_kefu.gif" /></a> 
+</div>
+-->
+<script type="text/javascript">
+  window.setInterval("floatQQdone()",1);
+  lastScrollY=0;
+  function floatQQdone()
+  {
+	 var diffY;
+	if (document.documentElement && document.documentElement.scrollTop)
+		diffY = document.documentElement.scrollTop;
+	else if (document.body)
+		diffY = document.body.scrollTop
+	else
+		{/*Netscape stuff*/}	
+	//alert(diffY);
+	percent=.1*(diffY-lastScrollY); 
+	if(percent>0)percent=Math.ceil(percent); 
+	else percent=Math.floor(percent); 
+	document.getElementById("floatQQ").style.top=parseInt(document.getElementById("floatQQ").style.top)+percent+"px";
+	lastScrollY=lastScrollY+percent; 
+	//alert(lastScrollY);
+  }
+</script>
 <script type="text/javascript">
 var process_request = "正在處理您的請求...";
 </script>
@@ -79,7 +108,6 @@ onClick="window.external.AddFavorite(location.href,document.title);"> <img src="
 <span  id="ECS_CARTINFO">
 <a href="flow.php"><img src="themes/ohed/images/top4.gif"> 554fcae493e564ee0dc75bdf2ebf94cacart_info|a:1:{s:4:"name";s:9:"cart_info";}554fcae493e564ee0dc75bdf2ebf94ca</a>
 </span>
-<a href="flow.php"><img src="themes/ohed/images/top4.gif">歐傑紅酒官方微博</a>
 </div>
 <div class="link">
 <a href="#"><img src="themes/ohed/images/link1.gif"></a>
@@ -239,17 +267,17 @@ onClick="window.external.AddFavorite(location.href,document.title);"> <img src="
   font-family: DFTsaiStd-W3;
   src:url("themes/ohed/images/DFTsaiStd-W3.otf") format("opentype");
 }
-#TextDiv2 a,pre{color:#808080;}
-#TextDiv2 a:link,a:visited {color:#555;}
-#TextDiv2 a:hover,a:active {color:#ff4e00;}
+#TextDiv2 a,pre{color:#000;}
+#TextDiv2 a:link,a:visited {color:#fff;}
+#TextDiv2 a:hover,a:active {color:#fff;}
 #TextDiv2 li{height:30px;font-size:20px;}
 </style>
 <div class="block">
  <div id="ur_here">
- <div id="TextDiv2" style="width:460px;position:relative; top:0px; left:-10px;font-size:20px;font-family: isosoman ;border:1px solid #14A2D4;text-align:left;height:30px;overflow:hidden;">
+ <div id="TextDiv2" style="width:460px;position:relative; top:0px; left:-10px;font-size:20px;font-family: isosoman ;border:1px solid #ff0084;text-align:left;height:30px;overflow:hidden;">
 <ul id="TextContent2">
 <li>演示地址:<a href="http://www.popub.net/script/MSClass.html">http://www.popub.net/script/MSClass.html</a></li>
-<li>下載地址:<a href="http://www.popub.net/script/MSClass.js"><font color="red">http://www.popub.net/script/MSClass.js</font></a></li>
+<li>下載地址:<a href="http://www.popub.net/script/MSClass.js"><font color="white">http://www.popub.net/script/MSClass.js</font></a></li>
 <li>PCAS (省、市、地區聯動選擇JS封裝類) Ver 2.01 數據壓縮完整版</b> <a href="pcas.html"><font color="red">演示及下載</font></a></li>
 <li>\***程序製作/版權所有:崔永祥(333) E-Mail:zhadan007@21cn.com 網址:http://www.popub.net***/</li>
 <li>文字滾動測試1</li>
@@ -381,7 +409,7 @@ new Marquee(["TextDiv2","TextContent2"],0,1,980,60,20,1000,1000,60) ;
            <li class="clearfix"><dd><div class=" ">
 <strong>偉民帥哥價：</strong><font class="shop" id="ECS_SHOPPRICE">NT$3700元</font>  
       
-         <strong style=" padding-left:10px; color:#cc0000">節省740元</strong>
+         <strong style=" padding-left:10px; color:#cc0000">節省元</strong>
       </div>
       
         
@@ -391,14 +419,18 @@ new Marquee(["TextDiv2","TextContent2"],0,1,980,60,20,1000,1000,60) ;
       </li>
     
         
-             
+       <!---->
+      
       
       
          <li>
-    <dd>
-                  <strong>商品庫存：</strong>
-          8          
-       <select name="11">
+    
+                  <dd>
+          <strong>商品庫存：</strong>
+          8         
+         
+               
+          <select name="11">
           <option>上海發貨</option>
           <option>北京發貨</option>
           <option>廣東發貨</option>
@@ -539,8 +571,7 @@ new Marquee(["TextDiv2","TextContent2"],0,1,980,60,20,1000,1000,60) ;
      
    </div>
    <div class="blank"></div>
-    
-<script>
+   <script>
 function qq (id) {
 	var str=document.getElementsByName("box[]");
 	if(document.getElementById("goods_id_"+id).checked ==false)
@@ -598,7 +629,7 @@ function qq (id) {
        
        
        
-       <div>瀏覽量：29</div>
+       <div>瀏覽量：31</div>
        
        
        
@@ -719,8 +750,7 @@ function qq (id) {
   </TBODY>
 </TABLE>
 <p>□□</p>
-<p>注意事項：辦理電匯時，請在電匯單「匯款用途」一欄處註明您的訂單號。</p>
-     
+<p>注意事項：辦理電匯時，請在電匯單「匯款用途」一欄處註明您的訂單號。</p>     
      </div>
      </blockquote>
  
@@ -741,8 +771,7 @@ function qq (id) {
   （2）郵寄的送達時間是指訂單支付成功（網上支付、銀行電匯）到款或收到付款憑證後，以發貨 時開始計算；</p>
 <p><BR>
   （3）請務必在下訂單時註明收貨人姓名、聯繫電話、手機或小靈通、詳細地址及郵編等內容。<BR>
-</p>
-  </div>
+</p>  </div>
      </blockquote>
   <blockquote>
     <div style=" padding:20px;">
@@ -838,7 +867,7 @@ function qq (id) {
 <div class="blank"></div> 
 <div class="block">
 <div class="helpTitBg clearfix">
- <img src="themes/ohed/images/help_left.gif" style="float:left">
+ 
     
    <div class="clearfix">
 <dl>
@@ -916,8 +945,8 @@ function qq (id) {
    
  
 </div>
- &copy; 2005-2013 ECSHOP 版權所有，並保留所有權利。<br />
-                                                                                     <br />
+ &copy; 2005-2013 寶新塑膠 版權所有，並保留所有權利。<br />
+ 台中市神岡區中山路843號                                                                                    <br />
     554fcae493e564ee0dc75bdf2ebf94caquery_info|a:1:{s:4:"name";s:10:"query_info";}554fcae493e564ee0dc75bdf2ebf94ca<br />
    <a href="http://service.shopex.cn/auth.php?product=ecshop&url=http%3A%2F%2Fisosoman.zapto.org%2F">Licensed</a><br />
            <div align="center" style="padding-bottom:5px; width:1px; height:1px; overflow:hidden" ><a href="http://www.ecshop.com" target="_blank" style=" font-family:Verdana; font-size:11px;">Powered&nbsp;by&nbsp;<strong><span style="color: #3366FF">ECShop</span><span style="color: #FF9966">v2.7.3</span></strong></a></div>
@@ -948,7 +977,7 @@ var minute = "分鐘";
 var second = "秒";
 var end = "結束";
 var goodsId = 23;
-var now_time = 1372485378;
+var now_time = 1372707319;
 onload = function(){
   changePrice();
  

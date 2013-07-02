@@ -14,10 +14,10 @@ if ($this->_foreach['no']['total'] > 0):
 ?>
 <dl>
   <dt class="dt<?php echo $this->_foreach['no']['iteration']; ?>"><?php echo $this->_var['help_cat']['cat_name']; ?></dt>
-  <?php $_from = $this->_var['help_cat']['article']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'item_0_54853800_1372586675');if (count($_from)):
-    foreach ($_from AS $this->_var['item_0_54853800_1372586675']):
+  <?php $_from = $this->_var['help_cat']['article']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'item');if (count($_from)):
+    foreach ($_from AS $this->_var['item']):
 ?>
-  <dd><a  href="help.php?id=<?php echo $this->_var['item_0_54853800_1372586675']['article_id']; ?>" title="<?php echo htmlspecialchars($this->_var['item_0_54853800_1372586675']['title']); ?>"><?php echo $this->_var['item_0_54853800_1372586675']['short_title']; ?></a></dd>
+  <dd><a  href="help.php?id=<?php echo $this->_var['item']['article_id']; ?>" title="<?php echo htmlspecialchars($this->_var['item']['title']); ?>"><?php echo $this->_var['item']['short_title']; ?></a></dd>
   <?php endforeach; endif; unset($_from); ?><?php $this->pop_vars();; ?>
 </dl>
 <?php endforeach; endif; unset($_from); ?><?php $this->pop_vars();; ?>
@@ -72,12 +72,12 @@ if ($this->_foreach['no']['total'] > 0):
  <div class="text">
  <div class="bNavList clearfix">
    <?php if ($this->_var['navigator_list']['bottom']): ?>
-   <?php $_from = $this->_var['navigator_list']['bottom']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'nav_0_55307400_1372586675');$this->_foreach['nav_bottom_list'] = array('total' => count($_from), 'iteration' => 0);
+   <?php $_from = $this->_var['navigator_list']['bottom']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'nav_0_33878800_1372736097');$this->_foreach['nav_bottom_list'] = array('total' => count($_from), 'iteration' => 0);
 if ($this->_foreach['nav_bottom_list']['total'] > 0):
-    foreach ($_from AS $this->_var['nav_0_55307400_1372586675']):
+    foreach ($_from AS $this->_var['nav_0_33878800_1372736097']):
         $this->_foreach['nav_bottom_list']['iteration']++;
 ?>
-        <a href="<?php echo $this->_var['nav_0_55307400_1372586675']['url']; ?>" <?php if ($this->_var['nav_0_55307400_1372586675']['opennew'] == 1): ?> target="_blank" <?php endif; ?>><?php echo $this->_var['nav_0_55307400_1372586675']['name']; ?></a>
+        <a href="<?php echo $this->_var['nav_0_33878800_1372736097']['url']; ?>" <?php if ($this->_var['nav_0_33878800_1372736097']['opennew'] == 1): ?> target="_blank" <?php endif; ?>><?php echo $this->_var['nav_0_33878800_1372736097']['name']; ?></a>
         <?php if (! ($this->_foreach['nav_bottom_list']['iteration'] == $this->_foreach['nav_bottom_list']['total'])): ?>
            |
         <?php endif; ?>
