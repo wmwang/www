@@ -42,7 +42,7 @@
 	  <?php if ($this->_var['brands']['1'] || $this->_var['price_grade']['1'] || $this->_var['filter_attr_list']): ?>
       
       
-<div   style=" height:3em; line-height:2em; text-align:right; border-bottom:3px solid rgba(242, 222, 193, 0.452941)">
+<div   style=" height:2em; line-height:2em; text-align:right; border-bottom:3px solid rgba(242, 222, 193, 0.452941)">
  
           <div class="btn btn-large btn-block btn-dangerForIndexTree">商品分類中心
           </div>
@@ -133,17 +133,17 @@ if ($this->_foreach['cat']['total'] > 0):
         </dd>
      </dl>
 			<?php endif; ?>
-			<?php $_from = $this->_var['filter_attr_list']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'filter_attr_0_72159300_1373360236');if (count($_from)):
-    foreach ($_from AS $this->_var['filter_attr_0_72159300_1373360236']):
+			<?php $_from = $this->_var['filter_attr_list']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'filter_attr_0_37837700_1373429226');if (count($_from)):
+    foreach ($_from AS $this->_var['filter_attr_0_37837700_1373429226']):
 ?>
     
              
              
            <dl  onmouseover="this.className='  dl_on'" onmouseout="this.className=''">
-     <dt><a href="#"><?php echo htmlspecialchars($this->_var['filter_attr_0_72159300_1373360236']['filter_attr_name']); ?></a> </dt>
+     <dt><a href="#"><?php echo htmlspecialchars($this->_var['filter_attr_0_37837700_1373429226']['filter_attr_name']); ?></a> </dt>
      <dd class="clearfix xuanjiu_dd">  
    
-			<?php $_from = $this->_var['filter_attr_0_72159300_1373360236']['attr_list']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'attr');if (count($_from)):
+			<?php $_from = $this->_var['filter_attr_0_37837700_1373429226']['attr_list']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'attr');if (count($_from)):
     foreach ($_from AS $this->_var['attr']):
 ?>
 				<?php if ($this->_var['attr']['selected']): ?>

@@ -13,6 +13,7 @@
 <link rel="shortcut icon" href="favicon.ico" />
 <link rel="icon" href="animated_favicon.gif" type="image/gif" />
 <link href="<?php echo $this->_var['ecs_css_path']; ?>" rel="stylesheet" type="text/css" />
+<link href="themes/ohed/flat-ui.css" rel="stylesheet" type="text/css"/>
 <link rel="alternate" type="application/rss+xml" title="RSS|<?php echo $this->_var['page_title']; ?>" href="<?php echo $this->_var['feed_url']; ?>" />
 
 <?php echo $this->smarty_insert_scripts(array('files'=>'common.js,index.js')); ?>
@@ -52,7 +53,7 @@ function reg(str){
 <div class="block">
  
 
-<div class="f_l" style="width:728px;">
+<div class="f_l" style="width:710px;">
     <?php echo $this->fetch('library/index_ad.lbi'); ?>
  
  

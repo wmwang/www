@@ -41,7 +41,7 @@
 	  <!--{if $brands.1 || $price_grade.1 || $filter_attr_list}-->
       
       
-<div   style=" height:3em; line-height:2em; text-align:right; border-bottom:3px solid rgba(242, 222, 193, 0.452941)">
+<div   style=" height:2em; line-height:2em; text-align:right; border-bottom:3px solid rgba(242, 222, 193, 0.452941)">
  
           <div class="btn btn-large btn-block btn-dangerForIndexTree">商品分類中心
           </div>

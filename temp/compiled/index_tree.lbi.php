@@ -1,14 +1,14 @@
 
 
 
-
+<div  style="background-color:rgba(255,255,255,0.6); height:28px; line-height:28px; text-align:right; border-bottom:3px solid #fff" >
  
  <div class="btn btn-large btn-block btn-dangerForIndexTree">商品分類中心
           </div>
  
  
  <a class="more" href="catalog.php"><img   src="themes/ohed/images/more.gif"></a>
- 
+</div>
 
  
 

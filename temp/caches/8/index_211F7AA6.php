@@ -1,4 +1,4 @@
-<?php exit;?>a:3:{s:8:"template";a:9:{i:0;s:33:"C:/wamp/www/themes/ohed/index.dwt";i:1;s:47:"C:/wamp/www/themes/ohed/library/page_header.lbi";i:2;s:44:"C:/wamp/www/themes/ohed/library/index_ad.lbi";i:3;s:46:"C:/wamp/www/themes/ohed/library/index_tree.lbi";i:4;s:43:"C:/wamp/www/themes/ohed/library/gundong.lbi";i:5;s:47:"C:/wamp/www/themes/ohed/library/ad_position.lbi";i:6;s:46:"C:/wamp/www/themes/ohed/library/index_comm.lbi";i:7;s:40:"C:/wamp/www/themes/ohed/library/cart.lbi";i:8;s:47:"C:/wamp/www/themes/ohed/library/page_footer.lbi";}s:7:"expires";i:1373430353;s:8:"maketime";i:1373426753;}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php exit;?>a:3:{s:8:"template";a:9:{i:0;s:33:"C:/wamp/www/themes/ohed/index.dwt";i:1;s:47:"C:/wamp/www/themes/ohed/library/page_header.lbi";i:2;s:44:"C:/wamp/www/themes/ohed/library/index_ad.lbi";i:3;s:46:"C:/wamp/www/themes/ohed/library/index_tree.lbi";i:4;s:43:"C:/wamp/www/themes/ohed/library/gundong.lbi";i:5;s:47:"C:/wamp/www/themes/ohed/library/ad_position.lbi";i:6;s:46:"C:/wamp/www/themes/ohed/library/index_comm.lbi";i:7;s:40:"C:/wamp/www/themes/ohed/library/cart.lbi";i:8;s:47:"C:/wamp/www/themes/ohed/library/page_footer.lbi";}s:7:"expires";i:1373431174;s:8:"maketime";i:1373427574;}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta name="Generator" content="ECSHOP v2.7.3" />
@@ -9,6 +9,7 @@
 <link rel="shortcut icon" href="favicon.ico" />
 <link rel="icon" href="animated_favicon.gif" type="image/gif" />
 <link href="themes/ohed/style.css" rel="stylesheet" type="text/css" />
+<link href="themes/ohed/flat-ui.css" rel="stylesheet" type="text/css"/>
 <link rel="alternate" type="application/rss+xml" title="RSS|寶新塑膠" href="feed.php" />
 <script type="text/javascript" src="js/common.js"></script><script type="text/javascript" src="js/index.js"></script><script type="text/javascript" src="themes/ohed/js/left_goodslist.js"></script>
 <script type="text/javascript">
@@ -300,7 +301,7 @@ new Marquee(["TextDiv2","TextContent2"],0,1,980,60,20,1000,1000,60) ;
  
 <div class="block">
  
-<div class="f_l" style="width:728px;">
+<div class="f_l" style="width:710px;">
     <script type="text/javascript">
 function $(id){return document.getElementById(id)};
 </script>
@@ -362,12 +363,15 @@ new Marquee(
 <div class="blank"></div>
   
  
-   <div class="btn btn-large btn-block btn-dangerForIndexTree">商品分類中心
+   
+<div  style="background-color:rgba(255,255,255,0.6); height:28px; line-height:28px; text-align:right; border-bottom:3px solid #fff" >
+ 
+ <div class="btn btn-large btn-block btn-dangerForIndexTree">商品分類中心
           </div>
  
  
  <a class="more" href="catalog.php"><img   src="themes/ohed/images/more.gif"></a>
- 
+</div>
  
 <div  id="category_tree_index" class="box  clearfix">
 <ul>
@@ -523,7 +527,8 @@ new Marquee(
            
      
 </ul>    
-</div> 
+</div>
+ 
   
 </div> 
 <div class="f_r" style="width:250px; _overflow:hidden">
