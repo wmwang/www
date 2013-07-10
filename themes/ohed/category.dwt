@@ -41,12 +41,12 @@
 	  <!--{if $brands.1 || $price_grade.1 || $filter_attr_list}-->
       
       
-<div   style=" height:28px; line-height:28px; text-align:right; border-bottom:3px solid #fff">
+<div   style=" height:3em; line-height:2em; text-align:right; border-bottom:3px solid rgba(242, 222, 193, 0.452941)">
  
-          <div class="btn btn-large btn-block btn-primaryForIndexTree">商品分類中心
+          <div class="btn btn-large btn-block btn-dangerForIndexTree">商品分類中心
           </div>
         </div>       
-<div class="clearfix" style="margin-top:-12px; line-height:22px">
+<div class="clearfix" style="margin-top:-1.6em; line-height:22px">
       
        
  <a class="more" href="catalog.php"><img   src="../images/more.gif"></a>

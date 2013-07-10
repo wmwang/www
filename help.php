@@ -159,7 +159,7 @@ function index_get_new_articles()
  */
 function get_article_info($article_id)
 {
-    /* 뱵IĕμĐŏ⠪/
+    /* 뱵IĕμĐŏ�*/
     $sql = "SELECT a.*, IFNULL(AVG(r.comment_rank), 0) AS comment_rank ".
             "FROM " .$GLOBALS['ecs']->table('article'). " AS a ".
             "LEFT JOIN " .$GLOBALS['ecs']->table('comment'). " AS r ON r.id_value = a.article_id AND comment_type = 1 ".

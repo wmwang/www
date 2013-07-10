@@ -81,7 +81,7 @@
  
 </div>
 
-<div class="f_r" style="color:#000; padding:0px 10px 0 20px">共{$pager.record_count}個商品 
+<div class="f_r" style="color:#000; padding:0 0 0 0 ">共{$pager.record_count}個商品 
 {$pager.page}/{$pager.page_count}
 </div>
 
@@ -225,10 +225,10 @@ buyNumber{$smarty.foreach.no.iteration}.goodNumber(num);
     <!--{/foreach}-->
     </div>
     <!-- {elseif $pager.display == 'grid'} -->
-    <div class="clearfix goodsBox" style="border:none; padding-top:7px">
+    <div class="clearfix goodsBox" style="border:none; margin-top:1em">
     <!--{foreach from=$goods_list item=goods name=no}-->
     <!-- {if $goods.goods_id} -->
-     <div class="goodsItem goodsItem2"   <!--{if $smarty.foreach.no.index mod 3 eq 0}-->style="background:none" <!--{else}-->  <!--{/if}-->>
+     <div class="goodsItem goodsItem2 "   <!--{if $smarty.foreach.no.index mod 3 eq 0}--><!--{else}-->  <!--{/if}-->>
            <a href="{$goods.url}"><img src="{$goods.goods_thumb}" alt="{$goods.goods_name}" class="goodsimg" /></a> 
           
           <div class="blank5"></div>

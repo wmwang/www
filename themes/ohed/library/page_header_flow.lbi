@@ -20,7 +20,7 @@
     <script src="themes/<?php echo $GLOBALS['_CFG']['template']; ?>/js/DD_belatedPNG_0.0.8a-min.vb4e86b02.js"></script>
     <script> DD_belatedPNG.fix('.pngfix'); </script>
     <![endif]-->
-
+<!--
 <div id="floatQQ" class="QQ_service" style="position:absolute; top:160px; right:5px; font-size:12px;  z-index:999999">
  <img src="../images/float_kefu.gif" /></a> 
 </div>
@@ -45,6 +45,7 @@
 	//alert(lastScrollY);
   }
 </script>
+-->
 <script type="text/javascript">
 var process_request = "{$lang.process_request}";
 </script>

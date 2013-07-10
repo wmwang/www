@@ -420,15 +420,7 @@ textarea {
   font-family: "Lato", sans-serif;
   font-size: 14px;
 }
-a {
-  color: #16a085;
-  /*text-decoration: underline;*/
-  -webkit-transition: 0.25s;
-  -moz-transition: 0.25s;
-  -o-transition: 0.25s;
-  transition: 0.25s;
-  -webkit-backface-visibility: hidden;
-}
+
 a:hover {
   color: #1abc9c;
   text-decoration: none;
@@ -527,7 +519,7 @@ h6 {
   font-size: 16.996px;
   /* 17px */
 
-  line-height: 20px;
+  line-height: 1em;
   padding: 3px 3px 3px;
 }
 .btn.btn-large > [class^="fui-"] {
@@ -542,10 +534,10 @@ h6 {
 .btn.btn-primaryForIndexTree {
   margin-left: 1px;
   margin-top: 2px;
-  background-color: #053eff;
+  background-color: #34495e;
   float: left;
-  width: 18%;
-  font-size: 20px;
+  width: 6.5em;
+  font-size: 2em;
   font-family: isosoman;
 }
 .btn.btn-primary:hover,
@@ -561,11 +553,11 @@ h6 {
 .btn.btn-info {
   background-color: #3498db;
   margin-top: -5px;
-  width: 25%;
-  height: 35px;
+  width: 2.4em;
+  height: 2.3em;
   float: left;;
   font-family: isosoman;
-  font-size: 20px;
+  font-size: 1.2em;
 }
 .btn.btn-info:hover,
 .btn.btn-info:focus,
@@ -580,10 +572,31 @@ h6 {
 .btn.btn-danger {
   background-color: #e74c3c;
   font-family: isosoman;
-  font-size: 20px;
-  width: 25%;
+  font-size: 1.6em;
+  width:  10em;
   float: left;
   margin-left: -27px;
+}
+.btn.btn-dangerForIndexTree {
+  margin-left: 1px;
+  margin-top: 2px;
+  background-color: #e74c3c;
+  float: left;
+  width: 7em;
+  font-size: 1.6em;
+  font-family: isosoman;
+  text-align: left;
+}
+.btn.btn-dangerForlogo {
+  background-color: rgba(50%,50%,50%,0.7);
+  float: left;
+  width: 160px;
+  font-size: 30px;
+  height: 32px;
+  padding-top: 20px;
+  font-family: isosoman;
+  font-weight: bold;
+  color: #00d6c7;
 }
 .btn.btn-danger:hover,
 .btn.btn-danger:focus,

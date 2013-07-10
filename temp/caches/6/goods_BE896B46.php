@@ -1,4 +1,4 @@
-<?php exit;?>a:3:{s:8:"template";a:11:{i:0;s:33:"C:/wamp/www/themes/ohed/goods.dwt";i:1;s:47:"C:/wamp/www/themes/ohed/library/page_header.lbi";i:2;s:43:"C:/wamp/www/themes/ohed/library/ur_here.lbi";i:3;s:49:"C:/wamp/www/themes/ohed/library/goods_gallery.lbi";i:4;s:50:"C:/wamp/www/themes/ohed/library/goods_fittings.lbi";i:5;s:44:"C:/wamp/www/themes/ohed/library/goods_gm.lbi";i:6;s:44:"C:/wamp/www/themes/ohed/library/goods_ps.lbi";i:7;s:53:"C:/wamp/www/themes/ohed/library/bought_note_guide.lbi";i:8;s:49:"C:/wamp/www/themes/ohed/library/goods_related.lbi";i:9;s:48:"C:/wamp/www/themes/ohed/library/bought_goods.lbi";i:10;s:47:"C:/wamp/www/themes/ohed/library/page_footer.lbi";}s:7:"expires";i:1372595071;s:8:"maketime";i:1372591471;}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php exit;?>a:3:{s:8:"template";a:11:{i:0;s:33:"C:/wamp/www/themes/ohed/goods.dwt";i:1;s:47:"C:/wamp/www/themes/ohed/library/page_header.lbi";i:2;s:43:"C:/wamp/www/themes/ohed/library/ur_here.lbi";i:3;s:49:"C:/wamp/www/themes/ohed/library/goods_gallery.lbi";i:4;s:50:"C:/wamp/www/themes/ohed/library/goods_fittings.lbi";i:5;s:44:"C:/wamp/www/themes/ohed/library/goods_gm.lbi";i:6;s:44:"C:/wamp/www/themes/ohed/library/goods_ps.lbi";i:7;s:53:"C:/wamp/www/themes/ohed/library/bought_note_guide.lbi";i:8;s:49:"C:/wamp/www/themes/ohed/library/goods_related.lbi";i:9;s:48:"C:/wamp/www/themes/ohed/library/bought_goods.lbi";i:10;s:47:"C:/wamp/www/themes/ohed/library/page_footer.lbi";}s:7:"expires";i:1373429948;s:8:"maketime";i:1373426348;}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta name="Generator" content="ECSHOP v2.7.3" />
@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
 <meta name="Keywords" content="2008年10月 GSM,850,900,1800,1900 黑色" />
 <meta name="Description" content="" />
-<title>諾基亞N85_GSM手機_手機類型_ECSHOP演示站</title>
+<title>諾基亞N85_GSM手機_手機類型_寶新塑膠</title>
 <link rel="shortcut icon" href="favicon.ico" />
 <link rel="icon" href="animated_favicon.gif" type="image/gif" />
 <link href="themes/ohed/style.css" rel="stylesheet" type="text/css" />
@@ -50,7 +50,7 @@ changePrice();
 </script>
 </head>
 <body>
- 
+   
  
  
  
@@ -105,7 +105,6 @@ onClick="window.external.AddFavorite(location.href,document.title);"> <img src="
 <span  id="ECS_CARTINFO">
 <a href="flow.php"><img src="themes/ohed/images/top4.gif"> 554fcae493e564ee0dc75bdf2ebf94cacart_info|a:1:{s:4:"name";s:9:"cart_info";}554fcae493e564ee0dc75bdf2ebf94ca</a>
 </span>
-<a href="flow.php"><img src="themes/ohed/images/top4.gif">歐傑紅酒官方微博</a>
 </div>
 <div class="link">
 <a href="#"><img src="themes/ohed/images/link1.gif"></a>
@@ -121,14 +120,15 @@ onClick="window.external.AddFavorite(location.href,document.title);"> <img src="
  
  
 <div class="block  " style=" height:84px;">
- <div class="f_l" style=" padding-top:27px;">
- <a href="index.php" name="top"><img style="float:left" src="themes/ohed/images/logo.gif" /></a> 
-<div style="float:left; padding:24px 0 0 30px">
+ <div class="f_l" style=" padding-top:7px;">
+ <a href="index.php" name="top">
+  <img style="float:left" src="themes/ohed/images/logo.png" /></a> 
+ <!-- <div class="btn btn-large btn-block btn-dangerForlogo">寶新制袋</div>-->
+<!--
 <img src="themes/ohed/images/tel.gif" />
- <a href="#" name="top"><img style="padding:0 5px" src="themes/ohed/images/ico_qianggou.gif" /></a> 
+ <a href="#" name="top"><img style="" src="themes/ohed/images/ico_qianggou.gif" /></a> 
  <a href="#" name="top"><img src="themes/ohed/images/ico_kefu.gif" /></a> 
- 
- </div>
+ -->
  
 </div>
  
@@ -212,6 +212,24 @@ onClick="window.external.AddFavorite(location.href,document.title);"> <img src="
     
   
   </ul>
+    
+   
+ 
+  <ul class="u1" onmouseover="this.className='u1 u1_over'" onmouseout="this.className='u1'"  >
+  <a  class="a1"  href="category.php?id=18"    >精品塑膠</a>
+  
+    
+  
+  </ul>
+    
+   
+ 
+  <ul class="u1" onmouseover="this.className='u1 u1_over'" onmouseout="this.className='u1'"  >
+  <a  class="a1"  href="category.php?id=21"    >商業包裝材料</a>
+  
+    
+  
+  </ul>
   
  
  
@@ -272,12 +290,12 @@ onClick="window.external.AddFavorite(location.href,document.title);"> <img src="
 </style>
 <div class="block">
  <div id="ur_here">
- <div id="TextDiv2" style="width:460px;position:relative; top:0px; left:-10px;font-size:20px;font-family: isosoman ;border:1px solid #ff0084;text-align:left;height:30px;overflow:hidden;">
+ <div id="TextDiv2" style="width:460px;position:relative; top:0px; left:-10px;font-size:20px;font-family: isosoman ;border:1px solid #e81E28;text-align:left;height:30px;overflow:hidden;">
 <ul id="TextContent2">
 <li>演示地址:<a href="http://www.popub.net/script/MSClass.html">http://www.popub.net/script/MSClass.html</a></li>
 <li>下載地址:<a href="http://www.popub.net/script/MSClass.js"><font color="white">http://www.popub.net/script/MSClass.js</font></a></li>
 <li>PCAS (省、市、地區聯動選擇JS封裝類) Ver 2.01 數據壓縮完整版</b> <a href="pcas.html"><font color="red">演示及下載</font></a></li>
-<li>\***程序製作/版權所有:崔永祥(333) E-Mail:zhadan007@21cn.com 網址:http://www.popub.net***/</li>
+<li>程序製作/版權所有:崔永祥(333) </li>
 <li>文字滾動測試1</li>
 <li>文字滾動測試2</li>
 <li>文字滾動測試3</li>
@@ -303,7 +321,7 @@ new Marquee(["TextDiv2","TextContent2"],0,1,980,60,20,1000,1000,60) ;
   src:url("themes/ohed/images/DFTsaiStd-W3.otf") format("opentype");
 }
 #TextDiv2 a,pre{color:#808080;}
-#TextDiv2 a:link,a:visited {color:#555;}
+#TextDiv2 a:link,a:visited {color:#fff;}
 #TextDiv2 a:hover,a:active {color:#ff4e00;}
 #TextDiv2 li{height:30px;font-size:20px;}
 </style>
@@ -405,7 +423,8 @@ new Marquee(["TextDiv2","TextContent2"],0,1,980,60,20,1000,1000,60) ;
       
       
            <li class="clearfix"><dd><div class=" ">
-<script type="text/javascript" src="js/lefttime.js"></script><strong>促銷價：</strong><font class="shop">NT$2750元</font>       
+<strong>偉民帥哥價：</strong><font class="shop" id="ECS_SHOPPRICE">NT$3010元</font>  
+      
          <strong style=" padding-left:10px; color:#cc0000">節省602元</strong>
       </div>
       
@@ -416,12 +435,7 @@ new Marquee(["TextDiv2","TextContent2"],0,1,980,60,20,1000,1000,60) ;
       </li>
     
         
-       <!-- 促銷
-       <dd>
-      <li  ><strong>剩餘時間：</strong>
-      <font class="f4" id="leftTime">請稍等, 正在載入中...</font> </li>
-    </dd>
-       -->
+       <!---->
       
       
       
@@ -462,11 +476,11 @@ new Marquee(["TextDiv2","TextContent2"],0,1,980,60,20,1000,1000,60) ;
       
    
                 <li class="clearfix">
-       <dd><strong>註冊用戶：</strong><font class="shop" id="ECS_RANKPRICE_1">NT$3010元</font>
+       <dd><strong>網路下單會員(享會員價，含免費修設計稿件)：</strong><font class="shop" id="ECS_RANKPRICE_1">NT$3010元</font>
        </dd>
        </li>
                 <li class="clearfix">
-       <dd><strong>vip：</strong><font class="shop" id="ECS_RANKPRICE_2">NT$2860元</font>
+       <dd><strong>同行/批發(優先排成，專案價格)：</strong><font class="shop" id="ECS_RANKPRICE_2">NT$2860元</font>
        </dd>
        </li>
              
@@ -654,7 +668,7 @@ function qq (id) {
        
        
        
-       <div>瀏覽量：26</div>
+       <div>瀏覽量：31</div>
        
        
        
@@ -1506,28 +1520,29 @@ function qq (id) {
 <div class="blank"></div>
 <div id="footer">
 <div class="block">
-<img src="themes/ohed/images/logo2.gif" style="float:left">
+<!--<img src="themes/ohed/images/logo2.gif" style="float:left">-->
  <div class="text">
  <div class="bNavList clearfix">
-              <a href="article.php?id=1" >免責條款</a>
+              <a href="article.php?id=1"  target="_blank" >免責條款</a>
                    |
-                      <a href="article.php?id=2" >隱私保護</a>
+                      <a href="article.php?id=2"  target="_blank" >隱私保護</a>
                    |
-                      <a href="article.php?id=3" >咨詢熱點</a>
+                      <a href="article.php?id=3"  target="_blank" >咨詢熱點</a>
                    |
-                      <a href="article.php?id=4" >聯系我們</a>
+                      <a href="article.php?id=4"  target="_blank" >聯系我們</a>
                    |
-                      <a href="article.php?id=5" >公司簡介</a>
+                      <a href="article.php?id=5"  target="_blank" >公司簡介</a>
                    |
-                      <a href="wholesale.php" >批發方案</a>
+                      <a href="wholesale.php"  target="_blank" >批發方案</a>
                    |
-                      <a href="myship.php" >配送方式</a>
+                      <a href="myship.php"  target="_blank" >配送方式</a>
                 
    
  
 </div>
- &copy; 2005-2013 ECSHOP 版權所有，並保留所有權利。<br />
-                                                                                     <br />
+ &copy; 2005-2013 寶新塑膠 版權所有，並保留所有權利。<br />
+ 台中市神岡區中山路843號 <a href=".">首頁</a> <code>&gt;</code> <a href="category.php?id=1">手機類型</a> <code>&gt;</code> <a href="category.php?id=3">GSM手機</a> <code>&gt;</code> 諾基亞N85 
+                                                                                   <br />
     554fcae493e564ee0dc75bdf2ebf94caquery_info|a:1:{s:4:"name";s:10:"query_info";}554fcae493e564ee0dc75bdf2ebf94ca<br />
    <a href="http://service.shopex.cn/auth.php?product=ecshop&url=http%3A%2F%2Fisosoman.zapto.org%2F">Licensed</a><br />
            <div align="center" style="padding-bottom:5px; width:1px; height:1px; overflow:hidden" ><a href="http://www.ecshop.com" target="_blank" style=" font-family:Verdana; font-size:11px;">Powered&nbsp;by&nbsp;<strong><span style="color: #3366FF">ECShop</span><span style="color: #FF9966">v2.7.3</span></strong></a></div>
@@ -1551,14 +1566,14 @@ function qq (id) {
 <script type="text/javascript">
 var goods_id = 32;
 var goodsattr_style = 1;
-var gmt_end_time = 1417276800;
+var gmt_end_time = 0;
 var day = "天";
 var hour = "小時";
 var minute = "分鐘";
 var second = "秒";
 var end = "結束";
 var goodsId = 32;
-var now_time = 1372562671;
+var now_time = 1373397549;
 onload = function(){
   changePrice();
  

@@ -42,12 +42,12 @@
 	  <?php if ($this->_var['brands']['1'] || $this->_var['price_grade']['1'] || $this->_var['filter_attr_list']): ?>
       
       
-<div   style=" height:28px; line-height:28px; text-align:right; border-bottom:3px solid #fff">
+<div   style=" height:3em; line-height:2em; text-align:right; border-bottom:3px solid rgba(242, 222, 193, 0.452941)">
  
-          <div class="btn btn-large btn-block btn-primaryForIndexTree">商品分類中心
+          <div class="btn btn-large btn-block btn-dangerForIndexTree">商品分類中心
           </div>
         </div>       
-<div class="clearfix" style="margin-top:-12px; line-height:22px">
+<div class="clearfix" style="margin-top:-1.6em; line-height:22px">
       
        
  <a class="more" href="catalog.php"><img   src="themes/ohed/images/more.gif"></a>
@@ -133,17 +133,17 @@ if ($this->_foreach['cat']['total'] > 0):
         </dd>
      </dl>
 			<?php endif; ?>
-			<?php $_from = $this->_var['filter_attr_list']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'filter_attr_0_51361000_1372738437');if (count($_from)):
-    foreach ($_from AS $this->_var['filter_attr_0_51361000_1372738437']):
+			<?php $_from = $this->_var['filter_attr_list']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'filter_attr_0_72159300_1373360236');if (count($_from)):
+    foreach ($_from AS $this->_var['filter_attr_0_72159300_1373360236']):
 ?>
     
              
              
            <dl  onmouseover="this.className='  dl_on'" onmouseout="this.className=''">
-     <dt><a href="#"><?php echo htmlspecialchars($this->_var['filter_attr_0_51361000_1372738437']['filter_attr_name']); ?></a> </dt>
+     <dt><a href="#"><?php echo htmlspecialchars($this->_var['filter_attr_0_72159300_1373360236']['filter_attr_name']); ?></a> </dt>
      <dd class="clearfix xuanjiu_dd">  
    
-			<?php $_from = $this->_var['filter_attr_0_51361000_1372738437']['attr_list']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'attr');if (count($_from)):
+			<?php $_from = $this->_var['filter_attr_0_72159300_1373360236']['attr_list']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'attr');if (count($_from)):
     foreach ($_from AS $this->_var['attr']):
 ?>
 				<?php if ($this->_var['attr']['selected']): ?>

@@ -3,7 +3,6 @@
 <head>
 <meta name="Generator" content="ECSHOP v2.7.3" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="Keywords" content="<?php echo $this->_var['keywords']; ?>" />
 <meta name="Description" content="<?php echo $this->_var['description']; ?>" />
 
@@ -14,8 +13,7 @@
 <link rel="shortcut icon" href="favicon.ico" />
 <link rel="icon" href="animated_favicon.gif" type="image/gif" />
 <link href="<?php echo $this->_var['ecs_css_path']; ?>" rel="stylesheet" type="text/css" />
-<link href="themes/ohed/flat-ui.css" rel="stylesheet" type="text/css"/>
-<link hrel="alternate" type="application/rss+xml" title="RSS|<?php echo $this->_var['page_title']; ?>" href="<?php echo $this->_var['feed_url']; ?>" />
+<link rel="alternate" type="application/rss+xml" title="RSS|<?php echo $this->_var['page_title']; ?>" href="<?php echo $this->_var['feed_url']; ?>" />
 
 <?php echo $this->smarty_insert_scripts(array('files'=>'common.js,index.js')); ?>
 <script type="text/javascript" src="themes/ohed/js/left_goodslist.js"></script>
@@ -70,18 +68,16 @@ function reg(str){
 <div class="gonggao_box box_1"> 
 
 <div class="ff_1 ">
-    <h2 id="ECS_tree1" class=" tabFront" style=" border-right:1px solid #d5d5d5; width:119px;  ">最新動態</h2>
-    <h2 id="ECS_tree2" class=" tabBack" style=" ">調價公告</h2>
+    <h2 id="ECS_tree1" class=" tabFront" style=" border-right:1px solid #d5d5d5; width:119px;  ">最新动态</h2>
+    <h2 id="ECS_tree2" class=" tabBack" style=" ">调价公告</h2>
 </div>   
 <div style="clear:both"></div>
 <div id="ECS_tree1_BODY" style="">
 
-<?php echo $this->fetch('library/promotion_info.lbi'); ?>
 
 </div>
 <div   id="ECS_tree2_BODY" style="display:none;">
 
-<?php echo $this->fetch('library/cart.lbi'); ?>
 
 </div>
 </div>
@@ -140,7 +136,7 @@ function reg(str){
 
 <div class="blank"></div>
 
-
+<!--
 
     
 
@@ -167,7 +163,44 @@ function reg(str){
 
 </div> 
 
+<div class="blank"></div>
+-->
+
+
+<div class="bottom_txt clearfix">
+
+<ul style="border-right:1px solid #b4b4b4">
+
+<li class="f_l">
+
+
+</li>
+<li class="f_r">
+
+<?php echo $this->fetch('library/cart.lbi'); ?>
+
+</li>
+
+
+
+
+</ul>
+
+
+<ul>
  
+<li class="f_l">
+
+
+</li>
+<li class="f_r">
+
+
+</li>
+
+</ul>
+
+</div> 
 
 
     

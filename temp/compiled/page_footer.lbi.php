@@ -66,18 +66,18 @@ if ($this->_foreach['no']['total'] > 0):
 <div id="footer">
 
 <div class="block">
-<img src="themes/ohed/images/logo2.gif" style="float:left">
+<!--<img src="themes/ohed/images/logo2.gif" style="float:left">-->
 
 
  <div class="text">
  <div class="bNavList clearfix">
    <?php if ($this->_var['navigator_list']['bottom']): ?>
-   <?php $_from = $this->_var['navigator_list']['bottom']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'nav_0_03140800_1372738445');$this->_foreach['nav_bottom_list'] = array('total' => count($_from), 'iteration' => 0);
+   <?php $_from = $this->_var['navigator_list']['bottom']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'nav_0_61083300_1373359838');$this->_foreach['nav_bottom_list'] = array('total' => count($_from), 'iteration' => 0);
 if ($this->_foreach['nav_bottom_list']['total'] > 0):
-    foreach ($_from AS $this->_var['nav_0_03140800_1372738445']):
+    foreach ($_from AS $this->_var['nav_0_61083300_1373359838']):
         $this->_foreach['nav_bottom_list']['iteration']++;
 ?>
-        <a href="<?php echo $this->_var['nav_0_03140800_1372738445']['url']; ?>" <?php if ($this->_var['nav_0_03140800_1372738445']['opennew'] == 1): ?> target="_blank" <?php endif; ?>><?php echo $this->_var['nav_0_03140800_1372738445']['name']; ?></a>
+        <a href="<?php echo $this->_var['nav_0_61083300_1373359838']['url']; ?>" <?php if ($this->_var['nav_0_61083300_1373359838']['opennew'] == 1): ?> target="_blank" <?php endif; ?>><?php echo $this->_var['nav_0_61083300_1373359838']['name']; ?></a>
         <?php if (! ($this->_foreach['nav_bottom_list']['iteration'] == $this->_foreach['nav_bottom_list']['total'])): ?>
            |
         <?php endif; ?>
@@ -88,7 +88,7 @@ if ($this->_foreach['nav_bottom_list']['total'] > 0):
  
 </div>
  <?php echo $this->_var['copyright']; ?><br />
- <?php echo $this->_var['shop_address']; ?> <?php echo $this->_var['shop_postcode']; ?>
+ <?php echo $this->_var['shop_address']; ?> <?php echo $this->_var['shop_postcode']; ?><?php echo $this->_var['ur_here']; ?> 
  <?php if ($this->_var['service_phone']): ?>
       Tel: <?php echo $this->_var['service_phone']; ?>
  <?php endif; ?>

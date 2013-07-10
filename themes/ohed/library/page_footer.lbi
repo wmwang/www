@@ -59,7 +59,7 @@
 <div id="footer">
 
 <div class="block">
-<img src="../images/logo2.gif" style="float:left">
+<!--<img src="../images/logo2.gif" style="float:left">-->
 
 
  <div class="text">
@@ -77,7 +77,7 @@
  
 </div>
  {$copyright}<br />
- {$shop_address} {$shop_postcode}
+ {$shop_address} {$shop_postcode}{$ur_here} 
  <!-- 客服電話{if $service_phone} -->
       Tel: {$service_phone}
  <!-- 結束客服電話{/if} -->

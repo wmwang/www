@@ -102,19 +102,21 @@ onClick="window.external.AddFavorite(location.href,document.title);"> <img src="
  
 
 <div class="block  " style=" height:84px;">
- <div class="f_l" style=" padding-top:27px;">
- <a href="../index.php" name="top"><img style="float:left" src="../images/logo.gif" /></a> 
+ <div class="f_l" style=" padding-top:7px;">
+ <a href="../index.php" name="top">
+  <img style="float:left" src="../images/logo.png" /></a> 
+ <!-- <div class="btn btn-large btn-block btn-dangerForlogo">寶新制袋</div>-->
 
-<div style="float:left; padding:24px 0 0 30px">
 
 
+<!--
 <img src="../images/tel.gif" />
 
- <a href="#" name="top"><img style="padding:0 5px" src="../images/ico_qianggou.gif" /></a> 
+ <a href="#" name="top"><img style="" src="../images/ico_qianggou.gif" /></a> 
 
  <a href="#" name="top"><img src="../images/ico_kefu.gif" /></a> 
- 
- </div>
+ -->
+
  
 
 </div>
@@ -233,12 +235,12 @@ onClick="window.external.AddFavorite(location.href,document.title);"> <img src="
 </style>
 <div class="block">
  <div id="ur_here">
- <div id="TextDiv2" style="width:460px;position:relative; top:0px; left:-10px;font-size:20px;font-family: isosoman ;border:1px solid #ff0084;text-align:left;height:30px;overflow:hidden;">
+ <div id="TextDiv2" style="width:460px;position:relative; top:0px; left:-10px;font-size:20px;font-family: isosoman ;border:1px solid #e81E28;text-align:left;height:30px;overflow:hidden;">
 <ul id="TextContent2">
 <li>演示地址:<a href="http://www.popub.net/script/MSClass.html">http://www.popub.net/script/MSClass.html</a></li>
 <li>下載地址:<a href="http://www.popub.net/script/MSClass.js"><font color="white">http://www.popub.net/script/MSClass.js</font></a></li>
 <li>PCAS (省、市、地區聯動選擇JS封裝類) Ver 2.01 數據壓縮完整版</b> <a href="pcas.html"><font color="red">演示及下載</font></a></li>
-<li>\***程序製作/版權所有:崔永祥(333) E-Mail:zhadan007@21cn.com 網址:http://www.popub.net***/</li>
+<li>程序製作/版權所有:崔永祥(333) </li>
 <li>文字滾動測試1</li>
 <li>文字滾動測試2</li>
 <li>文字滾動測試3</li>
@@ -254,6 +256,8 @@ new Marquee(["TextDiv2","TextContent2"],0,1,980,60,20,1000,1000,60) ;
 
 </script>
 </div>
+
+
 </div>
 <div class="blank"></div>
  

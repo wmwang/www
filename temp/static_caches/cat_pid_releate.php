@@ -2,19 +2,6 @@
 $data = array (
   0 => 
   array (
-    'cat_id' => '1',
-    'cat_name' => '手機類型',
-    'measure_unit' => '',
-    'parent_id' => '0',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '5',
-    'sort_order' => '50',
-    'has_children' => '4',
-    'goods_num' => 0,
-  ),
-  1 => 
-  array (
     'cat_id' => '12',
     'cat_name' => '充值卡',
     'measure_unit' => '',
@@ -26,10 +13,23 @@ $data = array (
     'has_children' => '3',
     'goods_num' => 0,
   ),
+  1 => 
+  array (
+    'cat_id' => '21',
+    'cat_name' => '商業包裝材料',
+    'measure_unit' => '',
+    'parent_id' => '0',
+    'is_show' => '1',
+    'show_in_nav' => '1',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '1',
+    'goods_num' => 0,
+  ),
   2 => 
   array (
-    'cat_id' => '16',
-    'cat_name' => '是個好東西',
+    'cat_id' => '20',
+    'cat_name' => '濫竽充數',
     'measure_unit' => '',
     'parent_id' => '0',
     'is_show' => '1',
@@ -54,18 +54,31 @@ $data = array (
   ),
   4 => 
   array (
-    'cat_id' => '4',
-    'cat_name' => '3G手機',
-    'measure_unit' => '',
-    'parent_id' => '1',
+    'cat_id' => '18',
+    'cat_name' => '精品塑膠袋',
+    'measure_unit' => '公斤',
+    'parent_id' => '0',
     'is_show' => '1',
     'show_in_nav' => '1',
     'grade' => '0',
     'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => '2',
+    'has_children' => '1',
+    'goods_num' => '5',
   ),
   5 => 
+  array (
+    'cat_id' => '1',
+    'cat_name' => '手機類型',
+    'measure_unit' => '',
+    'parent_id' => '0',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '5',
+    'sort_order' => '50',
+    'has_children' => '4',
+    'goods_num' => 0,
+  ),
+  6 => 
   array (
     'cat_id' => '5',
     'cat_name' => '雙模手機',
@@ -78,7 +91,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => 2,
   ),
-  6 => 
+  7 => 
   array (
     'cat_id' => '2',
     'cat_name' => 'CDMA手機',
@@ -91,7 +104,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => 0,
   ),
-  7 => 
+  8 => 
   array (
     'cat_id' => '3',
     'cat_name' => 'GSM手機',
@@ -104,31 +117,18 @@ $data = array (
     'has_children' => '0',
     'goods_num' => '12',
   ),
-  8 => 
+  9 => 
   array (
-    'cat_id' => '11',
-    'cat_name' => '讀卡器和內存卡',
+    'cat_id' => '4',
+    'cat_name' => '3G手機',
     'measure_unit' => '',
-    'parent_id' => '6',
+    'parent_id' => '1',
     'is_show' => '1',
-    'show_in_nav' => '0',
+    'show_in_nav' => '1',
     'grade' => '0',
     'sort_order' => '50',
     'has_children' => '0',
     'goods_num' => '2',
-  ),
-  9 => 
-  array (
-    'cat_id' => '7',
-    'cat_name' => '充電器',
-    'measure_unit' => '',
-    'parent_id' => '6',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => 0,
   ),
   10 => 
   array (
@@ -158,10 +158,10 @@ $data = array (
   ),
   12 => 
   array (
-    'cat_id' => '14',
-    'cat_name' => '移動手機充值卡',
+    'cat_id' => '11',
+    'cat_name' => '讀卡器和內存卡',
     'measure_unit' => '',
-    'parent_id' => '12',
+    'parent_id' => '6',
     'is_show' => '1',
     'show_in_nav' => '0',
     'grade' => '0',
@@ -170,6 +170,19 @@ $data = array (
     'goods_num' => '2',
   ),
   13 => 
+  array (
+    'cat_id' => '7',
+    'cat_name' => '充電器',
+    'measure_unit' => '',
+    'parent_id' => '6',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => 0,
+  ),
+  14 => 
   array (
     'cat_id' => '15',
     'cat_name' => '聯通手機充值卡',
@@ -182,7 +195,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => '2',
   ),
-  14 => 
+  15 => 
   array (
     'cat_id' => '13',
     'cat_name' => '小靈通/固話充值卡',
@@ -194,6 +207,45 @@ $data = array (
     'sort_order' => '50',
     'has_children' => '0',
     'goods_num' => '2',
+  ),
+  16 => 
+  array (
+    'cat_id' => '14',
+    'cat_name' => '移動手機充值卡',
+    'measure_unit' => '',
+    'parent_id' => '12',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => '2',
+  ),
+  17 => 
+  array (
+    'cat_id' => '19',
+    'cat_name' => '塑膠袋子',
+    'measure_unit' => '',
+    'parent_id' => '18',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => '1',
+  ),
+  18 => 
+  array (
+    'cat_id' => '22',
+    'cat_name' => '膠帶類',
+    'measure_unit' => '',
+    'parent_id' => '21',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => '4',
   ),
 );
 ?>

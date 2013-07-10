@@ -1,14 +1,14 @@
 
 
 
-<div  style="background:#fff; height:28px; line-height:28px; text-align:right; border-bottom:3px solid #fff" >
+
  
- <div class="btn btn-large btn-block btn-primaryForIndexTree">商品分類中心
+ <div class="btn btn-large btn-block btn-dangerForIndexTree">商品分類中心
           </div>
  
  
  <a class="more" href="catalog.php"><img   src="themes/ohed/images/more.gif"></a>
-</div>
+ 
 
  
 
@@ -52,8 +52,8 @@ if ($this->_foreach['no2']['total'] > 0):
      </dd>
    
      </dl>
-       
-     <?php endif; ?>    
+      
+            <?php endif; ?>    
     <?php endforeach; endif; unset($_from); ?><?php $this->pop_vars();; ?> 
 </ul>    
 </div>

@@ -1,17 +1,15 @@
-<?php exit;?>a:3:{s:8:"template";a:10:{i:0;s:33:"C:/wamp/www/themes/ohed/index.dwt";i:1;s:47:"C:/wamp/www/themes/ohed/library/page_header.lbi";i:2;s:44:"C:/wamp/www/themes/ohed/library/index_ad.lbi";i:3;s:46:"C:/wamp/www/themes/ohed/library/index_tree.lbi";i:4;s:50:"C:/wamp/www/themes/ohed/library/promotion_info.lbi";i:5;s:40:"C:/wamp/www/themes/ohed/library/cart.lbi";i:6;s:43:"C:/wamp/www/themes/ohed/library/gundong.lbi";i:7;s:47:"C:/wamp/www/themes/ohed/library/ad_position.lbi";i:8;s:46:"C:/wamp/www/themes/ohed/library/index_comm.lbi";i:9;s:47:"C:/wamp/www/themes/ohed/library/page_footer.lbi";}s:7:"expires";i:1372750431;s:8:"maketime";i:1372746831;}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php exit;?>a:3:{s:8:"template";a:9:{i:0;s:33:"C:/wamp/www/themes/ohed/index.dwt";i:1;s:47:"C:/wamp/www/themes/ohed/library/page_header.lbi";i:2;s:44:"C:/wamp/www/themes/ohed/library/index_ad.lbi";i:3;s:46:"C:/wamp/www/themes/ohed/library/index_tree.lbi";i:4;s:43:"C:/wamp/www/themes/ohed/library/gundong.lbi";i:5;s:47:"C:/wamp/www/themes/ohed/library/ad_position.lbi";i:6;s:46:"C:/wamp/www/themes/ohed/library/index_comm.lbi";i:7;s:40:"C:/wamp/www/themes/ohed/library/cart.lbi";i:8;s:47:"C:/wamp/www/themes/ohed/library/page_footer.lbi";}s:7:"expires";i:1373430353;s:8:"maketime";i:1373426753;}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta name="Generator" content="ECSHOP v2.7.3" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<meta name="Keywords" content="ECSHOP演示站" />
-<meta name="Description" content="ECSHOP演示站" />
-<title>ECSHOP演示站</title>
+<meta name="Keywords" content="寶新塑膠" />
+<meta name="Description" content="寶新塑膠" />
+<title>寶新塑膠</title>
 <link rel="shortcut icon" href="favicon.ico" />
 <link rel="icon" href="animated_favicon.gif" type="image/gif" />
 <link href="themes/ohed/style.css" rel="stylesheet" type="text/css" />
-<link href="themes/ohed/flat-ui.css" rel="stylesheet" type="text/css"/>
-<link hrel="alternate" type="application/rss+xml" title="RSS|ECSHOP演示站" href="feed.php" />
+<link rel="alternate" type="application/rss+xml" title="RSS|寶新塑膠" href="feed.php" />
 <script type="text/javascript" src="js/common.js"></script><script type="text/javascript" src="js/index.js"></script><script type="text/javascript" src="themes/ohed/js/left_goodslist.js"></script>
 <script type="text/javascript">
 function $id(element) {
@@ -109,14 +107,15 @@ onClick="window.external.AddFavorite(location.href,document.title);"> <img src="
  
  
 <div class="block  " style=" height:84px;">
- <div class="f_l" style=" padding-top:27px;">
- <a href="index.php" name="top"><img style="float:left" src="themes/ohed/images/logo.gif" /></a> 
-<div style="float:left; padding:24px 0 0 30px">
+ <div class="f_l" style=" padding-top:7px;">
+ <a href="index.php" name="top">
+  <img style="float:left" src="themes/ohed/images/logo.png" /></a> 
+ <!-- <div class="btn btn-large btn-block btn-dangerForlogo">寶新制袋</div>-->
+<!--
 <img src="themes/ohed/images/tel.gif" />
- <a href="#" name="top"><img style="padding:0 5px" src="themes/ohed/images/ico_qianggou.gif" /></a> 
+ <a href="#" name="top"><img style="" src="themes/ohed/images/ico_qianggou.gif" /></a> 
  <a href="#" name="top"><img src="themes/ohed/images/ico_kefu.gif" /></a> 
- 
- </div>
+ -->
  
 </div>
  
@@ -200,6 +199,24 @@ onClick="window.external.AddFavorite(location.href,document.title);"> <img src="
     
   
   </ul>
+    
+   
+ 
+  <ul class="u1" onmouseover="this.className='u1 u1_over'" onmouseout="this.className='u1'"  >
+  <a  class="a1"  href="category.php?id=18"    >精品塑膠</a>
+  
+    
+  
+  </ul>
+    
+   
+ 
+  <ul class="u1" onmouseover="this.className='u1 u1_over'" onmouseout="this.className='u1'"  >
+  <a  class="a1"  href="category.php?id=21"    >商業包裝材料</a>
+  
+    
+  
+  </ul>
   
  
  
@@ -260,12 +277,12 @@ onClick="window.external.AddFavorite(location.href,document.title);"> <img src="
 </style>
 <div class="block">
  <div id="ur_here">
- <div id="TextDiv2" style="width:460px;position:relative; top:0px; left:-10px;font-size:20px;font-family: isosoman ;border:1px solid #ff0084;text-align:left;height:30px;overflow:hidden;">
+ <div id="TextDiv2" style="width:460px;position:relative; top:0px; left:-10px;font-size:20px;font-family: isosoman ;border:1px solid #e81E28;text-align:left;height:30px;overflow:hidden;">
 <ul id="TextContent2">
 <li>演示地址:<a href="http://www.popub.net/script/MSClass.html">http://www.popub.net/script/MSClass.html</a></li>
 <li>下載地址:<a href="http://www.popub.net/script/MSClass.js"><font color="white">http://www.popub.net/script/MSClass.js</font></a></li>
 <li>PCAS (省、市、地區聯動選擇JS封裝類) Ver 2.01 數據壓縮完整版</b> <a href="pcas.html"><font color="red">演示及下載</font></a></li>
-<li>\***程序製作/版權所有:崔永祥(333) E-Mail:zhadan007@21cn.com 網址:http://www.popub.net***/</li>
+<li>程序製作/版權所有:崔永祥(333) </li>
 <li>文字滾動測試1</li>
 <li>文字滾動測試2</li>
 <li>文字滾動測試3</li>
@@ -293,20 +310,20 @@ function $(id){return document.getElementById(id)};
 #TabID LI IMG{display:none}
 #TabID LI.active {background:url(themes/ohed/images/mall_dot_hover.png)} 
 </STYLE>
-<DIV style="position:relative;width:716px;height:316px;overflow:hidden; border:5px solid #053eff;
+<DIV style="position:relative;width:710px;height:316px;overflow:hidden; 
 border-radius: 0px;
-   box-shadow: 0 0 0 1px #888888"
+   box-shadow: 0 0 0 0px #888888"
 >
 	<div>
 		<UL></UL>
 	</div>
 	<DIV id=MSClassBox>
 		<UL id=ContentID>
-			<LI><A href="javascript:void(0)"><IMG border=0 src="themes/ohed/images/a1.jpg" width=706 height=336></A></LI>
-			<LI><A href="javascript:void(0)"><IMG border=0 src="themes/ohed/images/a2.jpg" width=706 height=336></A></LI>
-			<LI><A href="javascript:void(0)"><IMG border=0 src="themes/ohed/images/a3.jpg" width=706 height=336></A></LI>
-			<LI><A href="javascript:void(0)"><IMG border=0 src="themes/ohed/images/a4.jpg" width=706 height=336></A></LI>
-			<LI><A href="javascript:void(0)"><IMG border=0 src="themes/ohed/images/a5.jpg" width=706 height=336></A></LI>
+			<LI><A href="javascript:void(0)"><IMG border=0 src="themes/ohed/images/a1.png" width=710 height=336></A></LI>
+			<LI><A href="javascript:void(0)"><IMG border=0 src="themes/ohed/images/a2.png" width=710 height=336></A></LI>
+			<LI><A href="javascript:void(0)"><IMG border=0 src="themes/ohed/images/a3.png" width=710 height=336></A></LI>
+			<LI><A href="javascript:void(0)"><IMG border=0 src="themes/ohed/images/a4.png" width=710 height=336></A></LI>
+			<LI><A href="javascript:void(0)"><IMG border=0 src="themes/ohed/images/a5.png" width=710 height=336></A></LI>
 			 
 		</UL>
 	</DIV>
@@ -328,13 +345,13 @@ new Marquee(
 	TabID	  : "TabID",
 	Direction : 2,
 	Step	  : 0.1,
-	Width	  : 706,
+	Width	  : 710,
 	Height	  : 336,
 	Timer	  : 20,
-	DelayTime : 3000,
+	DelayTime : 5000,
 	WaitTime  : 0,
-	ScrollStep: 706,
-	SwitchType: 0,
+	ScrollStep: 710,
+	SwitchType: 2,
 	AutoStart : 1
 })
 </SCRIPT>
@@ -345,15 +362,12 @@ new Marquee(
 <div class="blank"></div>
   
  
-   
-<div  style="background:#fff; height:28px; line-height:28px; text-align:right; border-bottom:3px solid #fff" >
- 
- <div class="btn btn-large btn-block btn-primaryForIndexTree">商品分類中心
+   <div class="btn btn-large btn-block btn-dangerForIndexTree">商品分類中心
           </div>
  
  
  <a class="more" href="catalog.php"><img   src="themes/ohed/images/more.gif"></a>
-</div>
+ 
  
 <div  id="category_tree_index" class="box  clearfix">
 <ul>
@@ -400,8 +414,8 @@ new Marquee(
           </dd>
    
      </dl>
-       
-         
+      
+                
         
  
      <dl  onmouseover="this.className='  dl_on'" onmouseout="this.className=''">
@@ -445,8 +459,8 @@ new Marquee(
           </dd>
    
      </dl>
-       
-         
+      
+                
         
  
      <dl  onmouseover="this.className='  dl_on'" onmouseout="this.className=''">
@@ -482,27 +496,34 @@ new Marquee(
           </dd>
    
      </dl>
-       
-         
+      
+                
         
  
      <dl  onmouseover="this.className='  dl_on'" onmouseout="this.className=''">
      <dt>
     
-     <a href="category.php?id=16">是個好東西</a>
+     <a href="category.php?id=18">精品塑膠袋</a>
      </dt>
      <dd class="clearfix">
     
+     <a href="category.php?id=19">塑膠袋子</a>
+     
+ 
+ 
+            
+     
+ 
           </dd>
    
      </dl>
-       
-         
+      
+                
+           
            
      
 </ul>    
-</div>
- 
+</div> 
   
 </div> 
 <div class="f_r" style="width:250px; _overflow:hidden">
@@ -511,16 +532,13 @@ new Marquee(
  
 <div class="gonggao_box box_1"> 
 <div class="ff_1 ">
-    <h2 id="ECS_tree1" class=" tabFront" style=" border-right:1px solid #d5d5d5; width:119px;  ">最新動態</h2>
-    <h2 id="ECS_tree2" class=" tabBack" style=" ">調價公告</h2>
+    <h2 id="ECS_tree1" class=" tabFront" style=" border-right:1px solid #d5d5d5; width:119px;  ">最新动态</h2>
+    <h2 id="ECS_tree2" class=" tabBack" style=" ">调价公告</h2>
 </div>   
 <div style="clear:both"></div>
 <div id="ECS_tree1_BODY" style="">
 </div>
 <div   id="ECS_tree2_BODY" style="display:none;">
-<script type="text/javascript" src="js/transport.js"></script><div class="cart" id="ECS_CARTINFO">
- 554fcae493e564ee0dc75bdf2ebf94cacart_info|a:1:{s:4:"name";s:9:"cart_info";}554fcae493e564ee0dc75bdf2ebf94ca</div>
-<div class="blank5"></div>
 </div>
 </div>
 <div class="blank"></div>
@@ -559,7 +577,7 @@ new Marquee(
   }
 //]]>
 </script>
- <!--
+ 
 <script language="javascript" type="text/javascript">
     function ScrollText(content,btnPrevious,btnNext,autoStart,timeout,isSmoothScroll)
     {
@@ -751,7 +769,6 @@ new Marquee(
     
  </div>
 <div class="blank"></div>
--->
  
 554fcae493e564ee0dc75bdf2ebf94caads|a:3:{s:4:"name";s:3:"ads";s:2:"id";s:2:"13";s:3:"num";s:1:"1";}554fcae493e564ee0dc75bdf2ebf94ca
  
@@ -759,12 +776,32 @@ new Marquee(
  
  
 <div class="blank"></div>
+<!--
     
  
 <div class="blank"></div>
 <div style="float:right; width:251px;">
 </div> 
+<div class="blank"></div>
+-->
+<div class="bottom_txt clearfix">
+<ul style="border-right:1px solid #b4b4b4">
+<li class="f_l">
+</li>
+<li class="f_r">
+<script type="text/javascript" src="js/transport.js"></script><div class="cart" id="ECS_CARTINFO">
+ 554fcae493e564ee0dc75bdf2ebf94cacart_info|a:1:{s:4:"name";s:9:"cart_info";}554fcae493e564ee0dc75bdf2ebf94ca</div>
+<div class="blank5"></div>
+</li>
+</ul>
+<ul>
  
+<li class="f_l">
+</li>
+<li class="f_r">
+</li>
+</ul>
+</div> 
     
 </div> 
    
@@ -838,28 +875,29 @@ new Marquee(
 <div class="blank"></div>
 <div id="footer">
 <div class="block">
-<img src="themes/ohed/images/logo2.gif" style="float:left">
+<!--<img src="themes/ohed/images/logo2.gif" style="float:left">-->
  <div class="text">
  <div class="bNavList clearfix">
-              <a href="article.php?id=1" >免責條款</a>
+              <a href="article.php?id=1"  target="_blank" >免責條款</a>
                    |
-                      <a href="article.php?id=2" >隱私保護</a>
+                      <a href="article.php?id=2"  target="_blank" >隱私保護</a>
                    |
-                      <a href="article.php?id=3" >咨詢熱點</a>
+                      <a href="article.php?id=3"  target="_blank" >咨詢熱點</a>
                    |
-                      <a href="article.php?id=4" >聯系我們</a>
+                      <a href="article.php?id=4"  target="_blank" >聯系我們</a>
                    |
-                      <a href="article.php?id=5" >公司簡介</a>
+                      <a href="article.php?id=5"  target="_blank" >公司簡介</a>
                    |
-                      <a href="wholesale.php" >批發方案</a>
+                      <a href="wholesale.php"  target="_blank" >批發方案</a>
                    |
-                      <a href="myship.php" >配送方式</a>
+                      <a href="myship.php"  target="_blank" >配送方式</a>
                 
    
  
 </div>
- &copy; 2005-2013 ECSHOP 版權所有，並保留所有權利。<br />
-                                                                                     <br />
+ &copy; 2005-2013 寶新塑膠 版權所有，並保留所有權利。<br />
+ 台中市神岡區中山路843號 <a href=".">首頁</a> 
+                                                                                   <br />
     554fcae493e564ee0dc75bdf2ebf94caquery_info|a:1:{s:4:"name";s:10:"query_info";}554fcae493e564ee0dc75bdf2ebf94ca<br />
    <a href="http://service.shopex.cn/auth.php?product=ecshop&url=http%3A%2F%2Fisosoman.zapto.org%2F">Licensed</a><br />
            <div align="center" style="padding-bottom:5px; width:1px; height:1px; overflow:hidden" ><a href="http://www.ecshop.com" target="_blank" style=" font-family:Verdana; font-size:11px;">Powered&nbsp;by&nbsp;<strong><span style="color: #3366FF">ECShop</span><span style="color: #FF9966">v2.7.3</span></strong></a></div>

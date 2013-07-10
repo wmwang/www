@@ -53,5 +53,6 @@ if ($this->_foreach['no']['total'] > 0):
 </div>
 
 </div>
-<div class="blank"></div>
+<div class="blank" style="background-color: rgba(28, 17, 3, 0.852941);
+visibility:visible;"></div>
 <?php endif; ?>

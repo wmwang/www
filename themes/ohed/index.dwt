@@ -2,7 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="Keywords" content="{$keywords}" />
 <meta name="Description" content="{$description}" />
 <!-- TemplateBeginEditable name="doctitle" -->
@@ -13,8 +12,7 @@
 <link rel="shortcut icon" href="favicon.ico" />
 <link rel="icon" href="animated_favicon.gif" type="image/gif" />
 <link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
-<link href="themes/ohed/flat-ui.css" rel="stylesheet" type="text/css"/>
-<link hrel="alternate" type="application/rss+xml" title="RSS|{$page_title}" href="{$feed_url}" />
+<link rel="alternate" type="application/rss+xml" title="RSS|{$page_title}" href="{$feed_url}" />
 {* 包含脚本文件 *}
 {insert_scripts files='common.js,index.js'}
 <script type="text/javascript" src="js/left_goodslist.js"></script>
@@ -69,54 +67,16 @@ function reg(str){
 <div class="gonggao_box box_1"> 
 
 <div class="ff_1 ">
-    <h2 id="ECS_tree1" class=" tabFront" style=" border-right:1px solid #d5d5d5; width:119px;  ">最新動態</h2>
-    <h2 id="ECS_tree2" class=" tabBack" style=" ">調價公告</h2>
+    <h2 id="ECS_tree1" class=" tabFront" style=" border-right:1px solid #d5d5d5; width:119px;  ">最新动态</h2>
+    <h2 id="ECS_tree2" class=" tabBack" style=" ">调价公告</h2>
 </div>   
 <div style="clear:both"></div>
 <div id="ECS_tree1_BODY" style="">
 <!-- TemplateBeginEditable name="最新动态" -->
-<!-- #BeginLibraryItem "/library/promotion_info.lbi" -->
-
-<!-- {if $promotion_info} -->
-<!-- 促銷信息 -->
-<div class="box">
- <div class="box_1">
-  <h3><span>{$lang.promotion_info}</span></h3>
-  <div class="boxCenterList RelaArticle">
-    <!-- {foreach from=$promotion_info item=item key=key} -->
-    <!-- {if $item.type eq "snatch"} -->
-    <a href="snatch.php" title="{$lang.$item.type}">{$lang.snatch_promotion}</a>
-    <!-- {elseif $item.type eq "group_buy"} -->
-    <a href="group_buy.php" title="{$lang.$item.type}">{$lang.group_promotion}</a>
-    <!-- {elseif $item.type eq "auction"} -->
-    <a href="auction.php" title="{$lang.$item.type}">{$lang.auction_promotion}</a>
-    <!-- {elseif $item.type eq "favourable"} -->
-     <a href="activity.php" title="{$lang.$item.type}">{$lang.favourable_promotion}</a>
-    <!-- {elseif $item.type eq "package"} -->
-    <a href="package.php" title="{$lang.$item.type}">{$lang.package_promotion}</a>
-    <!-- {/if} -->
-
-    <a href="{$item.url}" title="{$lang.$item.type} {$item.act_name}{$item.time}" style="background:none; padding-left:0px;">{$item.act_name}</a><br />
-    <!-- {/foreach} -->
-  </div>
- </div>
-</div>
-<div class="blank5"></div>
-<!-- {/if} -->
- <!-- #EndLibraryItem -->
 <!-- TemplateEndEditable -->
 </div>
 <div   id="ECS_tree2_BODY" style="display:none;">
 <!-- TemplateBeginEditable name="调价公告" -->
-<!-- #BeginLibraryItem "/library/cart.lbi" -->
-
-{insert_scripts files='transport.js'}
-<div class="cart" id="ECS_CARTINFO">
- {insert name='cart_info'}
-</div>
-<div class="blank5"></div>
-
- <!-- #EndLibraryItem -->
 <!-- TemplateEndEditable -->
 </div>
 </div>
@@ -178,7 +138,7 @@ function reg(str){
 
 <div class="blank"></div>
 
-
+<!--
 
     <!-- TemplateBeginEditable name="产品主区域" -->
 <!-- TemplateEndEditable -->
@@ -205,7 +165,52 @@ function reg(str){
 
 </div> 
 
+<div class="blank"></div>
+-->
+
+
+<div class="bottom_txt clearfix">
+
+<ul style="border-right:1px solid #b4b4b4">
+
+<li class="f_l">
+<!-- TemplateBeginEditable name="底部广告一" -->
+<!-- TemplateEndEditable -->
+</li>
+<li class="f_r">
+<!-- TemplateBeginEditable name="底部文章一" -->
+<!-- #BeginLibraryItem "/library/cart.lbi" -->
+
+{insert_scripts files='transport.js'}
+<div class="cart" id="ECS_CARTINFO">
+ {insert name='cart_info'}
+</div>
+<div class="blank5"></div>
+
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+</li>
+
+
+
+
+</ul>
+
+
+<ul>
  
+<li class="f_l">
+<!-- TemplateBeginEditable name="底部广告二" -->
+<!-- TemplateEndEditable -->
+</li>
+<li class="f_r">
+<!-- TemplateBeginEditable name="底部文章二" -->
+<!-- TemplateEndEditable -->
+</li>
+
+</ul>
+
+</div> 
 
 
     
